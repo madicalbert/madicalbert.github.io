@@ -1,11 +1,5 @@
 ---
-title: "madicalbert.github.io"
+title: "Madison Calbert"
 ---
 
-This is a Quarto website.
-
-To learn more about Quarto websites visit <https://quarto.org/docs/websites>.
-
-```{r}
-1 + 1
-```
+Hi, I'm Madison Calbert. I'm a software engineer and I love to write code. I'm currently working at [GitHub](https://github.com) and I'm also a student at [Lambda School](https://lambdaschool.com). I'm passionate about learning and I'm always looking for ways to improve my skills. I'm excited to share my journey with you! 
