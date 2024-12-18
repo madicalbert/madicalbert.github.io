@@ -1,5 +1,27 @@
 ---
 title: "Madison Calbert"
+image: media/IMG_6624.jpeg
+toc: false
+about: 
+  template: jolla
+  image-shape: round
+  image-width: 25em
+  links:
+    - icon: linkedin
+      text: LinkedIn
+      href: https://www.linkedin.com/in/madisoncalbert/
+      target: _blank
+    - icon: github
+      text: GitHub
+      href: https://github.com/madicalbert
+      target: _blank
+    - icon: envelope
+      text: Email
+      href: mailto:madisoncalbert@bren.ucsb.edu 
+      target: _blank
 ---
+    
 
-Hi, I'm Madison Calbert. I'm a software engineer and I love to write code. I'm currently working at [GitHub](https://github.com) and I'm also a student at [Lambda School](https://lambdaschool.com). I'm passionate about learning and I'm always looking for ways to improve my skills. I'm excited to share my journey with you! 
+Hi, I'm Madison Calbert. I am currently pursuing a Master of Environmental Science and Management degree with a specialization in conservation planning from the Bren School of Environmental Science and Management at UC Santa Barbara. I'm a wildlife biologist and botanist with three years’ experience conducting special status species surveys, botanical surveys, and biological construction monitoring. 
+
+

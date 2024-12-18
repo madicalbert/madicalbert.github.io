@@ -1,0 +1,6 @@
+---
+title: "Portfolio"
+listing:
+  contents: media
+  type: grid
+---

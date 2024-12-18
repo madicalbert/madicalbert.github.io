@@ -2,8 +2,20 @@
 title: "About"
 ---
 
-About this site
+## Current Projects
 
-```{r}
-1 + 1
-```
+[Evaluating Ecological Conservation Gaps Across a Proposed Sentinel Landscape (Connectivity Analysis)](https://bren.ucsb.edu/projects/evaluating-ecological-conservation-gaps-across-proposed-sentinel-landscape)
+
+[Groundwater in Southern California](https://natcatmayer.shinyapps.io/groundwatershinyapp/)
+
+## Professional Interests
+
+Wildlife Conservation \| Restoration Ecology \| Endangered Species Management & Recovery \| Landscape Ecology \| Habitat Connectivity
+
+## Professional Affiliations
+
+[California Native Plant Society](https://www.cnps.org/) \| [The Wildlife Society](https://wildlife.org/cali-centralcoast/)
+
+## Skillsets
+
+Wildlife & Plant ID \| Data Science \| R Programming Language \| Geospatial Analysis \| Excel \| Project Management \| Communication \| Stakeholder Engagement

@@ -1,16 +1,51 @@
 [
   {
+    "objectID": "portfolio.html",
+    "href": "portfolio.html",
+    "title": "Portfolio",
+    "section": "",
+    "text": "No matching items"
+  },
+  {
     "objectID": "about.html",
     "href": "about.html",
     "title": "About",
     "section": "",
-    "text": "About this site\n\n1 + 1\n\n[1] 2"
+    "text": "Evaluating Ecological Conservation Gaps Across a Proposed Sentinel Landscape (Connectivity Analysis)\nGroundwater in Southern California"
+  },
+  {
+    "objectID": "about.html#current-projects",
+    "href": "about.html#current-projects",
+    "title": "About",
+    "section": "",
+    "text": "Evaluating Ecological Conservation Gaps Across a Proposed Sentinel Landscape (Connectivity Analysis)\nGroundwater in Southern California"
+  },
+  {
+    "objectID": "about.html#professional-interests",
+    "href": "about.html#professional-interests",
+    "title": "About",
+    "section": "Professional Interests",
+    "text": "Professional Interests\nWildlife Conservation | Restoration Ecology | Endangered Species Management & Recovery | Landscape Ecology | Habitat Connectivity"
+  },
+  {
+    "objectID": "about.html#professional-affiliations",
+    "href": "about.html#professional-affiliations",
+    "title": "About",
+    "section": "Professional Affiliations",
+    "text": "Professional Affiliations\nCalifornia Native Plant Society | The Wildlife Society"
+  },
+  {
+    "objectID": "about.html#skillsets",
+    "href": "about.html#skillsets",
+    "title": "About",
+    "section": "Skillsets",
+    "text": "Skillsets\nWildlife & Plant ID | Data Science | R Programming Language | Geospatial Analysis | Excel | Project Management | Communication | Stakeholder Engagement"
   },
   {
     "objectID": "index.html",
     "href": "index.html",
     "title": "Madison Calbert",
     "section": "",
-    "text": "Hi, I’m Madison Calbert. I’m a software engineer and I love to write code. I’m currently working at GitHub and I’m also a student at Lambda School. I’m passionate about learning and I’m always looking for ways to improve my skills. I’m excited to share my journey with you!"
+    "text": "Hi, I’m Madison Calbert. I am currently pursuing a Master of Environmental Science and Management degree with a specialization in conservation planning from the Bren School of Environmental Science and Management at UC Santa Barbara. I’m a wildlife biologist and botanist with three years’ experience conducting special status species surveys, botanical surveys, and biological construction monitoring."
   }
 ]
