@@ -2,5 +2,11 @@
   {
     "listing": "/portfolio.html",
     "items": []
+  },
+  {
+    "listing": "/posts.html",
+    "items": [
+      "/posts/2024-12-17-benefits-transfer/index.html"
+    ]
   }
 ]

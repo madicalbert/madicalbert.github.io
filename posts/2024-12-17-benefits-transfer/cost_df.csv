@@ -1,0 +1,272 @@
+study_cluster,wetland_type,observation,reference,ref_year,country,area_ha,total_cost_2010
+1,mangrove,1,"Adger NW, Kelly PM, Tri NH ",1997,Vietnam,1.0,
+1,mangrove,2,"Adger NW, Kelly PM, Tri NH ",1997,Vietnam,1.0,
+2,mangrove,3,"Ainodion MJ, Robnett CR, Ajose TI ",2002,Nigeria,,
+2,mangrove,4,"Ainodion MJ, Robnett CR, Ajose TI ",2002,Nigeria,,
+2,mangrove,5,"Ainodion MJ, Robnett CR, Ajose TI ",2002,Nigeria,,
+2,mangrove,6,"Ainodion MJ, Robnett CR, Ajose TI ",2002,Nigeria,,
+2,mangrove,7,"Ainodion MJ, Robnett CR, Ajose TI ",2002,Nigeria,,
+2,mangrove,8,"Ainodion MJ, Robnett CR, Ajose TI ",2002,Nigeria,,
+2,mangrove,9,"Ainodion MJ, Robnett CR, Ajose TI ",2002,Nigeria,,
+2,mangrove,10,"Ainodion MJ, Robnett CR, Ajose TI ",2002,Nigeria,,
+2,mangrove,11,"Ainodion MJ, Robnett CR, Ajose TI ",2002,Nigeria,,
+2,mangrove,12,"Ainodion MJ, Robnett CR, Ajose TI ",2002,Nigeria,,
+2,mangrove,13,"Ainodion MJ, Robnett CR, Ajose TI ",2002,Nigeria,,
+2,mangrove,14,"Ainodion MJ, Robnett CR, Ajose TI ",2002,Nigeria,,
+2,mangrove,15,"Ainodion MJ, Robnett CR, Ajose TI ",2002,Nigeria,,
+2,mangrove,16,"Ainodion MJ, Robnett CR, Ajose TI ",2002,Nigeria,,
+2,mangrove,17,"Ainodion MJ, Robnett CR, Ajose TI ",2002,Nigeria,,
+3,mangrove,18,"Brockmeyer R, Rey J, Virnstein R, Gilmore R, Earnest L ",1997,USA,8000.0,2575740
+4,mangrove,19,"Brown B, Fadillah R, Nurdin Y, Soulsby I, Ahmad R ",2014,Indonesia,425.0,504576.15
+5,mangrove,20,"Chen LZ, Wang WQ, Zhang YH, Lin GH ",2009,China,,
+5,mangrove,21,"Chen LZ, Wang WQ, Zhang YH, Lin GH ",2009,China,,
+5,mangrove,22,"Chen LZ, Wang WQ, Zhang YH, Lin GH ",2009,China,,
+5,mangrove,23,"Chen LZ, Wang WQ, Zhang YH, Lin GH ",2009,China,256.0,
+6,mangrove,24,"Day S, Streever WJ, Watts JJ ",1999,Australia,0.0,
+6,mangrove,25,"Day S, Streever WJ, Watts JJ ",1999,Australia,0.0,
+6,mangrove,26,"Day S, Streever WJ, Watts JJ ",1999,Australia,0.0,
+6,mangrove,27,"Day S, Streever WJ, Watts JJ ",1999,Australia,0.0,
+6,mangrove,28,"Day S, Streever WJ, Watts JJ ",1999,Australia,0.0,
+7,mangrove,29,"Erftemeijer P, Lewis III R ",1999,Bangladesh,120000.0,40314756
+7,mangrove,30,"Erftemeijer P, Lewis III R ",1999,Hong Kong,0.1,171.3225
+7,mangrove,31,"Erftemeijer P, Lewis III R ",1999,Philippines,1000.0,20840750
+7,mangrove,32,"Erftemeijer P, Lewis III R ",1999,Philippines,30000.0,511960200
+7,mangrove,33,"Erftemeijer P, Lewis III R ",1999,Malaysia,,
+7,mangrove,34,"Erftemeijer P, Lewis III R ",1999,Thailand,40000.0,57047560
+7,mangrove,35,"Erftemeijer P, Lewis III R ",1999,Thailand,0.2,
+7,mangrove,36,"Erftemeijer P, Lewis III R ",1999,Thailand,1320.0,1576256.88
+7,mangrove,37,"Erftemeijer P, Lewis III R ",1999,Thailand,,
+7,mangrove,38,"Erftemeijer P, Lewis III R ",1999,Thailand,,
+7,mangrove,39,"Erftemeijer P, Lewis III R ",1999,Thailand,800.0,
+7,mangrove,40,"Erftemeijer P, Lewis III R ",1999,Thailand,8.0,
+7,mangrove,41,"Erftemeijer P, Lewis III R ",1999,Vietnam,580.0,
+8,mangrove,42,"Gilman E, Ellison J ",2007,American Samoa,0.2,
+9,mangrove,43,"Goforth HJ, Thomas J ",1979,USA,0.0,1690.98804
+9,mangrove,44,"Goforth HJ, Thomas J ",1979,USA,,
+9,mangrove,45,"Goforth HJ, Thomas J ",1979,USA,,
+9,mangrove,46,"Goforth HJ, Thomas J ",1979,USA,,
+10,mangrove,47,"Hashim R, Kamali B, Tamin N, Zakaria R ",2010,Malaysia,0.6,38005.89
+11,mangrove,48,"Kaly UL, Jones GP ",1998,,100.0,
+12,mangrove,49,"Kamali B, Hashim R ",2011,Malaysia,1819.0,9663100.985
+13,mangrove,50,King D ,1998,USA,0.4,32602.88363
+14,mangrove,51,Lewis III R ,1990,Virgin Islands,3.8,
+15,mangrove,52,Lewis III R ,1999,India,9050.0,
+16,mangrove,53,Lewis III R ,2001,Globally,,
+16,mangrove,54,Lewis III R ,2001,Globally,,
+16,mangrove,55,Lewis III R ,2001,Globally,,
+16,mangrove,56,Lewis III R ,2001,Globally,,
+16,mangrove,57,Lewis III R ,2001,Globally,,
+16,mangrove,58,Lewis III R ,2001,Globally,,
+16,mangrove,59,Lewis III R ,2001,Globally,,
+16,mangrove,60,Lewis III R ,2001,Thailand,800.0,206894.88
+16,mangrove,61,Lewis III R ,2001,Thailand,800.0,724132.16
+16,mangrove,62,Lewis III R ,2001,Thailand,1200.0,310342.32
+16,mangrove,63,Lewis III R ,2001,Thailand,1200.0,1086198.24
+17,mangrove,64,Lewis III R ,2005,Globally,,
+17,mangrove,65,Lewis III R ,2005,Globally,,
+17,mangrove,66,Lewis III R ,2005,Globally,,
+18,mangrove,67,Lewis III R ,2009,Globally,,
+19,mangrove,68,"Lewis III R, Hodgson A, Mauseth G ",2005,USA,,
+19,mangrove,69,"Lewis III R, Hodgson A, Mauseth G ",2005,USA,1.9,
+20,mangrove,70,"Lewis III R, Phillips M, Clough B, Macintosh D ",2003,Thailand,,
+20,mangrove,71,"Lewis III R, Phillips M, Clough B, Macintosh D ",2003,USA,,
+20,mangrove,72,"Lewis III R, Phillips M, Clough B, Macintosh D ",2003,Thailand,,
+20,mangrove,73,"Lewis III R, Phillips M, Clough B, Macintosh D ",2003,Thailand,,
+20,mangrove,74,"Lewis III R, Phillips M, Clough B, Macintosh D ",2003,Vietnam,,
+20,mangrove,75,"Lewis III R, Phillips M, Clough B, Macintosh D ",2003,Vietnam,,
+20,mangrove,76,"Lewis III R, Phillips M, Clough B, Macintosh D ",2003,Vietnam,,
+21,mangrove,77,"Matsui N, Suekuni J, Nogami M, Havanond S, Salikul P ",2010,Thailand,0.7,
+21,mangrove,78,"Matsui N, Suekuni J, Nogami M, Havanond S, Salikul P ",2010,Thailand,0.7,
+21,mangrove,79,"Matsui N, Suekuni J, Nogami M, Havanond S, Salikul P ",2010,Thailand,0.7,
+21,mangrove,80,"Matsui N, Suekuni J, Nogami M, Havanond S, Salikul P ",2010,Thailand,0.7,
+22,mangrove,81,Milano G ,1999,USA,121.5,8962554.42
+22,mangrove,82,Milano G ,1999,USA,8.7,1112171.387
+22,mangrove,83,Milano G ,1999,USA,34.4,3665329.319
+22,mangrove,84,Milano G ,1999,USA,0.8,200335.6612
+22,mangrove,85,Milano G ,1999,USA,2.0,235629.6315
+22,mangrove,86,Milano G ,1999,USA,5.3,500666.7608
+22,mangrove,87,Milano G ,1999,USA,18.2,1963568.931
+22,mangrove,88,Milano G ,1999,USA,,
+22,mangrove,89,Milano G ,1999,USA,2.8,815077.7158
+23,mangrove,90,"Motamedi S, Hashim R, Zakaria R, Song KI, Sofawi B ",2014,Malaysia,0.2,27130.2528
+24,mangrove,91,NOAA ,1996,USA,,
+24,mangrove,92,NOAA ,1996,USA,,
+24,mangrove,93,NOAA ,1996,USA,,
+24,mangrove,94,NOAA ,1996,USA,,
+24,mangrove,95,NOAA ,1996,USA,,
+24,mangrove,96,NOAA ,1996,USA,,
+24,mangrove,97,NOAA ,1996,USA,,
+24,mangrove,98,NOAA ,1996,USA,,
+24,mangrove,99,NOAA ,1996,USA,,
+24,mangrove,100,NOAA ,1996,USA,,
+24,mangrove,101,NOAA ,1996,USA,,
+24,mangrove,102,NOAA ,1996,USA,,
+24,mangrove,103,NOAA ,1996,USA,,
+24,mangrove,104,NOAA ,1996,USA,,
+24,mangrove,105,NOAA ,1996,USA,,
+24,mangrove,106,NOAA ,1996,USA,,
+24,mangrove,107,NOAA ,1996,USA,,
+24,mangrove,108,NOAA ,1996,USA,,
+24,mangrove,109,NOAA ,1996,USA,,
+24,mangrove,110,NOAA ,1996,USA,0.3,21049.1936
+24,mangrove,111,NOAA ,1996,USA,,
+24,mangrove,112,NOAA ,1996,USA,,
+24,mangrove,113,NOAA ,1996,USA,,
+24,mangrove,114,NOAA ,1996,USA,0.0,3.512095
+24,mangrove,115,NOAA ,1996,USA,,
+25,mangrove,116,"Primavera J, Esteban J ",2008,Philippines,,
+25,mangrove,117,"Primavera J, Esteban J ",2008,Philippines,,
+25,mangrove,118,"Primavera J, Esteban J ",2008,Philippines,50.0,88839
+25,mangrove,119,"Primavera J, Esteban J ",2008,Philippines,994.0,20839995.26
+25,mangrove,120,"Primavera J, Esteban J ",2008,Philippines,11486.0,221850367.1
+25,mangrove,121,"Primavera J, Esteban J ",2008,Philippines,7000.0,273055720
+25,mangrove,122,"Primavera J, Esteban J ",2008,Philippines,5302.0,62057418.06
+25,mangrove,123,"Primavera J, Esteban J ",2008,Philippines,53.8,49267.52216
+25,mangrove,124,"Primavera J, Esteban J ",2008,Philippines,,
+25,mangrove,125,"Primavera J, Esteban J ",2008,Philippines,,
+25,mangrove,126,"Primavera J, Esteban J ",2008,Philippines,400.0,279300.36
+25,mangrove,127,"Primavera J, Esteban J ",2008,Philippines,400.0,243492.64
+25,mangrove,128,"Primavera J, Esteban J ",2008,Philippines,,
+25,mangrove,129,"Primavera J, Esteban J ",2008,Philippines,,
+25,mangrove,130,"Primavera J, Esteban J ",2008,Philippines,,
+25,mangrove,131,"Primavera J, Esteban J ",2008,Philippines,,
+25,mangrove,132,"Primavera J, Esteban J ",2008,Philippines,,
+25,mangrove,133,"Primavera J, Esteban J ",2008,Philippines,,
+25,mangrove,134,"Primavera J, Esteban J ",2008,Philippines,,
+25,mangrove,135,"Primavera J, Esteban J ",2008,Philippines,,
+25,mangrove,136,"Primavera J, Esteban J ",2008,Philippines,,
+25,mangrove,137,"Primavera J, Esteban J ",2008,Philippines,,
+26,mangrove,138,"Primavera J, Savaris J, Bajoyo B, Coching J, Curnick D, Golbeque R, Guzman A, Henderin J, Joven R, Loma R, Koldewey H ",2012,Philippines,,
+26,mangrove,139,"Primavera J, Savaris J, Bajoyo B, Coching J, Curnick D, Golbeque R, Guzman A, Henderin J, Joven R, Loma R, Koldewey H ",2012,Philippines,,
+27,mangrove,140,"Proffitt CE, Devlin DJ ",2005,USA,0.0,
+27,mangrove,141,"Proffitt CE, Devlin DJ ",2005,USA,0.0,
+27,mangrove,142,"Proffitt CE, Devlin DJ ",2005,USA,0.0,
+27,mangrove,143,"Proffitt CE, Devlin DJ ",2005,USA,,
+27,mangrove,144,"Proffitt CE, Devlin DJ ",2005,USA,,
+28,mangrove,145,"Quinn R, Beumer J ",1984,Australia,,
+28,mangrove,146,"Quinn R, Beumer J ",1984,Australia,,
+29,mangrove,147,Saenger P ,1996,Australia,11.0,91387.032
+29,mangrove,148,Saenger P ,1996,Australia,11.0,137100.59
+29,mangrove,149,Saenger P ,1996,Australia,11.0,251364.52
+29,mangrove,150,Saenger P ,1996,Australia,11.0,822603.65
+29,mangrove,151,Saenger P ,1996,Australia,,
+30,mangrove,152,"Samson M, Rollon R ",2008,Philippines,44000.0,74851612
+31,mangrove,153,"Sathirathai S, Barbier E ",2001,Thailand,,
+32,mangrove,154,Society for Ecological Restoration,2007,China,20000.0,42225260
+33,mangrove,155,Society for Ecological Restoration. 2007,2007,Ecuador,13.3,24768.75376
+34,mangrove,156,Society for Ecological Restoration,2007,India,520.0,6850230.4
+35,mangrove,157,Society for Ecological Restoration,2007,Mauritius,13.0,
+36,mangrove,158,Society for Ecological Restoration,2007,Puerto Rico,8.1,
+37,mangrove,159,Society for Ecological Restoration,2007,Taiwan,4.6,
+38,mangrove,160,Society for Ecological Restoration,2007,Thailand,79.0,
+39,mangrove,161,Society for Ecological Restoration,2007,USA,500.0,9947785
+40,mangrove,162,Society for Ecological Restoration,2007,USA,11.1,578764.459
+41,mangrove,163,Society for Ecological Restoration,2007,Venezuela,19.8,
+42,mangrove,164,Society for Ecological Restoration,2008,Colombia,35000.0,209913060
+43,mangrove,165,Society for Ecological Restoration,2008,Mexico,0.2,
+44,mangrove,166,Sosnow A ,1986,USA,0.3,209780.256
+45,mangrove,167,Spurgeon J ,1999,USA,,
+45,mangrove,168,Spurgeon J ,1999,USA,,
+45,mangrove,169,Spurgeon J ,1999,USA,,
+45,mangrove,170,Spurgeon J ,1999,USA,,
+45,mangrove,171,Spurgeon J ,1999,USA,,
+45,mangrove,172,Spurgeon J ,1999,USA,,
+45,mangrove,173,Spurgeon J ,1999,Puerto Rico,400.0,
+46,mangrove,174,"Stevenson N, Lewis III R, Burbridge P ",1999,Thailand,0.0,
+47,mangrove,175,Teas H ,1977,USA,,
+47,mangrove,176,Teas H ,1977,USA,,
+47,mangrove,177,Teas H ,1977,USA,,
+47,mangrove,178,Teas H ,1977,USA,,
+47,mangrove,179,Teas H ,1977,USA,,
+47,mangrove,180,Teas H ,1977,USA,,
+47,mangrove,181,Teas H ,1977,USA,,
+47,mangrove,182,Teas H ,1977,USA,,
+47,mangrove,183,Teas H ,1977,USA,,
+47,mangrove,184,Teas H ,1977,USA,,
+47,mangrove,185,Teas H ,1977,USA,,
+47,mangrove,186,Teas H ,1977,USA,,
+47,mangrove,187,Teas H ,1977,USA,,
+47,mangrove,188,Teas H ,1977,USA,,
+47,mangrove,189,Teas H ,1977,USA,,
+47,mangrove,190,Teas H ,1977,USA,,
+47,mangrove,191,Teas H ,1977,USA,,
+47,mangrove,192,Teas H ,1977,USA,,
+47,mangrove,193,Teas H ,1977,USA,,
+47,mangrove,194,Teas H ,1977,USA,,
+47,mangrove,195,Teas H ,1977,USA,,
+48,mangrove,196,"Teas HJ, Lasday AH, Luque L E, Morales RA, De Diego ME, Baker JM ",1989,Panama,,
+48,mangrove,197,"Teas HJ, Lasday AH, Luque L E, Morales RA, De Diego ME, Baker JM ",1989,Panama,,
+48,mangrove,198,"Teas HJ, Lasday AH, Luque L E, Morales RA, De Diego ME, Baker JM ",1989,Panama,,
+48,mangrove,199,"Teas HJ, Lasday AH, Luque L E, Morales RA, De Diego ME, Baker JM ",1989,Panama,,
+48,mangrove,200,"Teas HJ, Lasday AH, Luque L E, Morales RA, De Diego ME, Baker JM ",1989,Panama,,
+48,mangrove,201,"Teas HJ, Lasday AH, Luque L E, Morales RA, De Diego ME, Baker JM ",1989,Panama,,
+48,mangrove,202,"Teas HJ, Lasday AH, Luque L E, Morales RA, De Diego ME, Baker JM ",1989,Panama,,
+48,mangrove,203,"Teas HJ, Lasday AH, Luque L E, Morales RA, De Diego ME, Baker JM ",1989,Panama,,
+48,mangrove,204,"Teas HJ, Lasday AH, Luque L E, Morales RA, De Diego ME, Baker JM ",1989,Panama,,
+48,mangrove,205,"Teas HJ, Lasday AH, Luque L E, Morales RA, De Diego ME, Baker JM ",1989,Panama,,
+48,mangrove,206,"Teas HJ, Lasday AH, Luque L E, Morales RA, De Diego ME, Baker JM ",1989,Panama,,
+48,mangrove,207,"Teas HJ, Lasday AH, Luque L E, Morales RA, De Diego ME, Baker JM ",1989,Panama,,
+49,mangrove,208,"Toledo G, Rojas A, Bashan Y ",2001,Mexico,,
+49,mangrove,209,"Toledo G, Rojas A, Bashan Y ",2001,Mexico,,
+49,mangrove,210,"Toledo G, Rojas A, Bashan Y ",2001,Mexico,,
+49,mangrove,211,"Toledo G, Rojas A, Bashan Y ",2001,Mexico,,
+49,mangrove,212,"Toledo G, Rojas A, Bashan Y ",2001,Mexico,,
+50,mangrove,213,"Tri NH, Adger WN, Kelly PM ",1998,Vietnam,1.0,
+51,mangrove,214,"Tuan T, Tinh B ",2013,Vietnam,150.0,656560.05
+52,mangrove,215,"Tuan TH, My NHD, Anh LTQ, Toan NV ",2014,Vietnam,150.0,648670.8
+53,mangrove,216,"Turner R, Lewis III R ",1996,USA,,
+54,mangrove,217,"Walton M, Samonte-Tan G, Primavera J, Edwards-Jones G, Vay L Le ",2006,Philippines,,
+1,saltmarsh,2,"Adams CS, Benosky CP ",1998,USA,160.0,2224347.2
+4,saltmarsh,11,"Bauer D, Cyr N, Swallow S ",2004,USA,42.0,3911642.28
+9,saltmarsh,29,"Burchett MD, Allen C, Pulkownik A, MacFarlane G ",1998,Australia,2.5,533306.75
+9,saltmarsh,30,"Burchett MD, Allen C, Pulkownik A, MacFarlane G ",1998,Australia,0.6,
+9,saltmarsh,31,"Burchett MD, Allen C, Pulkownik A, MacFarlane G ",1998,Australia,0.6,
+9,saltmarsh,32,"Burchett MD, Allen C, Pulkownik A, MacFarlane G ",1998,Australia,0.6,
+9,saltmarsh,33,"Burchett MD, Allen C, Pulkownik A, MacFarlane G ",1998,Australia,0.6,
+9,saltmarsh,34,"Burchett MD, Allen C, Pulkownik A, MacFarlane G ",1998,Australia,0.6,
+9,saltmarsh,35,"Burchett MD, Allen C, Pulkownik A, MacFarlane G ",1998,Australia,0.6,
+10,saltmarsh,36,"Burdick DM, Dionne M, Boumans RM, Short FT ",1997,USA,4.5,111218.715
+11,saltmarsh,37,"Castillo JM, Figueroa E ",2009,Spain,8.4,
+11,saltmarsh,38,"Castillo JM, Figueroa E ",2009,Spain,8.4,
+11,saltmarsh,39,"Castillo JM, Figueroa E ",2009,Spain,8.4,
+12,saltmarsh,40,Cornelisen C ,1998,USA,0.5,950921.6613
+12,saltmarsh,41,Cornelisen C ,1998,USA,20.2,54342.72581
+13,saltmarsh,42,"Dawe N, Bradfield G, Boyd W, Trethewey D, Zolbrod A ",2000,Canada,2.4,
+14,saltmarsh,43,King D ,1998,USA,0.4,67344.30425
+17,saltmarsh,64,Louis Berger and Associates ,1997,USA,1.6,436490.5341
+17,saltmarsh,65,Louis Berger and Associates ,1997,USA,1.6,29806.24684
+17,saltmarsh,66,Louis Berger and Associates ,1997,USA,4.0,142622.2682
+17,saltmarsh,67,Louis Berger and Associates ,1997,USA,5.7,34034.38058
+17,saltmarsh,68,Louis Berger and Associates ,1997,USA,8.1,498186.1552
+17,saltmarsh,69,Louis Berger and Associates ,1997,USA,8.1,394276.9654
+17,saltmarsh,70,Louis Berger and Associates ,1997,USA,8.9,41224.80512
+17,saltmarsh,71,Louis Berger and Associates ,1997,USA,14.2,149205.6739
+17,saltmarsh,72,Louis Berger and Associates ,1997,USA,16.2,66123.14104
+17,saltmarsh,73,Louis Berger and Associates ,1997,USA,20.2,53848.4023
+17,saltmarsh,74,Louis Berger and Associates ,1997,USA,39.7,3098163.985
+18,saltmarsh,78,Milano G ,1999,USA,2.0,238389.7899
+18,saltmarsh,80,Milano G ,1999,USA,2.8,824625.0999
+18,saltmarsh,79,Milano G ,1999,USA,5.3,337846.438
+18,saltmarsh,76,Milano G ,1999,USA,8.7,1112267.965
+18,saltmarsh,77,Milano G ,1999,USA,34.4,3665150.447
+18,saltmarsh,75,Milano G ,1999,USA,121.5,8962554.42
+19,saltmarsh,84,"Minello T, Rozas L, Caldwell P, Liese C ",2012,USA,1.1,73840.811
+19,saltmarsh,83,"Minello T, Rozas L, Caldwell P, Liese C ",2012,USA,1.9,105525.373
+19,saltmarsh,85,"Minello T, Rozas L, Caldwell P, Liese C ",2012,USA,3.0,192086.22
+19,saltmarsh,88,"Minello T, Rozas L, Caldwell P, Liese C ",2012,USA,3.7,488890.99
+19,saltmarsh,86,"Minello T, Rozas L, Caldwell P, Liese C ",2012,USA,4.6,295044.966
+19,saltmarsh,82,"Minello T, Rozas L, Caldwell P, Liese C ",2012,USA,5.1,404751.912
+19,saltmarsh,89,"Minello T, Rozas L, Caldwell P, Liese C ",2012,USA,5.7,511062
+19,saltmarsh,87,"Minello T, Rozas L, Caldwell P, Liese C ",2012,USA,9.9,329243.409
+19,saltmarsh,81,"Minello T, Rozas L, Caldwell P, Liese C ",2012,USA,11.3,694314.149
+21,saltmarsh,98,"Rozas L, Caldwell P, Minello T ",2005,USA,1.8,91375.92
+22,saltmarsh,99,Society for Ecological Restoration,2007,Australia,2.5,216000000
+26,saltmarsh,103,Society for Ecological Restoration,2007,USA,197.1,5766232.308
+28,saltmarsh,105,Society for Ecological Restoration,2012,USA,0.3,302141.5702
+29,saltmarsh,106,Society for Ecological Restoratio,2008,USA,130.3,11937220.87
+31,saltmarsh,127,Spurgeon J ,1999,UK,1.0,54886.73
+31,saltmarsh,128,Spurgeon J ,1999,UK,2.0,4748.34
+31,saltmarsh,129,Spurgeon J ,1999,UK,40.0,132749.32
+31,saltmarsh,125,Spurgeon J ,1999,USA,14.0,1901844
+31,saltmarsh,126,Spurgeon J ,1999,USA,44.5,9509200.55
+33,saltmarsh,131,Taylor DS ,2012,USA,25.0,808232.75
