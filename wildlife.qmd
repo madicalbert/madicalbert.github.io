@@ -1,3 +1,9 @@
 ---
-title: "Wildlife Photography"
+title: "Wildlife"
 ---
+
+![Santa Cruz Island fox (Santa Cruz Island), handled under the supervision of permitted biologist.](images/IMG_8072.jpeg){fig-align="left" width="5in" height="7in"}
+
+![California tiger salamander (Concord, CA), handled under the supervision of permitted biologist.](images/IMG_8686.jpeg){fig-align="left" width="5in"}
+
+![Juvenile Gilbert's skink (Concord, CA)](images/IMG_6822.jpeg){fig-align="left" width="5in"}

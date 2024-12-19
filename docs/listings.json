@@ -1,12 +1,14 @@
 [
   {
-    "listing": "/portfolio.html",
-    "items": []
-  },
-  {
     "listing": "/posts.html",
     "items": [
-      "/posts/2024-12-17-benefits-transfer/index.html"
+      "/posts/2024-12-17-benefits-transfer/index.html",
+      "/posts/2024-03-03-binary-log-regression/index.html",
+      "/posts/2024-03-03-nonlinear-least-squares/index.html",
+      "/posts/2024-02-10-spatial-data/index.html",
+      "/posts/2024-02-10-sentiment-analysis/index.html",
+      "/posts/2024-02-02-time-series/index.html",
+      "/posts/2024-02-02-data-viz/index.html"
     ]
   }
 ]

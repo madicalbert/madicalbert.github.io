@@ -1,13 +1,13 @@
 ---
 title: "Benefits Transfer"
-description: "Estimating restoration costs and storm protection benefits for 60 hectares of salt marsh habitat using benefits transfer."
+description: "Estimating restoration costs and storm protection benefits for 60 hectares of salt marsh habitat in Huntington Beach, CA using benefits transfer."
 author:
   - name: Madison Calbert
     url: https://madicalbert.github.io/
-    affiliation: Master of Environmental Science & Management Program @ The Bren School (UCSB)
+    affiliation: ESM 245 Cost Benefit Analysis Course - Master of Environmental Science & Management Program @ The Bren School (UCSB)
     affiliation-url: https://bren.ucsb.edu/masters-programs/master-environmental-science-and-management 
 date: 12-17-2024
-categories: [CBA, Wetlands] # self-defined categories
+categories: [R, Cost Benefit Analysis, Benefits Transfer] # self-defined categories
 citation: 
   url: https://madicalbert.github.io/posts/2022-12-17-benefits-transfer/ 
 image: preview-image.png
