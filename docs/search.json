@@ -11,21 +11,7 @@
     "href": "about.html",
     "title": "About",
     "section": "",
-    "text": "Evaluating Ecological Conservation Gaps Across a Proposed Sentinel Landscape (Connectivity Analysis)\nGroundwater in Southern California"
-  },
-  {
-    "objectID": "about.html#current-projects",
-    "href": "about.html#current-projects",
-    "title": "About",
-    "section": "",
-    "text": "Evaluating Ecological Conservation Gaps Across a Proposed Sentinel Landscape (Connectivity Analysis)\nGroundwater in Southern California"
-  },
-  {
-    "objectID": "about.html#professional-interests",
-    "href": "about.html#professional-interests",
-    "title": "About",
-    "section": "Professional Interests",
-    "text": "Professional Interests\nWildlife Conservation | Restoration Ecology | Endangered Species Management & Recovery | Landscape Ecology | Habitat Connectivity"
+    "text": "currently pursuing a Master of Environmental Science and Management degree with a specialization in conservation planning from the Bren School of Environmental Science and Management at UC Santa Barbara. I’m a wildlife biologist and botanist with three years’ experience conducting special status species surveys, botanical surveys, and biological construction monitoring."
   },
   {
     "objectID": "about.html#professional-affiliations",
@@ -33,13 +19,6 @@
     "title": "About",
     "section": "Professional Affiliations",
     "text": "Professional Affiliations\nCalifornia Native Plant Society | The Wildlife Society"
-  },
-  {
-    "objectID": "about.html#skillsets",
-    "href": "about.html#skillsets",
-    "title": "About",
-    "section": "Skillsets",
-    "text": "Skillsets\nWildlife & Plant ID | Data Science | R Programming Language | Geospatial Analysis | Excel | Project Management | Communication | Stakeholder Engagement"
   },
   {
     "objectID": "posts/2024-02-02-data-viz/index.html",
@@ -305,7 +284,35 @@
     "href": "index.html",
     "title": "Madison Calbert",
     "section": "",
-    "text": "Hi, I’m Madison Calbert. I am currently pursuing a Master of Environmental Science and Management degree with a specialization in conservation planning from the Bren School of Environmental Science and Management at UC Santa Barbara. I’m a wildlife biologist and botanist with three years’ experience conducting special status species surveys, botanical surveys, and biological construction monitoring."
+    "text": "Hello :-) I am a conservation ecologist who loves plants and wildlife."
+  },
+  {
+    "objectID": "index.html#welcome",
+    "href": "index.html#welcome",
+    "title": "Madison Calbert",
+    "section": "",
+    "text": "Hello :-) I am a conservation ecologist who loves plants and wildlife."
+  },
+  {
+    "objectID": "index.html#professional-interests",
+    "href": "index.html#professional-interests",
+    "title": "Madison Calbert",
+    "section": "Professional Interests",
+    "text": "Professional Interests\nWildlife Conservation | Restoration Ecology | Endangered Species Management & Recovery | Landscape Ecology | Habitat Connectivity"
+  },
+  {
+    "objectID": "index.html#skillset",
+    "href": "index.html#skillset",
+    "title": "Madison Calbert",
+    "section": "Skillset",
+    "text": "Skillset\nWildlife & Plant ID | Data Science | R Programming Language | Geospatial Analysis | Excel | Project Management | Communication | Stakeholder Engagement"
+  },
+  {
+    "objectID": "index.html#recent-ongoing-projects",
+    "href": "index.html#recent-ongoing-projects",
+    "title": "Madison Calbert",
+    "section": "Recent & Ongoing Projects",
+    "text": "Recent & Ongoing Projects\nEvaluating Ecological Conservation Gaps Across a Proposed Sentinel Landscape (Connectivity Analysis)\nGroundwater in Southern California"
   },
   {
     "objectID": "wildlife.html",

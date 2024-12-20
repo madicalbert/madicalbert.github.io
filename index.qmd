@@ -3,7 +3,7 @@ title: "Madison Calbert"
 image: media/IMG_6624.jpeg
 toc: false
 about: 
-  template: jolla
+  template: trestles
   image-shape: round
   image-width: 25em
   links:
@@ -20,8 +20,22 @@ about:
       href: mailto:madisoncalbert@bren.ucsb.edu 
       target: _blank
 ---
-    
 
-Hi, I'm Madison Calbert. I am currently pursuing a Master of Environmental Science and Management degree with a specialization in conservation planning from the Bren School of Environmental Science and Management at UC Santa Barbara. I'm a wildlife biologist and botanist with three years’ experience conducting special status species surveys, botanical surveys, and biological construction monitoring. 
+## Welcome!
+
+Hello :-) I am a conservation ecologist who loves plants and wildlife.
+
+## Professional Interests
+
+Wildlife Conservation \| Restoration Ecology \| Endangered Species Management & Recovery \| Landscape Ecology \| Habitat Connectivity
+
+## Skillset
+
+Wildlife & Plant ID \| Data Science \| R Programming Language \| Geospatial Analysis \| Excel \| Project Management \| Communication \| Stakeholder Engagement
+
+## Recent & Ongoing Projects
+
+[Evaluating Ecological Conservation Gaps Across a Proposed Sentinel Landscape (Connectivity Analysis)](https://bren.ucsb.edu/projects/evaluating-ecological-conservation-gaps-across-proposed-sentinel-landscape)
 
 
+[Groundwater in Southern California](https://natcatmayer.shinyapps.io/groundwatershinyapp/)

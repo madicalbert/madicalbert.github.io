@@ -2,20 +2,8 @@
 title: "About"
 ---
 
-## Current Projects
-
-[Evaluating Ecological Conservation Gaps Across a Proposed Sentinel Landscape (Connectivity Analysis)](https://bren.ucsb.edu/projects/evaluating-ecological-conservation-gaps-across-proposed-sentinel-landscape)
-
-[Groundwater in Southern California](https://natcatmayer.shinyapps.io/groundwatershinyapp/)
-
-## Professional Interests
-
-Wildlife Conservation \| Restoration Ecology \| Endangered Species Management & Recovery \| Landscape Ecology \| Habitat Connectivity
+currently pursuing a Master of Environmental Science and Management degree with a specialization in conservation planning from the Bren School of Environmental Science and Management at UC Santa Barbara. I'm a wildlife biologist and botanist with three years’ experience conducting special status species surveys, botanical surveys, and biological construction monitoring.
 
 ## Professional Affiliations
 
 [California Native Plant Society](https://www.cnps.org/) \| [The Wildlife Society](https://wildlife.org/cali-centralcoast/)
-
-## Skillsets
-
-Wildlife & Plant ID \| Data Science \| R Programming Language \| Geospatial Analysis \| Excel \| Project Management \| Communication \| Stakeholder Engagement
