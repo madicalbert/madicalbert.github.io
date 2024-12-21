@@ -9,14 +9,14 @@
   {
     "objectID": "about.html",
     "href": "about.html",
-    "title": "About",
+    "title": "About Me",
     "section": "",
-    "text": "currently pursuing a Master of Environmental Science and Management degree with a specialization in conservation planning from the Bren School of Environmental Science and Management at UC Santa Barbara. I’m a wildlife biologist and botanist with three years’ experience conducting special status species surveys, botanical surveys, and biological construction monitoring."
+    "text": "I am a master’s student at UC Santa Barbara’s Bren School of Environmental Science & Management, specializing in conservation planning. I am passionate about using data science and geospatial analysis to inform conservation and management decisions.\nPrior to graduate school, I worked as a consulting wildlife biologist and botanist conducting special status species surveys, botanical surveys, and biological construction monitoring. I have experience working with a variety of taxa, including the federally and state listed California tiger salamader (Ambystoma californiense) and California red-legged frog (Rana draytonii). I have also worked on habitat restoration projects, including invasive species removal, native plant installation, and habitat restoration monitoring. I also hold a B.S. in Environmental Studies from UCSB.\nI am from Valley Center, a small town in north county San Diego, where I fell in love with nature. In my free time I enjoy bird watching, botanizing, hiking, and running."
   },
   {
     "objectID": "about.html#professional-affiliations",
     "href": "about.html#professional-affiliations",
-    "title": "About",
+    "title": "About Me",
     "section": "Professional Affiliations",
     "text": "Professional Affiliations\nCalifornia Native Plant Society | The Wildlife Society"
   },
@@ -284,14 +284,14 @@
     "href": "index.html",
     "title": "Madison Calbert",
     "section": "",
-    "text": "Hello :-) I am a conservation ecologist who loves plants and wildlife."
+    "text": "Hello, I am a conservation ecologist who loves plants and wildlife."
   },
   {
-    "objectID": "index.html#welcome",
-    "href": "index.html#welcome",
+    "objectID": "index.html#welcome--",
+    "href": "index.html#welcome--",
     "title": "Madison Calbert",
     "section": "",
-    "text": "Hello :-) I am a conservation ecologist who loves plants and wildlife."
+    "text": "Hello, I am a conservation ecologist who loves plants and wildlife."
   },
   {
     "objectID": "index.html#professional-interests",
@@ -301,18 +301,18 @@
     "text": "Professional Interests\nWildlife Conservation | Restoration Ecology | Endangered Species Management & Recovery | Landscape Ecology | Habitat Connectivity"
   },
   {
-    "objectID": "index.html#skillset",
-    "href": "index.html#skillset",
+    "objectID": "index.html#skillsets",
+    "href": "index.html#skillsets",
     "title": "Madison Calbert",
-    "section": "Skillset",
-    "text": "Skillset\nWildlife & Plant ID | Data Science | R Programming Language | Geospatial Analysis | Excel | Project Management | Communication | Stakeholder Engagement"
+    "section": "Skillsets",
+    "text": "Skillsets\nWildlife & Plant ID | Data Science | Geospatial Analysis | Excel | Project Management | Communication | Stakeholder Engagement"
   },
   {
     "objectID": "index.html#recent-ongoing-projects",
     "href": "index.html#recent-ongoing-projects",
     "title": "Madison Calbert",
     "section": "Recent & Ongoing Projects",
-    "text": "Recent & Ongoing Projects\nEvaluating Ecological Conservation Gaps Across a Proposed Sentinel Landscape (Connectivity Analysis)\nGroundwater in Southern California"
+    "text": "Recent & Ongoing Projects\nEvaluating Ecological Conservation Gaps Across a Proposed Sentinel Landscape (Connectivity Analysis)\nValuation of the Restored North Campus Open Space Wetlands\nGroundwater in Southern California"
   },
   {
     "objectID": "wildlife.html",
