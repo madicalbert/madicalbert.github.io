@@ -2,8 +2,11 @@
 title: "Wildlife"
 ---
 
-![Santa Cruz Island fox (Santa Cruz Island), handled under the supervision of permitted biologist.](images/IMG_8072.jpeg){fig-align="left" width="5in" height="7in"}
+## Reptiles & Amphibians
 
-![California tiger salamander (Concord, CA), handled under the supervision of permitted biologist.](images/IMG_8686.jpeg){fig-align="left" width="5in"}
+::: {layout-nrow="15"}
+![California Tiger Salamander (*Ambystoma californiense*), Contra Costa County, CA](media/IMG_0908.jpeg){width="553"}
 
-![Juvenile Gilbert's skink (Concord, CA)](images/IMG_6822.jpeg){fig-align="left" width="5in"}
+![California red-legged frog (*Rana draytonii*), Concord, CA](media/IMG_3483.jpeg){width="553"}
+
+
