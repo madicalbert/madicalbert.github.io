@@ -4,7 +4,7 @@ title: "Wildlife"
 
 ## Reptiles & Amphibians
 
-::: {layout-nrow="15"}
+::: {layout-nrow="6"}
 ![California Tiger Salamander (*Ambystoma californiense*), Contra Costa County, CA](media/IMG_0908.jpeg){width="553"}
 
 ![California red-legged frog (*Rana draytonii*), Concord, CA](media/IMG_3483.jpeg){width="553"}
@@ -17,30 +17,32 @@ title: "Wildlife"
 
 ![Juvenile Gilbert's skink (*Plestiodon gilberti cancellosus*), Concord, CA](media/IMG_6816.jpeg){width="530"}
 
-![Juvenile California tiger salamander (*Ambystoma californiense*), San Luis Obispo County](media/IMG_6837.jpeg){width="530"}
+![Blunt-nosed leopard lizard (*Gambelia sila*), Carrizo Plain National Monument (Photo credit: Maddie McGinn)](media/DSC_0880.jpeg)
 
 ![Blainville's Horned Lizard (*Phrynosoma blainvillii*), Carrizo Plain National Monument (Photo credit: Maddie McGinn)](media/DSC_0837.jpeg)
 
-![Blunt-nosed leopard lizard (*Gambelia sila*), Carrizo Plain National Monument (Photo credit: Maddie McGinn)](media/DSC_0880.jpeg)
-
-![Gopher snake (Pituophis catenifer), Concord, CA](media/IMG_5040.jpeg){width="530"}
+![Gopher snake (*Pituophis catenifer*), Concord, CA](media/IMG_5040.jpeg){width="530"}
 
 ![California glossy snake (*Arizona elegans occidentalis*), Lakeside, CA](media/IMG_2515.jpeg){width="530"}
 
-![Santa Cruz Island Fox (*Urocyon littoralis santacruzae*), Santa Cruz Island, CA](media/IMG_3142.jpeg)
+![Ring-necked snake (*Diadophis punctatus*), Goleta, CA](media/mads-6.jpeg)
+
+![Juvenile California tiger salamander (*Ambystoma californiense*), San Luis Obispo County](media/IMG_6837.jpeg){width="530"}
+:::
 
 ## Birds
 
-![Great blue heron (*Ardea herodias*), Goleta, CA](media/IMG_9935.jpeg)
+::: {layout-nrow="2"}
+![Great blue heron (*Ardea herodias*), Goleta, CA](media/IMG_9935.jpeg){width="554"}
 
-![Black-crowned night heron (*Ardea herodias*), Goleta, CA](media/IMG_7498.jpeg)
-
-![Acorn woodpecker (*Melanerpes formicivorus*), Valley Center, CA](media/IMG_5687.jpeg)
+![Acorn woodpecker (*Melanerpes formicivorus*), Valley Center, CA](media/IMG_5687.jpeg){width="552"}
 
 ![Song sparrow (*Melospiza melodia*) nest with two eggs, Bonsall, CA](media/IMG_0195.jpeg)
+:::
 
 ## Plants
 
+::: {layout-nrow="3"}
 ![San Diego goldenstar (*Bloomeria clevelandii*) and purple Chinese houses (*Collinsia heterophylla*), Lakeside, CA](media/IMG_1003.jpeg)
 
 ![California lilac (*Ceanothus* sp.), Fort Ord, CA](media/IMG_0341.jpeg)
@@ -50,6 +52,4 @@ title: "Wildlife"
 ![Purple owl's clover (*Castilleja exserta*), Concord, CA](media/IMG_8897.jpeg)
 
 ![California poppy (*Eschscholzia californica*), Santee, CA](media/IMG_0223.jpeg)
-:::
-
 :::
