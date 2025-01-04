@@ -2,16 +2,20 @@
 title: "About Me"
 ---
 
-I am a master's student at UC Santa Barbara's Bren School of Environmental Science & Management, specializing in conservation planning. 
+I am a master's student at UC Santa Barbara's Bren School of Environmental Science & Management, specializing in conservation planning. Prior to graduate school, I worked as a consulting wildlife biologist and botanist conducting special status species surveys, botanical surveys, and biological construction monitoring. I have experience working with a variety of taxa, including the federally and state listed California tiger salamader (*Ambystoma californiense*) and California red-legged frog (*Rana draytonii*). I have also worked on habitat restoration projects, including invasive species removal and native plant installation. I also hold a B.S. in Environmental Studies from UCSB.
 
-Prior to graduate school, I worked as a consulting wildlife biologist and botanist conducting special status species surveys, botanical surveys, and biological construction monitoring. I have experience working with a variety of taxa, including the federally and state listed California tiger salamader (*Ambystoma californiense*) and California red-legged frog (*Rana draytonii*). I have also worked on habitat restoration projects, including invasive species removal and native plant installation. I also hold a B.S. in Environmental Studies from UCSB. 
+I am from Valley Center, a small town in north county San Diego. In my free time I enjoy bird watching, botanizing, hiking, and running.
 
-![Jennings Lake in Lakeside, CA](media/IMG_1171.jpeg)
+::: {layout-nrow="2"}
+![Construction Monitoring at Lake Jennings in Lakeside, CA](media/IMG_1171.jpeg){width="4035"}
 
-I am from Valley Center, a small town in north county San Diego. In my free time I enjoy bird watching, botanizing, hiking, and running. 
+![Hiking at Gaviota Wind Caves](media/IMG_0970.jpeg)
 
-## Professional Affiliations 
+![First day of grad school!](media/IMG_9922.jpeg){width="1536"}
+
+![Hiking around Carizzo Plain National Monument, CA](media/IMG_7760.JPG)
+:::
+
+## Professional Affiliations
 
 [California Native Plant Society](https://www.cnps.org/) \| [The Wildlife Society](https://wildlife.org/cali-centralcoast/)
-
-
