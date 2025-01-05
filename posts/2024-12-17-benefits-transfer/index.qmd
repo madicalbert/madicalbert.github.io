@@ -12,7 +12,19 @@ citation:
   url: https://madicalbert.github.io/posts/2022-12-17-benefits-transfer/ 
 image: preview-image.png
 draft: false # setting this to `true` will prevent your post from appearing on your listing page until you're ready!
+format: 
+  html: 
+    code-fold: true
+    toc: true 
+    embed-resources: true
+editor: visual
+execute: 
+  echo: true
+  message: false
+  warning: false
 ---
+
+![Huntington Beach wetlands, Photo Credit: Huntington Beach Wetlands Conservancy](images/preview-image.png){fig-align="left" width="889"}
 
 # Background
 
@@ -26,7 +38,7 @@ The analysis will pull from these two studies:
 
 -   [Costanza et al. (2021)](https://storymaps.arcgis.com/stories/4be8afd6872145f585782f6e3f8fbe95): estimate the storm protection benefits (avoided damage).
 
-You have part of the dataset of Bayraktov et al. (2015) and it has the following information:
+The dataset of Bayraktov et al. (2015) and has the following information:
 
 1\) study_cluster: research belonging to a specific year
 
@@ -44,13 +56,20 @@ You have part of the dataset of Bayraktov et al. (2015) and it has the following
 
 8\) total_cost_2010: total restoration cost in USD2010
 
-# Part 1: Restoration costs
+# Restoration costs
 
-*You will employ a benefit transfer to find the costs of restoring 60 hectares of wetland.*
+*Employ a benefit transfer to find the costs of restoring 60 hectares of wetland.*
 
 1)  *Inspect the dataset. What wetland type is most appropriate for your analysis? Filter the dataset for that wetland type.*
 
+We want saltmarsh wetlands for our analysis.
+
+2)  *Create a new variable with the restoration costs per hectare. Then, choose one of the research studies and estimate the total costs of restoring 60 hectares in Huntington Beach. Explain your choice.*
+
+To choose a research study, I filtered for projects in the USA with an area greater than or equal to 60 hectares. From these four results, I consulted with the larger data set from the Bayraktov et al. (2015) study to determine that observation #106 was a project in the San Francisco Bay area of California. Because our restoration site is in Huntington Beach, California, I chose observation #106 as the most appropriate for our analysis based on geographic location. Based on the restoration cost per hectare for observation #106, the total cost of restoring 60 hectares in Huntington Beach is \$5,496,801.63
+
 ```{r}
+#load libraries
 library(tidyverse)
 library(here)
 
@@ -63,13 +82,7 @@ cost_df <- read_csv(here("posts/2024-12-17-benefits-transfer/cost_df.csv"))
 saltmarsh_df <- cost_df %>%
   filter(wetland_type == "saltmarsh") %>% 
   drop_na()
-```
 
-We want saltmarsh wetlands for our analysis.
-
-2)  *Create a new variable with the restoration costs per hectare. Then, choose one of the research studies and estimate the total costs of restoring 60 hectares in Huntington Beach. Explain your choice.*
-
-```{r}
 # Create a new variable with the restoration costs per hectare
 saltmarsh_df <- saltmarsh_df %>%
   mutate(cost_per_ha = total_cost_2010 / area_ha)
@@ -85,8 +98,6 @@ total_cost_60_ha <- saltmarsh_df %>%
   pull(cost_per_ha) * 60
 total_cost_60_ha
 ```
-
-To choose a research study, I filtered for projects in the USA with an area greater than or equal to 60 hectares. From these four results, I consulted with the larger data set from the Bayraktov et al. (2015) study to determine that observation #106 was a project in the San Francisco Bay area of California. Because our restoration site is in Huntington Beach, California, I chose observation #106 as the most appropriate for our analysis based on geographic location. Based on the restoration cost per hectare for observation #106, the total cost of restoring 60 hectares in Huntington Beach is \$5,496,801.63
 
 3)  *We are interested in the marginal cost of each additional hectare restored. Make a scatter plot of hectares on the y-axis and total restoration costs on the x-axis in the USA. Describe the relationship between total costs and wetland area restored.*
 
@@ -128,7 +139,7 @@ The total cost from the regression is \$3,077,755 to restore 60 hectares of wetl
 
 One way to improve the cost analysis and valuation is to include additional variables that may influence the restoration costs. For example, factors such as the type of restoration activities, the condition of the wetland site, and the availability of resources could impact the total restoration costs. By including these variables in the analysis, we can better estimate the costs of restoring wetlands and provide more accurate benefit transfer estimates.
 
-# Part 2: Storm protection benefits
+# Storm protection benefits
 
 [Costanza et al. (2021)](https://storymaps.arcgis.com/stories/4be8afd6872145f585782f6e3f8fbe95) analyzed 1288 coastal storms globally to calculate the storm protection benefits from wetlands. The authors obtained the following regression estimates:
 
