@@ -1,5 +1,6 @@
 ---
 title: "Wildlife"
+format: html
 ---
 
 ## Reptiles & Amphibians

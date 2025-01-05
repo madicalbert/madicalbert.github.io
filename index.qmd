@@ -1,6 +1,7 @@
 ---
 title: "Madison Calbert"
 image: media/IMG_6624.jpeg
+format: html
 toc: false
 about: 
   template: trestles

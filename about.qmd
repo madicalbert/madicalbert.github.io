@@ -1,5 +1,6 @@
 ---
 title: "About Me"
+format: html
 ---
 
 I am currently a master’s student at UC Santa Barbara’s Bren School of Environmental Science & Management, specializing in conservation planning. Before graduate school, I worked as a consulting wildlife biologist and botanist, conducting special-status species surveys, botanical assessments, and biological construction monitoring. My experience spans a variety of taxa, including the federally and state-listed California tiger salamander (*Ambystoma californiense*) and California red-legged frog (*Rana draytonii*). I have also contributed to habitat restoration projects focused on invasive species removal and native plant installation.

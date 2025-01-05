@@ -8,7 +8,8 @@ website:
     right: # accepts right/left/center; you can also place items individually on the left, right, and center
       - href: index.qmd
         text: Home
-      - about.qmd
+      - href: about.qmd
+        text: About
       - href: posts.qmd
         text: Projects
       - href: wildlife.qmd
