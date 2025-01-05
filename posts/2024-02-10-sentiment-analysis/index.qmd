@@ -24,18 +24,20 @@ execute:
   warning: false
 ---
 
-![First edition dust cover jacket of *East of Eden* (1952) by American author John Steinbeck. Photo retrieved from Wikipedia page. ](images/East_of_Eden.jpeg)
+![First edition dust cover jacket of *East of Eden* (1952) by American author John Steinbeck. Photo retrieved from Wikipedia page.](images/East_of_Eden.jpeg)
 
-## Overview 
-In this report, I analyze John Steinbeck's classic novel, "East of Eden", to determine the most frequently used words and overall sentiments throughout the book. Figure 1 displays the most frequently used words in each chapter for Chapters 1 - 16, and Figure 2 visualizes a cloud map of most frequenlty used word for just Chapter 1. Figures 3 and 4 portrays the sentiment analysis for Chapters 1-16. 
+## Overview
+
+In this report, I analyze John Steinbeck's classic novel, "East of Eden", to determine the most frequently used words and overall sentiments throughout the book. Figure 1 displays the most frequently used words in each chapter for Chapters 1 - 16, and Figure 2 visualizes a cloud map of most frequenlty used word for just Chapter 1. Figures 3 and 4 portrays the sentiment analysis for Chapters 1-16.
 
 ## Text Analysis
-* Load libraries needed for analysis
-* Load in the pdf of "East of Eden" 
-* Convert the pdf text into a data frame
-* Wrangle the data to get tokens into tidy format and remove stop words
-* Determine word counts by chapter
-* Plot it in a bar graph
+
+-   Load libraries needed for analysis
+-   Load in the pdf of "East of Eden"
+-   Convert the pdf text into a data frame
+-   Wrangle the data to get tokens into tidy format and remove stop words
+-   Determine word counts by chapter
+-   Plot it in a bar graph
 
 ```{r}
 ### Load Packages
@@ -63,7 +65,6 @@ eoe_lines <- data.frame(eoe_text) %>%
   mutate(text_full = str_trim(text_full)) 
 ```
 
-
 ```{r}
 eoe_chapts <- eoe_lines %>% 
   slice(-(1:247)) %>% 
@@ -72,7 +73,6 @@ eoe_chapts <- eoe_lines %>%
   separate(col = chapter, into = c("ch", "num"), sep = " ") %>% 
   mutate(chapter = as.numeric(as.roman(num)))
 ```
-
 
 ```{r}
 eoe_words <- eoe_chapts %>% 
@@ -87,7 +87,6 @@ eoe_wordcount <- eoe_words %>%
 wordcount_clean <- eoe_wordcount %>% 
   anti_join(stop_words, by = 'word')
 ```
-
 
 ```{r fig.cap= "Figure 1: Top 5 Words per Chapter. Figure 1 portrays the top 5 most frequently used words per chapter for chapters 1 through 16. The most commonly used word is 'Adam' in Chapter 10."}
 top_5_words <- wordcount_clean %>% 
@@ -106,12 +105,13 @@ ggplot(data = top_5_words, aes(x = n, y = word)) +
        y = " ")
 ```
 
-## Word Cloud 
-Create a visualization for most frequently used words in Chapter 1: 
+## Word Cloud
 
-* Filter for only Chapter 1
-* Determine the top 100 most used words
-* Plot it 
+Create a visualization for most frequently used words in Chapter 1:
+
+-   Filter for only Chapter 1
+-   Determine the top 100 most used words
+-   Plot it
 
 ```{r}
 ch1_top100 <- wordcount_clean %>% 
@@ -130,14 +130,15 @@ ch1_cloud <- ggplot(data = ch1_top100, aes(label = word)) +
 ch1_cloud
 ```
 
-## Sentiment Analysis 
+## Sentiment Analysis
+
 Determine the overall sentiment (positive or negative) for each chapter:
 
-* Load in the affin lexicon 
-* Bind the affin words to EOE words
-* Determine positive and negative word counts
-* Plot it by chapter 
-* Consider the log ratios and plot it 
+-   Load in the affin lexicon
+-   Bind the affin words to EOE words
+-   Determine positive and negative word counts
+-   Plot it by chapter
+-   Consider the log ratios and plot it
 
 ```{r}
 afinn_lex <- get_sentiments(lexicon = "afinn")
@@ -153,9 +154,6 @@ eoe_afinn <- eoe_words %>%
   filter(chapter == 1:16) %>% 
   inner_join(afinn_lex, by = 'word') ### why inner_join?
 ```
-
-
-
 
 ```{r fig.cap = "Figure 3: East of Eden Sentiment Analysis. Fig 3 portrays the number of words per chapter that are associated with positive or negative connotations. Chapter 3 has the most negative words and Chapter 7 has the most positive words."}
 bing_lex <- get_sentiments(lexicon = "bing")
@@ -181,7 +179,6 @@ ggplot(data = bing_counts, aes(x = sentiment, y = n, fill = sentiment)) +
   scale_fill_manual(values = c("positive" = "slateblue", "negative" = "darkred"))+
   theme_minimal()
 ```
-
 
 ```{r fig.cap = "Figure 4: Ratio of Sentiment Analysis. Fig 4 portrays the average sentiment for the whole book and compares each chapter to that average. Based on a log scale, a neutral chapter will equal 0 (ratio = 1), and a super positive chapter will show the same length as a super negative chapter but in the opposite directions. Chapter 2 was the most positive, and Chapters 3 and 9 were very negative."}
 # find log ratio score overall:
@@ -212,9 +209,6 @@ ggplot(data = bing_log_ratio_ch,
   theme(legend.position = 'none')
 ```
 
-
-## Works Cited 
+## Works Cited
 
 Steinbeck, John. *East of Eden*. Penguin Classics, 2000. Retreived from: https://hitalki.org/blog/wp-content/uploads/2023/05/East-of-Eden.pdf
-
-

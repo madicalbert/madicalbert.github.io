@@ -1,0 +1,31 @@
+---
+title: "Habitat Connectivity"
+description: "Mapping Habitat Connectivity and Potential Jaguar Movement Pathways in Costa Rica using Circuitscape"
+author:
+  - name: Madison Calbert and Olivia Hemond
+    url: https://madicalbert.github.io/
+    affiliation: ESM 270 Conservation Planning - Master of Environmental Science & Management Program @ The Bren School (UCSB)
+    affiliation-url: https://bren.ucsb.edu/masters-programs/master-environmental-science-and-management 
+date: 09-23-2024
+categories: [GIS, Conservation Planning, Habitat Connectvity, Modeling] 
+citation: 
+  url: https://madicalbert.github.io/posts/2024-09-23-connectivity/ 
+image: preview-image.png
+draft: false # setting this to `true` will prevent your post from appearing on your listing page until you're ready!
+---
+
+**Background:** The jaguar (Panthera onca) is a species of big cat found in habitats ranging from the southwestern United States to northern Argentina. They are threatened by the loss and fragmentation of their habitat, along with illegal wildlife trade, illegal trophy hunting, and conflict with humans (USFWS). In Costa Rica, jaguar habitat is protected in nature reserves, but jaguars are not confined to those areas and may move across the landscape to meet their various needs.
+
+Problem: Identifying key jaguar movement corridors and high-trafficked pinch points will help reserve managers better understand barriers to movement and interactions between the reserves. Connectivity between the reserves is crucial to ensure interbreeding across different jaguar populations. As a threatened species, jaguar connectivity between reserves will ensure species stability and longevity.
+
+**Approach:** We used Circuitscape and ArcGIS Pro to analyze jaguar movement in the Talamanca-Osa region of Costa Rica across three conservation reserves: Corcovado, Piedras Blancas, and La Amistad National Parks. These three reserves serve as core areas of jaguar habitat with low levels of human modification. Folger and Brock created a resistance layer (resolution of 390m) by combining features from many data layers including roads, elevation, and land cover and by assigning weighted resistance values to these features based on expert opinion, available data, and literature review. Jaguar least-cost corridors, least-coast pathways, and key movement pinch points between the three reserves were modeled and mapped using Circuitscape. To identify key jaguar corridors and the least cost pathway between the three reserves, we created a map of cost-weighted distances to the three core areas, with a corridor width of 20 cost-weighted km. We visualized the corridors by classifying into 20 quantiles of cost-weighted distances. The least-cost pathway between each pair of reserves was mapped to represent the “best” route for jaguars to take, accounting for both distance traveled and the resistance values of the landscape. To identify key pinch points within corridor areas, we ran Circuitscape across the corridor areas from the previous step. This output displayed areas where corridors are constricted and jaguar movement is funneled through those zones.
+
+**Results:** Figure 1 illustrates movement pinch points between Corcovado, Piedras Blancas, and La Amistad National Parks. There is a greater number of pinch points between Corcovado and Piedras Blancas than between Piedras Blancas and La Amistad. Corridors and least-cost pathways between reserves are shown in Figure 2. Between Corcovado and Piedras Blancas, the least-cost pathway makes a slight northward arc. Between Piedras Blancas and La Amistad, the least-cost pathway is a fairly straight line, with slight deviations to either side.
+
+**Conclusions:** The many movement pinch points between Corcovado and Piedras Blancas represent areas that may be critical for jaguar movement. Development or land conversion in those areas could threaten the ability of jaguars to disperse between the two parks. The pinch points that intersect with the least-cost pathway may be particularly high-trafficked areas by jaguars. If jaguars are funneled through a narrow corridor, that puts them more at risk of coming into contact with each other and potentially causing territorial conflicts (USFWS). Similarly, there may be a high risk of human-jaguar conflict along the least-cost path. Managers should prioritize the maintenance of connectivity between the two reserves, as well as consider protecting other movement corridors to reduce the severity of pinch points. Between Piedras Blancas and La Amistad, there are very few pinch points. This indicates that there is homogeneity in the habitat quality between those two areas, with no particular pathway being easier for a jaguar to take. It does not indicate whether or not that habitat is suitable for jaguars to move through, but we can assume that it is of poor quality, given the background information that jaguars are not frequently observed to move between those two parks. Thus it should be a priority to increase connectivity between those two reserves to ensure long-term jaguar population viability. In future research, it could be beneficial to use collar tracking or camera trap data to map pathways that jaguars actually use, and compare these to the simulated least-cost paths, to create a better-informed picture of jaguar movement between the reserves.
+
+![**Figure 1. Jaguar Corridor Pinch Points.** Movement pathways of jaguars across three conservation reserves: Corcovado, Piedras Blancas, and La Amistad National Parks. Increased pinch points between Corcovado and Piedras Blancas in comparison to Piedras Blancas and La Amistad.](figures/figure1.jpg)
+
+![**Figure 2. Jaguar movement corridors and least-cost pathways.** Movement corridors between Corcovado, Piedras Blancas, and La Amistad National Parks color-coded by cost-weighted distance (lighter = lower cost, darker = higher cost). The least-cost pathway between each pair of reserves is overlaid as a black line.](figures/figure2.jpg)
+
+Citations: USFWS. Panthera onca \| U.S. Fish & Wildlife Service. (n.d.). FWS.gov. https://www.fws.gov/species/jaguar-panthera-onca

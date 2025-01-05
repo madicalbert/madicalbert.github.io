@@ -27,7 +27,7 @@ Hello, I am a conservation ecologist who loves plants and wildlife.
 
 ## Professional Interests
 
-Wildlife Conservation \| Restoration Ecology \| Landscape Ecology \| Endangered Species Management & Recovery \| Habitat Connectivity
+Wildlife Conservation \| Restoration Ecology \| Landscape Ecology \| Habitat Connectivity \| Endangered Species Management & Recovery
 
 ## Skillsets
 
@@ -38,5 +38,7 @@ Wildlife & Plant ID \| Data Science \| Geospatial Analysis \| Excel \| Project M
 [Evaluating Ecological Conservation Gaps Across a Proposed Sentinel Landscape (Connectivity Analysis)](https://bren.ucsb.edu/projects/evaluating-ecological-conservation-gaps-across-proposed-sentinel-landscape)
 
 [Valuation of the Restored North Campus Open Space Wetlands](https://drive.google.com/file/d/1_j_kb0NhQyN6CxDLwFXG2aI8nk6npr8m/view?usp=sharing)
+
+[Evaluating Rapid Response Devices For Island Biosecurity](https://drive.google.com/file/d/1ChEQflNmlyfhpTjxFfNV3c-mZtvS3gP_/view?usp=sharing)
 
 [Groundwater in Southern California](https://natcatmayer.shinyapps.io/groundwatershinyapp/)

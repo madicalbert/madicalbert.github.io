@@ -215,7 +215,7 @@ blr2_fit <- blr_mdl %>%
 
 Model 1 is a better predictor of species because it has a lower AIC (5195), a higher accuracy (92%) and a higher ROC (97%) compared to Model 2.
 
-For Model 1, all variables are statistically significant at predicting species. For every unit increase in plant height, the log odds outcome will decrease by 0.029. Number of leaves has the greatest effect on the log odds of plant type. Results from the BLR are showcased in Table 1. 
+For Model 1, all variables are statistically significant at predicting species. For every unit increase in plant height, the log odds outcome will decrease by 0.029. Number of leaves has the greatest effect on the log odds of plant type. Results from the BLR are showcased in Table 1.
 
 ```{r, results = 'hide'}
 blr1 <- glm(formula = f1, data = p_clean, family = binomial)
@@ -231,7 +231,6 @@ p_predict <- p_clean %>%
   mutate(predict(blr1_fit, new_data = .))
 ```
 
-
 ```{r, fig.cap= "Table 1: Results from Model 1 binary logistic regression looking at plant height, length, width, and number of leaves. Includes coefficients, estiamte, standard errors for the coefficients, statistics, and p-value."}
 # summary(blr1)
 tidy <- broom::tidy(blr1)
@@ -244,6 +243,7 @@ tidy_table <- kable(tidy, align = "c") %>%
 
 tidy_table
 ```
+
 ### Predictions
 
 For each species of palmetto, Table 2 shows how many plants in the original dataset would be correctly classified and how many were incorrectly classified by Model 1, as well as an the “% correctly classified”.
@@ -264,7 +264,6 @@ table(sps_test1_predict %>%
 accuracy(sps_test1_predict, truth = species, estimate = .pred_class)
 ```
 
-
 ```{r, fig.cap= "Table 2: Shows how successfully Model 1 can “classify” a plant as the correct species. Shows how many plants in the original dataset would be correctly classified and how many were incorrectly classified by the model, also shows the percent correctly classified."}
 species <- c("S. repens", "S. etonia")
 predict_correct <- c(5548, 5701)
@@ -284,6 +283,6 @@ species_correct_kable
 
 ## Conclusions
 
-Model 1 was a better predictor of species between the two models. Model 1 determined the species based on height, canopy length, canopy width, and number of leaves, which shows that canopy length does matter since Model 2 excluded this variable. 
+Model 1 was a better predictor of species between the two models. Model 1 determined the species based on height, canopy length, canopy width, and number of leaves, which shows that canopy length does matter since Model 2 excluded this variable.
 
-Model 1 accurately predicted 91% of the observations for Saw Palmetto (*Serenoa repens*) and 93% for Scrub Palmetto (*Sabal etonia*). 
+Model 1 accurately predicted 91% of the observations for Saw Palmetto (*Serenoa repens*) and 93% for Scrub Palmetto (*Sabal etonia*).
