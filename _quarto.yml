@@ -9,9 +9,9 @@ website:
       - href: index.qmd
         text: Home
       - href: about.qmd
-        text: About
+        text: About Me
       - href: posts.qmd
-        text: Projects
+        text: Portfolio
       - href: wildlife.qmd
         text: Wildlife
       - href: media/Calbert_Madison_Resume.pdf # providing a relative file path to a pdf will open up a browser-based pdf viewer when clicked
