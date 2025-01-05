@@ -13,7 +13,7 @@ website:
       - href: posts.qmd
         text: Portfolio
       - href: wildlife.qmd
-        text: Wildlife
+        text: Wildlife Photography
       - href: media/Calbert_Madison_Resume.pdf # providing a relative file path to a pdf will open up a browser-based pdf viewer when clicked
         text: Resume
         target: _blank # opens link (or page) in a new browser tab
@@ -22,7 +22,7 @@ website:
         target: _blank
   page-footer:
     background: dark
-    left: Copyright 2024, Madison Calbert
+    left: Copyright 2025, Madison Calbert
     right: This website is built with {{< fa heart title="a heart" >}}, [{{< fa brands github title="GitHub octocat logo" >}}](https://github.com/madicalbert){target=_blank}, [{{< fa brands r-project title="R Project" >}}](https://www.r-project.org/about.html){target=_blank} and [Quarto](https://quarto.org/){target=_blank}
 
 format:
