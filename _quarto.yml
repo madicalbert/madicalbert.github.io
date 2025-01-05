@@ -1,0 +1,36 @@
+project:
+  type: website
+  output-dir: docs
+
+website:
+  title: "Madison Calbert"
+  navbar:
+    right: # accepts right/left/center; you can also place items individually on the left, right, and center
+      - href: index.qmd
+        text: Home
+      - href: about.qmd
+        text: About Me
+      - href: posts.qmd
+        text: Portfolio
+      - href: wildlife.qmd
+        text: Wildlife Photography
+      - href: media/Calbert_Madison_Resume.pdf # providing a relative file path to a pdf will open up a browser-based pdf viewer when clicked
+        text: Resume
+        target: _blank # opens link (or page) in a new browser tab
+      - icon: github # add icons as navbar buttons
+        href: https://github.com/madicalbert
+        target: _blank
+  page-footer:
+    background: dark
+    left: Copyright 2025, Madison Calbert
+    right: This website is built with {{< fa heart title="a heart" >}}, [{{< fa brands github title="GitHub octocat logo" >}}](https://github.com/madicalbert){target=_blank}, [{{< fa brands r-project title="R Project" >}}](https://www.r-project.org/about.html){target=_blank} and [Quarto](https://quarto.org/){target=_blank}
+
+format:
+  html:
+    theme: solar
+    css: styles.css
+    toc: true
+    page-layout: full
+
+editor: visual
+
