@@ -1,0 +1,87 @@
+---
+title: "Biodiversity Hotspots"
+description: "Hotspots and Coldspots for Sea Lions (*Zalophus californianus and Eumetopias jubatus*)"
+author:
+  - name: Madison Calbert and Natalie Smith
+    url: https://madicalbert.github.io/
+    affiliation: ESM 270 Conservation Planning - Master of Environmental Science & Management Program @ The Bren School (UCSB)
+    affiliation-url: https://bren.ucsb.edu/masters-programs/master-environmental-science-and-management 
+date: 09-20-2024
+categories: [GIS, Conservation Planning, Habitat Suitability, Modeling] 
+citation: 
+  url: https://madicalbert.github.io/posts/2024-09-20-hotspots/ 
+image: preview-image.jpeg
+draft: false # setting this to `true` will prevent your post from appearing on your listing page until you're ready!
+---
+
+![California Sea Lions (*Zalophus californianus*), Photo Credit: naturepl.com / Franco Banf](images/sea_lions.jpg){fig-align="left"}
+
+**Background:** Effective allocation of conservation resources for the California sea lion (Zalophus californianus) and Steller sea lion (Eumetopias jubatus) hinges on identifying areas of high conservation priority. Distinguishing between “hotspots,” which represent regions with high species richness under high threat levels, and coldspots, areas of similarly high species richness with lower associated threats, is key to this process. Hotspots may demand more urgent attention, while coldspots may represent zones of population stability, potentially serving as long-term refugia. In this study, we considered a range of threats to sea lion populations, as detailed in Appendix A.
+
+**Problem:** Strategic conservation planning often involves reconciling different stakeholder priorities. A key debate centers on whether to allocate limited resources toward conserving areas of high biodiversity that are under immediate threat (hotspots) or protecting species-rich regions that face fewer immediate risks (coldspots). With constraints on both funding and capacity, it is crucial to adopt a data-driven approach that balances these competing objectives.
+
+**Approach:** We began by importing the pre-prepared species distribution layers for California sea lions and Steller sea lions into ArcGIS Pro. After verifying consistent spatial projection (WGS84), we created a comprehensive species richness layer by summing the individual species distribution layers. Probabilities were converted to binary presence/absence data, where presence (1) represented the upper 50th percentile and absence (0) the lower 50th percentile. "No data" cells were recoded as 0 to simplify subsequent raster calculations.
+
+The combined species richness layer was then simplified to show areas of presence for either or both species. Specifically, values of 0 were reclassified as 'NODATA,' and values of 1 and 2 (indicating the presence of one or both species) were reclassified as 1.
+
+Next, a threat layer was introduced, representing the cumulative impact of various threats on the marine environment. This layer was categorized into five equal-area quantiles, from which we generated a high-threat layer by reclassifying all but the highest quantile to 'NODATA.' We used the same process to create a low-threat layer, isolating the lowest quantile. We ensured consistency by matching cell size and extent between the threat and species richness layers. Finally, we intersected the high and low-threat rasters with the sea lion species richness layer to show areas of high-threat (hotspots) and low-threat (coldspots) relative to sea lion distribution.
+
+Results: As shown in Figure 1, sea lion hotspots are concentrated in the northern portion of their range, particularly along the Pacific Northwest coast. In contrast, cold spots are predominantly found in the southern portion of the species range, off the coast of Southern California and Baja.
+
+**Conclusions:** Our results present a clear distinction in the distribution of threats relative to areas with high sea lion species richness. The northern population is under greater threat and, therefore, may require more urgent conservation action. To mitigate these risks, conservation efforts should be focused in the northern range where more biodiverse populations are facing greater threats. However, it is also important to consider conservation actions in coldspots to prevent future threats, and ensure population resilience. Additionally, safeguarding coldspot zones may create refuge areas for sea lions, helping to maintain overall population stability.
+
+![**Figure 1. Sealion (Zalophus californianus and Eumetopias jubatus)** Hotspots and Coldspots. Red represents hotspots or areas with high sealion biodiversity and high threat. Blue represents the coldspots or areas with high sealion biodiversity and low threat.](figures/figure1.jpg){fig-align="left" width="543"}
+
+![Figure 2. Hotspots and Coldspots for All Species and All Threats. Pink represents the hotspots or areas with high biodiversity and high threat. Blue represents the coldspots or areas with high biodiversity and low threat.](figures/figure2.jpg){fig-align="left" width="544"}
+
+Appendix A
+
+All threats include:
+
+-   Ocean Acidification
+
+-   Beach Access
+
+-   Coastal Engineering
+
+-   Ocean Deposition
+
+-   Inorganic Pollution
+
+-   Invasive Species
+
+-   Light Pollution
+
+-   Nutrient runnoff
+
+-   Ocean Engineering
+
+-   Organic Pollution
+
+-   Fish Farming
+
+-   Ocean Based Pollution
+
+-   Power Plants
+
+-   Sediment runnoff increase
+
+-   Sediment runnoff decrease
+
+-   Shipping
+
+-   Sea Surface Temperature Change
+
+-   Coastal Waste
+
+-   Ultraviolet Radiation Change
+
+-   Fishing: Demersal Destructive
+
+-   Fishing: Demersal Non-Destructive High-Bycatch
+
+-   Fishing: Demersal Non-Destructive Low-Bycatch
+
+-   Fishing: Pelagic High-Bycatch
+
+-   Fishing: Pelagic Low-Bycatch Fishing: Recreational

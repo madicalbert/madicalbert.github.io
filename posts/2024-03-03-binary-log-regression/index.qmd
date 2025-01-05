@@ -1,0 +1,288 @@
+---
+title: "Binary Logistic Regression"
+description: "Using binary logistic regression to differentiate plant species."
+author:
+  - name: Madison Calbert
+    url: https://madicalbert.github.io/
+    affiliation: ESM 244 Advanced Data Analysis - Master of Environmental Science & Management Program @ The Bren School (UCSB)
+    affiliation-url: https://bren.ucsb.edu/masters-programs/master-environmental-science-and-management 
+date: 03-03-2024
+categories: [R, Modeling, Regression, Cross-Validation, Data Visualization] # self-defined categories
+citation: 
+  url: https://madicalbert.github.io/posts/2024-03-03-binary-log-regression/ 
+image: preview-image.png
+draft: false # setting this to `true` will prevent your post from appearing on your listing page until you're ready!
+format: 
+  html: 
+    code-fold: true
+    toc: true 
+    embed-resources: true
+editor: visual
+execute: 
+  echo: true
+  message: false
+  warning: false
+---
+
+![Serenoa repens is a flowering, perennial, wetland shrub that is commonly found in wet to dry flatwoods and hammocks throughout the state of Florida.](images/s_repens.jpg)
+
+## Overview
+
+Saw Palmetto (*Serenoa repens*) and Scrub Palmetto (*Sabal etonia*) are both species of palms native to Florida. In this report, I use binary logistic regression to test the feasibility of using different plant characteristics to differentiate between the two species. The different plant variables include plant height (height), canopy length (length), canopy width (width), and number of green leaves (green_lvs).
+
+## Data Source
+
+The data for this analysis was sourced from Environmental Data Initiative Data Portal. This data package is comprised of three datasets all pertaining to two dominant palmetto species, *Serenoa repens* and *Sabal etonia*, at Archbold Biological Station in south-central Florida.
+
+Data source: Abrahamson, W.G. 2019. Survival, growth and biomass estimates of two dominant palmetto species of south-central Florida from 1981 - 2017, ongoing at 5-year intervals ver 1. Environmental Data Initiative. https://doi.org/10.6073/pasta/f2f96ec76fbbd4b9db431c79a770c4d5
+
+## Pseudocode
+
+-   Load libraries, load data, clean/tidy the data, select desired variables (species, height, length, width, green_lvs)
+
+-   Data visualization to hypothesize which variables differ between species.
+
+-   Build the two models: Model 1 determines species based on height, length, width, and number of leaves; & Model 2 determines species based on height, width, and number of leaves (excluding length).
+
+-   Run the binary logistic regression on both models, using generalized linear model.
+
+-   Split the data into testing group and training group.
+
+-   Initialize workflow
+
+-   Apply workflow to folded training data set for both models.
+
+-   Train the whole data set with the best model to determine which variables best predict species.
+
+```{r setup}
+### Load libraries
+
+library(tidyverse)
+library(here)
+library(tidymodels)
+
+library(cowplot)
+library(kableExtra)
+library(broom)
+
+
+### Load in the data
+
+p_df <- read_csv(here('posts', '2024-03-03-binary-log-regression','data', 'palmetto.csv'))
+
+
+### Tidy the data and make species a factor
+
+p_clean <- p_df %>% 
+  select(species, height, length, width, green_lvs) %>% 
+  mutate(species = as_factor(species)) %>% 
+  drop_na()
+```
+
+## Methods
+
+### Data Visualization
+
+```{r data viz, fig.cap = "Figure 1: Saw Palmetto (*Serenoa repens*) and Scrub Palmetto (*Sabal etonia*) differ by the number of leaves and are fairly similar based on height, canopy width, and canopy length. Number of leaves appears to be the best predictor variable to differentiate these two palmetto species."}
+
+lvs_bp <- ggplot(p_clean, aes(x = as_factor(species), y = green_lvs)) + 
+  geom_boxplot(fill = "lightgreen") + 
+  labs(x = " ", 
+       y = "Number of Leaves") +
+  theme_minimal()+
+  scale_x_discrete(labels = c("S. repens", "S. etonia"))
+
+height_bp <- ggplot(p_clean, aes(x = as_factor(species), y = height)) + 
+  geom_boxplot(fill = "lightgreen")+ 
+  labs(x = " ", 
+       y = "Height (cm)") +
+  theme_minimal()+
+  scale_x_discrete(labels = c("S. repens", "S. etonia"))
+
+length_bp <- ggplot(p_clean, aes(x = as_factor(species), y = length)) + 
+  geom_boxplot(fill = "lightgreen")+ 
+  labs(x = " ", 
+       y = "Canopy Length (cm)") +
+  theme_minimal()+
+  scale_x_discrete(labels = c("S. repens", "S. etonia"))
+
+width_bp <- ggplot(p_clean, aes(x = as_factor(species), y = width)) + 
+  geom_boxplot(fill = "lightgreen")+ 
+  labs(x = " ", 
+       y = "Canopy Width (cm)") +
+  theme_minimal()+
+  scale_x_discrete(labels = c("S. repens", "S. etonia"))
+
+### put it all together now 
+
+combined_plot <- plot_grid(
+  lvs_bp, height_bp,
+  length_bp, width_bp,
+  ncol = 2  
+)
+
+print(combined_plot)
+```
+
+### Define the models
+
+-   Model 1: Species as a function of height, canopy length, canopy width, and number of leaves
+
+-   Model 2: Species as a function of height, canopy width, and number of leaves
+
+```{r}
+### sps. 1 = s. repens
+### sps. 2 = s. etonia
+
+f1 <- species ~ height + length + width + green_lvs 
+f2 <- species ~ height + width + green_lvs
+```
+
+### Crossfold Validation
+
+Model 1 has an accuracy of 92%, this is the percent classified correctly in the testing group. In addition, the ROC is 97% which is good and explains that we do not have a lot of false positives. We are close to a perfect classifier.
+
+```{r, results = 'hide'}
+
+
+p_clean %>%
+  group_by(species) %>%
+  summarize(n = n()) %>%
+  ungroup() %>%
+  mutate(prop = n / sum(n))
+
+set.seed(10101)
+p_folds <- vfold_cv(p_clean, v = 10, repeats = 10)
+
+
+blr_mdl <- logistic_reg() %>%
+  set_engine('glm') ### this is the default - we could try engines from other packages or functions
+
+
+blr_wf <- workflow() %>%   ### initialize workflow
+  add_model(blr_mdl) %>%
+  add_formula(formula = f1)
+
+
+blr_fit_folds <- blr_wf %>%
+  fit_resamples(p_folds)
+
+
+### Average the predictive performance of the ten models:
+# collect_metrics(blr_fit_folds)
+```
+
+Model 2 has an accuracy of 89%, so this model is not as accurate of a predictor compares to Model 1. In addition the ROC is 96% which is still a good value, but not as strong as Model 1.
+
+```{r, results = 'hide'}
+
+blr2_wf <- workflow() %>%   ### initialize workflow
+  add_model(blr_mdl) %>%
+  add_formula(formula = f2)
+
+
+blr2_fit_folds <- blr2_wf %>%
+  fit_resamples(p_folds)
+
+
+### Average the predictive performance of the ten models:
+# collect_metrics(blr2_fit_folds)
+```
+
+### Check AIC
+
+Model 1 has a lower AIC compared to Model 2, so Model 1 is a better predictor of species.
+
+```{r set up a binary logistic regression model with our data, results = 'hide'}
+
+
+blr1_fit <- blr_mdl %>%
+  fit(formula = f1, data = p_clean)
+
+blr2_fit <- blr_mdl %>%
+  fit(formula = f2, data = p_clean)
+
+# blr1_fit
+### AIC of 5195
+
+# blr2_fit
+### AIC of 5987
+```
+
+## Results
+
+### Binary Logistic Regression
+
+Model 1 is a better predictor of species because it has a lower AIC (5195), a higher accuracy (92%) and a higher ROC (97%) compared to Model 2.
+
+For Model 1, all variables are statistically significant at predicting species. For every unit increase in plant height, the log odds outcome will decrease by 0.029. Number of leaves has the greatest effect on the log odds of plant type. Results from the BLR are showcased in Table 1.
+
+```{r, results = 'hide'}
+blr1 <- glm(formula = f1, data = p_clean, family = binomial)
+summary(blr1)
+# all p-values are small, so all coefficients are significant 
+# for every unit increase in height the log odds outcome decreases by 0.0029
+
+blr1_fit <- blr_mdl %>%
+  fit(formula = f1, data = p_clean)
+
+
+p_predict <- p_clean %>%
+  mutate(predict(blr1_fit, new_data = .))
+```
+
+```{r, fig.cap= "Table 1: Results from Model 1 binary logistic regression looking at plant height, length, width, and number of leaves. Includes coefficients, estiamte, standard errors for the coefficients, statistics, and p-value."}
+# summary(blr1)
+tidy <- broom::tidy(blr1)
+
+new_column_names <- c("Coefficient", "Estimate", "Standard Error", "Statistic", "P-Value")
+colnames(tidy) <- new_column_names
+
+tidy_table <- kable(tidy, align = "c") %>%
+  kable_styling(full_width = FALSE)
+
+tidy_table
+```
+
+### Predictions
+
+For each species of palmetto, Table 2 shows how many plants in the original dataset would be correctly classified and how many were incorrectly classified by Model 1, as well as an the “% correctly classified”.
+
+```{r, results = 'hide'}
+### MODEL 1
+sps_test1_predict <- p_clean %>%
+  ### straight up prediction, based on 50% prob threshold (to .pred_class):
+  mutate(predict(blr1_fit, new_data = p_clean)) %>%
+  ### but can also get the raw probabilities of class A vs B (.pred_A, .pred_B):
+  mutate(predict(blr1_fit, new_data = ., type = 'prob'))
+    ### note use of `.` as shortcut for "the current dataframe"
+
+
+table(sps_test1_predict %>%
+        select(species, .pred_class))
+
+accuracy(sps_test1_predict, truth = species, estimate = .pred_class)
+```
+
+```{r, fig.cap= "Table 2: Shows how successfully Model 1 can “classify” a plant as the correct species. Shows how many plants in the original dataset would be correctly classified and how many were incorrectly classified by the model, also shows the percent correctly classified."}
+species <- c("S. repens", "S. etonia")
+predict_correct <- c(5548, 5701)
+predict_incorrect <- c(564, 454)
+percent_correct <- c(91, 93)
+
+species_correct <- data.frame(species, predict_correct, predict_incorrect, percent_correct)
+
+column_names <- c("Species", "# Correctly Predicted", "# Incorrectly Predicted", "Percent Correct")
+colnames(species_correct) <- column_names
+
+species_correct_kable <- kable(species_correct, align = "c") %>% 
+  kable_styling()
+
+species_correct_kable
+```
+
+## Conclusions
+
+Model 1 was a better predictor of species between the two models. Model 1 determined the species based on height, canopy length, canopy width, and number of leaves, which shows that canopy length does matter since Model 2 excluded this variable.
+
+Model 1 accurately predicted 91% of the observations for Saw Palmetto (*Serenoa repens*) and 93% for Scrub Palmetto (*Sabal etonia*).

@@ -1,0 +1,139 @@
+---
+title: "Data Wrangling and Visualization"
+description: "Exploring mountain yellow-legged frog (*Rana muscosa*) abundance in Sierra Lakes from 1995 - 2002."
+author:
+  - name: Madison Calbert
+    url: https://madicalbert.github.io/
+    affiliation: ESM 244 Advanced Data Analysis - Master of Environmental Science & Management Program @ The Bren School (UCSB)
+    affiliation-url: https://bren.ucsb.edu/masters-programs/master-environmental-science-and-management 
+date: 02-02-2024
+categories: [R, Data Visualization] # self-defined categories
+citation: 
+  url: https://madicalbert.github.io/posts/2024-02-02-data-viz/ 
+image: preview-image.png
+draft: false # setting this to `true` will prevent your post from appearing on your listing page until you're ready!
+format: 
+  html: 
+    code-fold: true
+    toc: true 
+    embed-resources: true
+editor: visual
+execute: 
+  echo: true
+  message: false
+  warning: false
+---
+
+![Adult Mountain yellow-legged frog in San Gabriel Mountains, Los Angeles County, CA. Photo Credit: Gary Nafis.](images/rmuscosa.jpeg)
+
+## Overview
+
+This report explores Mountain yellow-legged frog (*Rana muscosa*, RAMU) amphibian abundance data recorded by the Sierra Lakes Inventory Project. From the Environmental Data Initiative repository: “The Sierra Lakes Inventory Project (SLIP) was a research endeavor that ran from 1995-2002 and has supported research and management of Sierra Nevada aquatic ecosystems and their terrestrial interfaces. We described the physical characteristics of and surveyed aquatic communities for \>8,000 lentic water bodies in the southern Sierra Nevada, including lakes, ponds, marshes, and meadows.”
+
+## RAMU Abundance by Year and Life Stage (across all lakes)
+
+### Steps
+
+-   Libraries
+
+```{r}
+library(tidyverse)
+library(here)
+library(patchwork)
+library(lubridate)
+library(readxl)
+library(janitor)
+```
+
+-   Load in the data.
+
+-   Filter for *Rana muscosa* and life stage. Lubridate to edit date and make year a factor.
+
+-   Group by life stage and year and summarize to find *Rana muscosa* abundance.
+
+```{r}
+frog_ds <- read_excel(here('posts', '2024-02-02-data-viz','data', 'sierra_amphibians.xlsx')) %>% 
+  clean_names()
+
+
+ramu_ds <- frog_ds %>% 
+  select('survey_date', 'amphibian_species', 'amphibian_life_stage', 'amphibian_number') %>% 
+  filter(amphibian_species == 'RAMU', amphibian_life_stage != 'EggMass') %>% 
+  mutate(year = lubridate::year(survey_date))
+
+
+ramu_ds$year <- factor(ramu_ds$year)
+
+
+ramu_count <- ramu_ds %>% 
+  group_by(amphibian_life_stage, year) %>% 
+  summarise(amphibian_number = sum(amphibian_number, na.rm = TRUE)) %>% 
+  ungroup()
+```
+
+-   Plot *Rana muscosa* abundance by life stage for each year.
+
+```{r}
+year_plot <- ggplot(data = ramu_count, aes(x = year, y = amphibian_number, fill = amphibian_life_stage)) + 
+  geom_col() +
+  scale_fill_manual(values = c("darkgreen", "lightgreen", "#FED976"))+
+  scale_y_continuous(breaks = scales::pretty_breaks(n = 10))+
+  labs(x = '',
+       y = 'Number of Amphibians',
+       fill = "Life Stage") + 
+  theme_minimal()+
+  theme(axis.text.x = element_text(angle = 45, hjust = 1)) 
+  #scale_y_log10() -- decided not to put it on the log scale
+```
+
+## RAMU Abundance by Lake and Life stage (across all years)
+
+### Steps
+
+-   Filter for *Rana muscosa* and life stage (adult and sub-adult only). Lubridate to edit date.
+
+-   Group by life stage (adult and sub-adult) and lake and summarize to find *Rana muscosa* abundance. Find the top 5 lakes with the greatest RAMU abundance.
+
+```{r}
+adult_ds <-frog_ds %>% 
+  select('survey_date', 'amphibian_species', 'amphibian_life_stage', 'amphibian_number', 'lake_id') %>% 
+  filter(amphibian_species == 'RAMU', 
+         amphibian_life_stage != 'EggMass', 
+         amphibian_life_stage != 'Tadpole') %>% 
+  mutate(year = lubridate::year(survey_date))
+
+
+adult_counts <- adult_ds %>% 
+  group_by(lake_id) %>% 
+  summarise(amphibian_number = sum(amphibian_number, na.rm = TRUE)) %>% 
+  ungroup()
+
+
+top_frogs <- adult_counts %>% top_n(5, wt = amphibian_number) %>% 
+  mutate(lake_id = paste("Lake", lake_id, sep = " ")) %>% 
+  mutate(lake_id = fct_reorder(lake_id, amphibian_number))
+```
+
+-   Plot the RAMU abundance in the top 5 lakes.
+
+```{r}
+lake_plot <- ggplot(data = top_frogs, aes(x = lake_id, y = amphibian_number)) + 
+  geom_col(fill = "#3CB371") +
+  labs(x = '',
+       y = 'Number of Amphibians',
+       title = expression(" "),
+       subtitle = 'Adult + Subadult combined') +
+  theme_minimal()+
+  theme(axis.text.x = element_text(angle = 45, hjust = 1))
+```
+
+-   Put the Figure all together and make it pretty.
+
+```{r fig.cap = "Figure 1: Mountain yellow-legged frog (RAMU, *Rana muscosa*) Abundance. Plot A portrays RAMU abundance by year and life stages (adult, subadult, and tadpole) across all lakes. RAMU abundance increases over the years and the tadpoles account for the greatest number of amphibians across all years. In 2002, there is the greatest number of tadpoles. Plot B portrays RAMU abundance by lake and life stage (adult and subadult combined) across all years, including the top 5 lakes with the greatest species abundance."}
+figure_1 <- year_plot + lake_plot
+figure_1 + plot_annotation(tag_levels = "A", title = "Mountain yellow-legged frog Abundance")
+```
+
+## Works Cited
+
+Knapp, R.A., C. Pavelka, E.E. Hegeman, and T.C. Smith. 2020. The Sierra Lakes Inventory Project: Non-Native fish and community composition of lakes and ponds in the Sierra Nevada, California ver 2. Environmental Data Initiative. https://doi.org/10.6073/pasta/d835832d7fd00d9e4466e44eea87fab3

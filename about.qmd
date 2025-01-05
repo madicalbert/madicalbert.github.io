@@ -1,0 +1,20 @@
+---
+title: "About Me"
+format: html
+---
+
+I am currently a master’s student at UC Santa Barbara’s Bren School of Environmental Science & Management, specializing in conservation planning. Before graduate school, I worked as a consulting wildlife biologist and botanist, conducting special-status species surveys, botanical assessments, and biological construction monitoring. My experience spans a variety of taxa, including the federally and state-listed California tiger salamander (*Ambystoma californiense*) and California red-legged frog (*Rana draytonii*). I have also contributed to habitat restoration projects focused on invasive species removal and native plant installation. I earned a B.S. in Environmental Studies with an emphasis in ecology from UCSB. My passion for the natural world was shaped by my upbringing in Valley Center, a small, rural community in northern San Diego County. In my free time, I enjoy birdwatching, botanizing, hiking, and traveling with friends and family.
+
+::: {layout-nrow="2"}
+![Construction Monitoring at Lake Jennings in Lakeside, CA](media/IMG_1171.jpeg){width="4035"}
+
+![Hiking at Gaviota Wind Caves](media/IMG_0970.jpeg)
+
+![First day of grad school!](media/IMG_9922.jpeg){width="1536"}
+
+![Releasing California tiger salamander](media/IMG_8686.jpeg)
+:::
+
+## Professional Affiliations
+
+[California Native Plant Society](https://www.cnps.org/) \| [The Wildlife Society](https://wildlife.org/cali-centralcoast/)
