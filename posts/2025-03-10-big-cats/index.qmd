@@ -25,6 +25,8 @@ format:
 editor: visual
 ---
 
+![Cheetah (*Acinonyx jubatus*) sticking out tongue, Photo Credit: Kaleel Zibe Photography](preview-image.png){fig-align="left" width="889"}
+
 ## Introduction
 
 This blog post provides a step-by-step guide to creating an infographic while incorporating ten key design elements: graphic forms, text, themes, color schemes, typography, overall design, data contextualization, primary messaging, and accessibility. Using publicly available data from the [Convention on International Trade in Endangered Species of Wild Fauna and Flora (CITES)](https://cites.org/eng), I explored the most frequently traded threatened and endangered big cats within the *Felidae* family. While individual figures and plots are valuable on their own, weaving together multiple visualizations and text into a cohesive infographic can be a compelling way to tell a story. In this post, I will guide you through the process of crafting a clear, engaging, and visually appealing narrative about the international trade of big cats using a bubble map, line plot, and bar chart.
