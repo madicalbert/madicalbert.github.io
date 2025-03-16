@@ -29,17 +29,17 @@ editor: visual
 
 ## Introduction
 
-This blog post provides a step-by-step guide to creating an infographic while incorporating ten key design elements: graphic forms, text, themes, color schemes, typography, overall design, data contextualization, primary messaging, and accessibility. Using publicly available data from the [Convention on International Trade in Endangered Species of Wild Fauna and Flora (CITES)](https://cites.org/eng), I explored the most frequently traded threatened and endangered big cats within the *Felidae* family. While individual figures and plots are valuable on their own, weaving together multiple visualizations and text into a cohesive infographic can be a compelling way to tell a story. In this post, I will guide you through the process of crafting a clear, engaging, and visually appealing narrative about the international trade of big cats using a bubble map, line plot, and bar chart.
+As someone who has always been captivated by cheetahs, the story of big cats has always been close to my heart. Cheetahs, along with many other big cats in the *Felidae* family, face increasing threats from the international wildlife trade. This blog post shares the process of creating an infographic that highlights the trade patterns of these magnificent creatures, focusing on data from the [Convention on International Trade in Endangered Species of Wild Fauna and Flora (CITES)](https://cites.org/eng). CITES Appendix I species, which includes many big cats, are at the highest risk of extinction, and international trade is strictly regulated. However, despite these protections, these species are still trafficked for their skins, bones, hunting trophies, and even as live pets.
 
-## Background
+What inspired me to explore this dataset is my deep connection to cheetahs and the broader struggle to protect endangered species. Through a bubble map, line plot, and bar chart, this infographic seeks to tell the story of how the global exotic animal trade continues to affect these endangered big cats. By visualizing the scale and trends of this trade, I hope to raise awareness about the persistence of this issue and the role of international agreements like CITES in regulating wildlife trade to ensure these incredible creatures have a future in the wild. I have had the incredible opportunity to work with cheetahs in the past, and I want to share my passion for these animals and the importance of protecting them.
 
-CITES Appendix I species are at the highest risk of extinction and are strictly protected from international trade, with exceptions only in rare cases such as non-commercial purposes like scientific research. Despite these protections, the exotic animal trade remains a major industry, with species like leopards, tigers, cheetahs, and jaguars continuing to be trafficked for their skins, bones, trophies, and even as live pets. This infographic was created to visualize the scale and patterns of the international trade in big cats, highlighting key trends over time and the persistence of the global exotic animal trade. By shedding light on these trade dynamics, the goal is to raise awareness and emphasize the role of international agreements like CITES in regulating wildlife trade.
+![Getting up close and personal with Victor the cheetah during my time volunteering at a small zoo in Bonsall, CA in 2020.](images/cheetah_madi.jpeg){fig-align="left"}
 
 ## About the Data
 
-The data set I used is publicly available on the [CITES Database](https://trade.cites.org/), which tracks international trade in wildlife and wildlife products regulated under the Convention on International Trade in Endangered Species of Wild Fauna and Flora (CITES). CITES collects data from member countries, which are required to report trade transactions involving species listed under the convention. These reports include information on the type of trade (e.g., imports, exports, or re-exports), the species involved, the quantity and purpose of trade, and the source of the specimens (e.g., wild-caught or captive-bred). This standardized data helps monitor global wildlife trade and assess its impact on species conservation.
+The data I used is publicly available through the [CITES Database](https://trade.cites.org/), which tracks international trade in wildlife and wildlife products under CITES. CITES collects data from member countries, who are required to report trade transactions involving species listed under the convention. These reports include crucial details such as the type of trade (e.g., imports, exports, re-exports), the species involved, trade quantity, the purpose of the transaction, and the source of the specimens (e.g., wild-caught or captive-bred). This standardized approach allows for monitoring of global wildlife trade and assessing its impact on species conservation.
 
-The dataset contains various variables related to trade records including: the year range (from 1975 onwards), the exporter and importer, the source of species/items traded (e.g. wild sourced or ranched), the purpose of the transaction (e.g. commercial or scientific), the trade term (e.g. live individuals, skins, etc.), and the taxon (i.e. genus, species, or subspecies) of interest. For this analysis, I focused on the taxon, year, exporter/importer, and the trade term; as they provided the most relevant insights into the trade of threatened and endangered big cats. This blog post contains a number of different subsets of the CITES database, the specific data sets that I use are called `exports.csv` and `exports_imports.csv`, both of which are filtered data sets of all traded Appendix I big cat species from 1975 to present with the recorded trade term of live individual, skin, bodies, or trophies. The first is gross exports and the second is exports and imports combined.
+The dataset I worked with includes key variables such as the year range (from 1975 onwards), the exporter and importer, the source of the species/items (e.g., wild sourced or ranched), the purpose of the transaction (e.g., commercial or scientific), and the trade term (e.g., live individuals, skins, trophies). For my analysis, I focused on the taxon, year, exporter/importer, and trade term, as these provided the most relevant insights into the trade of endangered big cats. Specifically, I used two filtered datasets: `exports.csv` and `exports_imports.csv`. Both datasets focus on the trade of Appendix I big cat species from 1975 to the present, with recorded trade terms such as live individuals, skins, bodies, or trophies. The first dataset covers gross exports, while the second combines both exports and imports.
 
 ## Questions
 
@@ -51,7 +51,9 @@ For this project I am interested in how the international trade of the top threa
 
 3.  Who are the top exporting and importing countries of the most commonly traded Appendix I cats?
 
-## Set Up
+## Creating the Infographic
+
+### R Set Up & Data Wrangling 
 
 Here I loaded some packages, imported some fonts and icons, and picked some colors for the theme of the infographic:
 
@@ -103,8 +105,6 @@ gh_caption <- glue::glue(
   <span style='color: white'>{github_username}</span>")
 
 ```
-
-## Data Wrangling
 
 Before I can create my infographic I need to wrangle and clean the data so that it can be used for data visualization in my 3 plots:
 
@@ -245,7 +245,7 @@ world_trade <- left_join(world_centroids, top_countries,
   filter(!is.na(total_quantity))        # Remove countries with no data
 ```
 
-## Bar Chart of Top Exports
+### Bar Chart of Top Exports
 
 The first figure that I want to create it a bar plot that highlights the top 4 most commonly traded threatened and endangered (Appendix I) big cat species. I also want to highlight the term that is being reported (i.e. live animals, hunting trophies, or skins of an animal). This will answer my first question: **What are the most commonly traded Appendix I big cats?**
 
@@ -292,7 +292,7 @@ top_cats <- top_4_taxa_terms %>%
                      labels = scales::comma) +
   theme(
     legend.position = "none",
-    plot.title = element_textbox_simple(size = 11,
+    plot.title = element_textbox_simple(size = 13,
                                         family = "montserrat",
                                         color = pal["light_text"],
                                         lineheight = 1,
@@ -315,7 +315,7 @@ barchart_filled <- top_cats +
 barchart_filled
 ```
 
-## Line Plot of Exports Across Time
+### Line Plot of Exports Across Time
 
 My next plot will be a line plot that answers my second question: **How has the international trade of the most common Appendix I cats changed from the establishment of CITES in 1975 until present time?**
 
@@ -344,9 +344,9 @@ time <- ggplot(gross_exports_agg,
   
   annotate(
     geom = "text",
-    x = 1975, 
-    y = 2000, 
-    label = "Conference of the Parties (CoP) 1\nlists all 4 big cats under Appendix I", 
+    x = 1975.5, 
+    y = 1950, 
+    label = "Conference of the Parties (CoP) 1\nlists all 4 big cats under Appendix I,\nimposing the strictest trade limits.",
     size = 3.5, 
     hjust = 0, 
     color = pal["light_text"],
@@ -355,8 +355,8 @@ time <- ggplot(gross_exports_agg,
   geom_vline(xintercept = 1997, linetype = "dashed", color = "darkgrey") +  
   annotate(
     geom = "text",
-    x = 1997, 
-    y = 2000, 
+    x = 1997.5, 
+    y = 1950, 
     label = "CoP 10 delists certain\nleopard populations to\nAppendix II.", 
     size = 3.5, 
     hjust = 0, 
@@ -366,9 +366,9 @@ time <- ggplot(gross_exports_agg,
   geom_vline(xintercept = 2010, linetype = "dashed", color = "darkgrey") +  
   annotate(
     geom = "text",
-    x = 2010, 
+    x = 2010.5, 
     y = 1900, 
-    label = "CoP 15 establishes the\nResolution and Action Plan on\nBig Cats to strengthen\ninternational cooperation.", 
+    label = "CoP 15 establishes the\nResolution and Action Plan\non Big Cats to strengthen\ninternational cooperation.", 
     size = 3.5, 
     hjust = 0, 
     color = pal["light_text"],
@@ -392,15 +392,16 @@ time <- ggplot(gross_exports_agg,
                      expand = c(0, 0)) +
   theme(
     legend.position = "none", 
-    plot.title = element_textbox_simple(size = 11,
+    plot.title = element_textbox_simple(size = 13,
                                         family = "montserrat",
                                         color = pal["light_text"],
                                         lineheight = 1, 
                                         padding = margin(0, 0, 5, 0)),
-    plot.caption = element_text(size = 10, 
+    plot.caption = element_text(size = 8, 
                                 family = "work sans",
                                 color = pal["light_text"],
-                                face = "italic"),
+                                face = "italic",
+                                margin = margin(t = 5)),
     axis.text = element_text(size = 10, 
                              family = "work sans",
                              color = pal["light_text"]),
@@ -418,7 +419,7 @@ time <- ggplot(gross_exports_agg,
 time
 ```
 
-## Bubble Map of Exporters/Importers
+### Bubble Map of Exporters/Importers
 
 My final plot will be a bubble map that highlights the top exporting and importing countries and answers my final question: **Who are the top exporting and importing countries of the most commonly traded Appendix I cats?**
 
@@ -481,7 +482,7 @@ map_filled <- map +
 map_filled
 ```
 
-## Text Annotation
+### Text Annotation
 
 Here I create my title, subtitle, and legend for the infographic:
 
@@ -506,7 +507,7 @@ title_plot <- ggplot() +
 subtitle_plot <- ggplot() +
   annotate("text", x = 0.8, y = 1, 
            label = "Exploring the Global Market Threatening These Iconic Predators Using the CITES Database",
-           family = "work sans", size = 5, color = "#FFFFF0") +
+           family = "work sans", size = 6, color = "#FFFFF0") +
   
   theme_void() 
 
@@ -520,9 +521,9 @@ legend <- ggplot() +
   theme_void()
 ```
 
-## Base Infographic
+### Base Infographic
 
-Now to create a base template in ggplot2 that will serve as the foundation of my infographic. First, I create an empty ggplot() object and set the color background here and adjust the margins:
+Now to create a base template in `ggplot2` that will serve as the foundation of my infographic. First, I create an empty `ggplot()` object and set the color background here and adjust the margins:
 
 ```{r}
 #| eval: true
@@ -542,7 +543,7 @@ g_base <- ggplot() +
         plot.margin = margin(b = 0, t = 0, r = 0, l = 0)  )
 ```
 
-## Creative Elements
+### Creative Elements
 
 Next, I add creative elements to the base template. I will be adding images of big cats (leopard, cheetah, tiger) and the CITES logo using the package `png`. These creative elements will be used to enhance the visual appeal of the infographic:
 
@@ -588,9 +589,9 @@ cites_gg <- ggplot() +
   theme_void()
 ```
 
-## Stitching Together
+## Final Infographic
 
-Lastly, I am using the `patchwork` package to add layers of inset elements/plots using inset_element() so that our figures and creative elements are nicely stacked. Note: I had to adjust the fill to be NA for the plots in order to get them to not block one another when stacking my inset elements.
+Lastly, I am using the `patchwork` package to add layers of inset elements/plots using `inset_element` so that my figures and creative elements are nicely stacked.
 
 We are then left with the final result:
 
@@ -645,13 +646,13 @@ final_fig <- g_base +
                 top = 0.85) +
   
   inset_element(tiger_gg,
-                left = 0.2,
+                left = 0.18,
                 bottom = -0.5,
-                right = 0.4,
+                right = 0.39,
                 top = 0.7) +
   
   inset_element(cites_gg,
-              left = 0.85,   
+              left = 0.87,   
               bottom = 0.9,  
               right = 1,     
               top = 0.99)  +
@@ -675,25 +676,47 @@ final_fig
 
 ## Design Elements
 
-1.  **Graphic form:** I used a bubble map, line plot, and bar chart to visualize the data. The bubble map shows the top exporting and importing countries and adds a spatial element to the visualization. I really wanted to include data on both importing and exporting countries to show where these animals are coming from and where they are going. I also choose a line plot that illustrates the change in exports over time, I felt that this was the best way to showcase the temporal element of my data. And lastly, I went with a stacked bar chart to highlight the most commonly traded big cats and really show the large discrepency between trade quantity in leopards compared to the other big cats.
+::: panel-tabset
+#### Graphic form
 
-2.  **Text:** I used a mix of titles, captions, and annotations to provide context and guide the viewer through the data. The titles and subtitles help set the stage for the infographic, while the annotations on the line plot highlight key events in the history of CITES and big cat trade. I also used axis labels and text to provide additional information and context for the visualizations.
+**Graphic form:** I used a bubble map, line plot, and bar chart to visualize the data. The bubble map shows the top exporting and importing countries and adds a spatial element to the visualization. I really wanted to include data on both importing and exporting countries to show where these animals are coming from and where they are going. I also choose a line plot that illustrates the change in exports over time, I felt that this was the best way to showcase the temporal element of my data. And lastly, I went with a stacked bar chart to highlight the most commonly traded big cats and really show the large discrepency between trade quantity in leopards compared to the other big cats.
 
-3.  **Themes:** I choose a forest green background color to represent to the rainforest habitats that most of these big cats thrive in. I included three images of my focal species to add a visual element to the infographic and to highlight the charismatic nature of these animals and draw the audience in.
+#### Text
 
-4.  **Colors:** In addition to my forest green background, I used a lighter off-white color for the text to make it stand out against the background. I used a dark red color for the exporting countries and a black color for the importing countries on the bubble map to represent the danger that these big cats are in due to the trade. I used a light blue color for the skins trade, a teal color for the live animal trade, and an orange color for the trophies trade in the bar chart to differentiate between the different trade terms. These colors also match my image of the leopard that I include on the infographic. For the bar chart, I used a light grey color for the leopard, a dark grey color for the tiger, a light brown color for the cheetah, and a dark brown color for the jaguar in the line plot to differentiate between the different species.
+**Text:** I used a mix of titles, captions, and annotations to provide context and guide the viewer through the data. The titles and subtitles help set the stage for the infographic, while the annotations on the line plot highlight key events in the history of CITES and big cat trade. I also used axis labels and text to provide additional information and context for the visualizations.
 
-5.  **Typography:** I used two different fonts for the text in the infographic. I used the "Montserrat" font for the titles and captions to give them a bold and modern look. I used the "Work Sans" font for the axis labels and annotations to provide a clean and readable style. I also used a larger font size for the titles and a smaller font size for the labels to create a visual hierarchy and guide the viewer through the infographic.
+#### Themes
 
-6.  **General design:** The general design here was to start with the map at the top to orientate the reader to where in the world are we focusing on. The images of the top 3 cats and the title also help to orientate the reader about the topic. Then I included the bar chart to show the top 4 species and their trade terms. I then included the line plot to show the change in exports over time. I used a clean and minimal design to avoid information overload and to make the data and visualizations the focal point of the infographic. I also used a consistent color scheme and font style throughout the infographic to create a cohesive and visually appealing design.
+**Themes:** I choose a forest green background color to represent to the rainforest habitats that most of these big cats thrive in. I included three images of my focal species to add a visual element to the infographic and to highlight the charismatic nature of these animals and draw the audience in.
 
-7.  **Data Contextualization:** I included annotations on the line plot to provide context for key events in the history of CITES and big cat trade. This helps the viewer understand the significance of these events and how they have impacted the trade of big cats over time. I also included a legend on the map to explain the color coding for exporting and importing countries. This helps the viewer interpret the data and understand the spatial distribution of big cat trade. My bar plot and line plot also have titles to explain what is being visualized.
+#### Colors
 
-8.  **Centering Primary Message:** The primary message of this infographic is to raise awareness about the international trade of big cats and the threats they face due to this trade. By visualizing the scale and patterns of big cat trade, the goal is to highlight the importance of conservation efforts and international agreements like CITES in protecting these iconic species. The images of the big cats and the CITES logo help to reinforce this message and draw attention to the urgency of addressing the illegal wildlife trade.
+**Colors:** In addition to my forest green background, I used a lighter off-white color for the text to make it stand out against the background. I used a dark red color for the exporting countries and a black color for the importing countries on the bubble map to represent the danger that these big cats are in due to the trade. I used a light blue color for the skins trade, a teal color for the live animal trade, and an orange color for the trophies trade in the bar chart to differentiate between the different trade terms. These colors also match my image of the leopard that I include on the infographic. For the bar chart, I used a light grey color for the leopard, a dark grey color for the tiger, a light brown color for the cheetah, and a dark brown color for the jaguar in the line plot to differentiate between the different species.
 
-9.  **Accessibility:** I utilize alt text in my figures to make them more accessible to those who may be visually impaired. I also use a colorblind-friendly palette in my visualizations to ensure that the data is clear and easy to interpret for all viewers. I also use a high contrast color scheme to make the text and visualizations stand out against the background and improve readability.
+#### Typography
 
-10. **Diversity Equity and Inclusion (DEI):** Although my infographic is somewhat lacking a DEI focus, I did try to consider the communities and places represented in my data by highlighting the top exporting and importing countries of big cats.Notably, the leading exporters are in Southern Africa, while the top importers are Western countries such as the U.S., Canada, and various European nations. Additionally, I framed my questions and findings in a way that underscores the importance of protecting these iconic species and the necessity of international cooperation to address the threats they face.
+**Typography:** I used two different fonts for the text in the infographic. I used the "Montserrat" font for the titles and captions to give them a bold and modern look. I used the "Work Sans" font for the axis labels and annotations to provide a clean and readable style. I also used a larger font size for the titles and a smaller font size for the labels to create a visual hierarchy and guide the viewer through the infographic.
+
+#### General Design
+
+**General design:** The general design here was to start with the map at the top to orientate the reader to where in the world are we focusing on. The images of the top 3 cats and the title also help to orientate the reader about the topic. Then I included the bar chart to show the top 4 species and their trade terms. I then included the line plot to show the change in exports over time. I used a clean and minimal design to avoid information overload and to make the data and visualizations the focal point of the infographic. I also used a consistent color scheme and font style throughout the infographic to create a cohesive and visually appealing design.
+
+#### Data Contextualization
+
+**Data Contextualization:** I included annotations on the line plot to provide context for key events in the history of CITES and big cat trade. This helps the viewer understand the significance of these events and how they have impacted the trade of big cats over time. I also included a legend on the map to explain the color coding for exporting and importing countries. This helps the viewer interpret the data and understand the spatial distribution of big cat trade. My bar plot and line plot also have titles to explain what is being visualized.
+
+#### Centering Primary Message
+
+**Centering Primary Message:** The primary message of this infographic is to raise awareness about the international trade of big cats and the threats they face due to this trade. By visualizing the scale and patterns of big cat trade, the goal is to highlight the importance of conservation efforts and international agreements like CITES in protecting these iconic species. The images of the big cats and the CITES logo help to reinforce this message and draw attention to the urgency of addressing the illegal wildlife trade.
+
+#### Accessibility
+
+**Accessibility:** I utilize alt text in my figures to make them more accessible to those who may be visually impaired. I also use a colorblind-friendly palette in my visualizations to ensure that the data is clear and easy to interpret for all viewers. I also use a high contrast color scheme to make the text and visualizations stand out against the background and improve readability.
+
+#### Diversity Equity and Inclusion (DEI)
+
+**Diversity Equity and Inclusion (DEI):** Although my infographic is somewhat lacking a DEI focus, I did try to consider the communities and places represented in my data by highlighting the top exporting and importing countries of big cats. Notably, the leading exporters are in Southern Africa, while the top importers are Western countries such as the U.S., Canada, and various European nations. Additionally, I framed my questions and findings in a way that underscores the importance of protecting these iconic species and the necessity of international cooperation to address the threats they face.
+:::
 
 ## Works Cited
 
