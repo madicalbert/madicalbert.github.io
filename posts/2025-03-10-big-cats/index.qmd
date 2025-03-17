@@ -33,7 +33,12 @@ As someone who has always been captivated by cheetahs, the story of big cats has
 
 What inspired me to explore this dataset is my deep connection to cheetahs and the broader struggle to protect endangered species. Through a bubble map, line plot, and bar chart, this infographic seeks to tell the story of how the global exotic animal trade continues to affect these endangered big cats. By visualizing the scale and trends of this trade, I hope to raise awareness about the persistence of this issue and the role of international agreements like CITES in regulating wildlife trade to ensure these incredible creatures have a future in the wild. I have had the incredible opportunity to work with cheetahs in the past, and I want to share my passion for these animals and the importance of protecting them.
 
-![Getting up close and personal with Victor the cheetah during my time volunteering at a small zoo in Bonsall, CA in 2020.](images/cheetah_madi.jpeg){fig-align="left"}
+<p align="center">
+  <img src="images/cheetah_madi.jpeg" alt="Getting up close and personal with Victor the cheetah">
+  <br>
+  <em>Getting up close and personal with Victor the cheetah during <br>
+      my time volunteering at a small zoo in Bonsall, CA in 2020.</em>
+</p>
 
 ## About the Data
 
