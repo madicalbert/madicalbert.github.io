@@ -1,13 +1,13 @@
 ---
-title: "Biodiversity Hotspots"
-description: "Hotspots and Coldspots for Sea Lions (*Zalophus californianus and Eumetopias jubatus*)"
+title: "Identifying Biodiversity Hotspots"
+description: "Visualizing hotspots and coldspots for sea lions along the West coast."
 author:
   - name: Madison Calbert and Natalie Smith
     url: https://madicalbert.github.io/
     affiliation: ESM 270 Conservation Planning - Master of Environmental Science & Management Program @ The Bren School (UCSB)
     affiliation-url: https://bren.ucsb.edu/masters-programs/master-environmental-science-and-management 
 date: 09-20-2024
-categories: [GIS, Conservation Planning, Habitat Suitability, Modeling] 
+categories: [GIS, Conservation Planning] 
 citation: 
   url: https://madicalbert.github.io/posts/2024-09-20-hotspots/ 
 image: preview-image.jpeg

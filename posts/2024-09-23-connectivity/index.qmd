@@ -1,13 +1,13 @@
 ---
-title: "Habitat Connectivity"
-description: "Mapping Habitat Connectivity and Potential Jaguar Movement Pathways in Costa Rica using Circuitscape"
+title: "Jaguar Habitat Connectivity"
+description: "Mapping jaguar habitat connectivity and movement pathways in Costa Rica using Circuitscape in ArcGIS Pro."
 author:
   - name: Madison Calbert and Olivia Hemond
     url: https://madicalbert.github.io/
     affiliation: ESM 270 Conservation Planning - Master of Environmental Science & Management Program @ The Bren School (UCSB)
     affiliation-url: https://bren.ucsb.edu/masters-programs/master-environmental-science-and-management 
 date: 09-23-2024
-categories: [GIS, Conservation Planning, Habitat Connectvity, Modeling] 
+categories: [GIS, Conservation Planning] 
 citation: 
   url: https://madicalbert.github.io/posts/2024-09-23-connectivity/ 
 image: preview-image.png

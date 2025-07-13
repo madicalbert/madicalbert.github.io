@@ -1,13 +1,13 @@
 ---
-title: "Conservation Network Design"
-description: "Assessing the Potential for Raptors as Umbrella Species for Reserve Network Design in Morro Bay"
+title: "Reserve Network Design"
+description: "Assessing the potential for raptors as an umbrella species for reserve network design in Morro Bay."
 author:
   - name: Madison Calbert and Olivia Hemond
     url: https://madicalbert.github.io/
     affiliation: ESM 270 Conservation Planning - Master of Environmental Science & Management Program @ The Bren School (UCSB)
     affiliation-url: https://bren.ucsb.edu/masters-programs/master-environmental-science-and-management 
 date: 09-21-2024
-categories: [GIS, Conservation Planning, Network Design] 
+categories: [GIS, Conservation Planning] 
 citation: 
   url: https://madicalbert.github.io/posts/2024-09-21-network-design/ 
 image: preview-image.png

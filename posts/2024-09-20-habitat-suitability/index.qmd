@@ -1,13 +1,13 @@
 ---
-title: "Habitat Suitability"
-description: "Modeling African Lion Habitat Ranges using Maxent across Climate Change Scenarios"
+title: "Modeling Habitat Suitability"
+description: "Modeling African lion habitat ranges using Maxent across climate change scenarios"
 author:
   - name: Madison Calbert and Natalie Smith
     url: https://madicalbert.github.io/
     affiliation: ESM 270 Conservation Planning - Master of Environmental Science & Management Program @ The Bren School (UCSB)
     affiliation-url: https://bren.ucsb.edu/masters-programs/master-environmental-science-and-management 
 date: 09-20-2024
-categories: [GIS, Conservation Planning, Habitat Suitability, Modeling] 
+categories: [GIS, Conservation Planning] 
 citation: 
   url: https://madicalbert.github.io/posts/2024-09-20-habitat-suitability/ 
 image: preview-image.jpg

@@ -7,7 +7,7 @@ author:
     affiliation: ESM 245 Cost Benefit Analysis Course - Master of Environmental Science & Management Program @ The Bren School (UCSB)
     affiliation-url: https://bren.ucsb.edu/masters-programs/master-environmental-science-and-management 
 date: 12-17-2024
-categories: [R, Cost Benefit Analysis, Benefits Transfer] # self-defined categories
+categories: [Data Science, Cost Benefit Analysis] # self-defined categories
 citation: 
   url: https://madicalbert.github.io/posts/2022-12-17-benefits-transfer/ 
 image: preview-image.png

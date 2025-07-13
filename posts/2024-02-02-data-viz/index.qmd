@@ -1,13 +1,13 @@
 ---
 title: "Data Wrangling and Visualization"
-description: "Exploring mountain yellow-legged frog (*Rana muscosa*) abundance in Sierra Lakes from 1995 - 2002."
+description: "Exploring endangered mountain yellow-legged frog (*Rana muscosa*) abundance in Sierra Lakes from 1995 - 2002."
 author:
   - name: Madison Calbert
     url: https://madicalbert.github.io/
     affiliation: ESM 244 Advanced Data Analysis - Master of Environmental Science & Management Program @ The Bren School (UCSB)
     affiliation-url: https://bren.ucsb.edu/masters-programs/master-environmental-science-and-management 
 date: 02-02-2024
-categories: [R, Data Visualization] # self-defined categories
+categories: [Data Science] # self-defined categories
 citation: 
   url: https://madicalbert.github.io/posts/2024-02-02-data-viz/ 
 image: preview-image.png

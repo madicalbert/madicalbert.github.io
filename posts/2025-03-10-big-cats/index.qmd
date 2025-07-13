@@ -1,13 +1,13 @@
 ---
 title: "Trafficked & Traded: The Fate of the World's Big Cats"
-subtitle: "Exploring the Global Market Threatening These Iconic Predators Using the CITES Database"
+description: "Creating an infographic to explore the global markets threatening these iconic predators."
 author:
   - name: Madison Calbert
     url: https://madicalbert.github.io/
     affiliation: EDS 240 Data Visualization Course - Master of Environmental Science & Management Program @ The Bren School (UCSB)
     affiliation-url: https://bren.ucsb.edu/masters-programs/master-environmental-science-and-management 
 date: last-modified
-categories: [R, Data Visualization, Endangered Species]
+categories: [Data Science]
 citation: 
   url: https://madicalbert.github.io/posts/2025-03-10-big-cats/ 
 image: preview-image.png
@@ -34,10 +34,9 @@ As someone who has always been captivated by cheetahs, the story of big cats has
 What inspired me to explore this dataset is my deep connection to cheetahs and the broader struggle to protect endangered species. Through a bubble map, line plot, and bar chart, this infographic seeks to tell the story of how the global exotic animal trade continues to affect these endangered big cats. By visualizing the scale and trends of this trade, I hope to raise awareness about the persistence of this issue and the role of international agreements like CITES in regulating wildlife trade to ensure these incredible creatures have a future in the wild. I have had the incredible opportunity to work with cheetahs in the past, and I want to share my passion for these animals and the importance of protecting them.
 
 <p align="center">
-  <img src="images/cheetah_madi.jpeg" alt="Getting up close and personal with Victor the cheetah">
-  <br>
-  <em>Getting up close and personal with Victor the cheetah during <br>
-      my time volunteering at a small zoo in Bonsall, CA in 2020.</em>
+
+<img src="images/cheetah_madi.jpeg" alt="Getting up close and personal with Victor the cheetah"/> <br> <em>Getting up close and personal with Victor the cheetah during <br> my time volunteering at a small zoo in Bonsall, CA in 2020.</em>
+
 </p>
 
 ## About the Data
@@ -58,7 +57,7 @@ For this project I am interested in how the international trade of the top threa
 
 ## Creating the Infographic
 
-### R Set Up & Data Wrangling 
+### R Set Up & Data Wrangling
 
 Here I loaded some packages, imported some fonts and icons, and picked some colors for the theme of the infographic:
 
