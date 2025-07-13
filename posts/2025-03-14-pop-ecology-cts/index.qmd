@@ -1,0 +1,487 @@
+---
+title: "Body Condition Analysis of California Tiger Salamander"
+description: "Comparing weight-length relationships of *Ambystoma californiense* from 2012 - 2024 across 9 different trapping sites."
+author:
+  - name: Madison Calbert
+    url: https://madicalbert.github.io/
+    affiliation: ESM 211 Applied Population Ecology Course - Master of Environmental Science & Management Program @ The Bren School (UCSB)
+    affiliation-url: https://bren.ucsb.edu/masters-programs/master-environmental-science-and-management 
+date: March 14, 2025
+categories: [Data Science]
+citation: 
+  url: https://madicalbert.github.io/posts/2025-03-14-pop-ecology-cts/ 
+image: preview-image.png
+execute: 
+  eval: true
+  echo: true
+  warning: false
+  message: false
+format:
+  html:
+    toc: true
+    code-fold: true  
+    code-tools: true  
+    embed-resources: true
+editor: visual
+---
+
+![California Tiger Salamander (*Ambystoma californiense*).](images/cts.jpeg)
+
+## Background and Data
+
+In this report, I set out to compare weight-length relationships of California tiger salamanders (*Ambystoma californiense*, CTS) across 2012 - 2024 trapping years and 9 different trapping sites. This analysis follows the methodology described by Derek H. Ogle as he describes in his blog post [Weight-Length Relationship for 3+ Groups](https://derekogle.com/IFAR/supplements/weightLengthDVR.html#ref-ogleIntroductoryFisheriesAnalyses2016) on his website Introductory Fisheries Analysis with R. Weight-Length relationships are often used in fisheries management to compare body condition across time, among habitats, among bodies of water, and among length categories (Ogle & Winfield, 2009). For this analysis, weights (grams) and total lengths (mm) were recorded from 1,714 CTS captured at nine sites within the Concord Naval Weapons Station in Concord, CA, between 2010 and 2024. The original data was collected in field notebooks and later transcribed into Excel spreadsheets (associated meta data is provided in the `README.md` file within the data folder). The combined trapping data is stored in the dataframe `cts`. Below are some photos of the trapping site, pitfall traps, CTS data collection, and a CTS relocation into the nearby breeding pond.
+
+::: {layout-nrow="2"}
+![Data collection on CTS sex, weight, snout vent length, total length, and location.](images/notebook.jpg)
+
+![Pitfall trap and ERTEC fencing at trapping site.](images/traps.jpeg)
+
+![Me releasing a CTS into the breeding pond.](images/madi_cts2.jpeg)
+
+![Me holding a CTS.](images/bb_cts.jpeg)
+:::
+
+## Methods
+
+#### Set up & Data Wrangling
+
+To begin the analysis, I cleaned and combined the data from the 2010–2021 and 2022–2024 trapping datasets. The data was filtered to include only California tiger salamanders (*Ambystoma californiense*) and cleaned up to ensure consistency with site names and age class.
+
+```{r}
+#| eval: true
+#| echo: true
+#| warning: false
+#| message: false
+
+#load libraries
+library(tidyverse)
+library(here)
+library(readxl)
+library(janitor)
+library(lubridate)
+library(dplyr)
+library(emmeans)  ## for emtrends()
+library(FSA)
+library(ggplot2)
+library(viridis)
+library(showtext)
+library(kableExtra)
+
+#load data
+trap_data_2022 <- read_excel(here("posts/2025-03-14-pop-ecology-cts/data/clean_cts_data/Data_CTS-CRLF TrappingData_2023-2024.xlsx")) %>% 
+  clean_names()
+
+trap_data_2010 <- read_excel(here("posts/2025-03-14-pop-ecology-cts/data/clean_cts_data/Copy of CTS_2010-2021.xlsx")) %>% 
+  clean_names()
+```
+
+```{r}
+#clean up data 
+trap_2010 <- trap_data_2010 %>% 
+  dplyr::select(date, site, species_6, species_7, class, weight, svl, tl) %>% 
+  rename(species = species_6,
+         scientific_name = species_7,
+         age_class = class) %>% 
+  mutate(weight = as.numeric(weight))
+
+trap_2022 <- trap_data_2022 %>% 
+  dplyr::select(date, site, species, scientific_name, age_class, weight_grams, sv_mm, tl_mm) %>%
+  rename(svl = sv_mm, 
+         tl = tl_mm,
+         weight = weight_grams) %>% 
+  mutate(svl = as.numeric(svl),
+         weight = as.numeric(weight)) %>% 
+  drop_na()
+
+#combine data
+trap_2010_2025 <- bind_rows(trap_2010, trap_2022)
+
+
+#filter for CTS and standardize values 
+cts <- trap_2010_2025 %>% 
+  filter(species == "California tiger salamander") %>% 
+  drop_na() %>% 
+  mutate(
+    # Clean age_class
+    age_class = case_when(
+      age_class == "adult" ~ "Adult",
+      age_class == "Unk" ~ "Adult",
+      age_class == "Juv" ~ "Juvenile",
+      TRUE ~ age_class
+    ),
+    
+    # Clean site names
+    site = recode(site, 
+                  "24A" = "Pistol Range",
+                  
+                  "Outside Eagles Nest" = "Eagles Nest",
+                  
+                  "100A" = "IA-100 Area A",
+                  
+                  "100B" = "IA-100 Area B",
+                  
+                  "100E" = "IA-100 Area East",
+                  "IA-100 AreaE" = "IA-100 Area East",
+                  "IA100E" = "IA-100 Area East",
+                  "IA-100E" = "IA-100 Area East",
+                  "IA-100 East" = "IA-100 Area East",
+                  
+                  "100N" = "IA-100 Area North",
+                  "IA-100 AreaN" = "IA-100 Area North",
+                  "IA100N" = "IA-100 Area North",
+                  "IA-100N" = "IA-100 Area North",
+                  "IA-100 North" = "IA-100 Area North",
+                  
+                  "100W" = "IA-100 Area West",
+                  "IA-100 AreaW" = "IA-100 Area West",
+                  "IA100W" = "IA-100 Area West",
+                  "IA-100W" = "IA-100 Area West",
+                  "IA-100 West" = "IA-100 Area West"),
+                  
+    
+    # Extract year from date
+    year = year(date)
+  )
+```
+
+#### Weight-Length Relationship Analysis
+
+In this analysis, I set out to determine if the mean log-transformed length of CTS varied across trapping years and trapping sites. Specifically, I hypothesize that the weight-length relationship of CTS would differ across years due to environmental factors or population dynamics. Additionally, I hypothesize that the weight-length relationship of CTS would also differ across trapping sites. To analyze the relationship between weight and total length, I first explored the data through scatterplots, visually inspecting the patterns and checking for any trends across the years and sites.
+
+```{r}
+#| eval: false
+#| echo: false
+#| warning: false
+#| message: false
+
+cts %>% ggplot(aes(x = tl, y = weight, color = age_class)) +
+  geom_point()
+
+cts %>% ggplot(aes(x = svl, y = weight, color = age_class)) +
+  geom_point()
+```
+
+```{r}
+#| fig.cap: "When comparing across years, we can see that the weight-length relationship of CTS varies over time, with some years showing a stronger relationship between total length and weight than others. This suggests that the body condition of CTS may be influenced by environmental factors or population dynamics that differ between years."
+
+cts %>% 
+  ggplot(aes(x = tl, y = weight)) + 
+  geom_point(alpha = 0.5) + 
+  facet_wrap(~year) +
+  labs(title = "Weight-Length Relationship of CTS Across Years",
+       x = "Total Length (mm)",
+       y = "Weight (g)")
+```
+
+```{r}
+#| fig.cap: "When comparing across sites, we can see that the weight-length relationship of CTS varies between different trapping locations, with some sites showing a stronger relationship between total length and weight than others. This suggests that habitat characteristics or local environmental conditions may influence the body condition of CTS at different sites in addition to comapring across years."
+
+cts %>% 
+  ggplot(aes(x = tl, y = weight, )) + 
+  geom_point(alpha = 0.5) + 
+  facet_wrap(~site) +
+  labs(title = "Weight-Length Relationship of CTS Across Sites",
+       x = "Total Length (mm)",
+       y = "Weight (g)")
+```
+
+#### Statistical Modeling
+
+I used linear regression models to assess the relationship between log-transformed weight and total length, including year as a categorical variable to evaluate differences over time. I log-transformed both the weight and total length variables to meet the assumptions of linear regression and stabilize variance. This allowed for easier interpretation of the relationships and comparisons across years and sites. The linear regression model was fitted using the formula:
+
+`log(Weight) = beta[0] + beta[1] * log(Total Length) + beta[2] * Year + beta[3] * (log(Total Length) * Year)`
+
+I then run a linear regression to assess the relationship between log-transformed weight and total length, including site as a categorical variable to evaluate differences across the 9 trapping sites. The model was fitted using the formula:
+
+`log(Weight) = beta[0] + beta[1] * log(Total Length) + beta[2] * Site + beta[3] * (log(Total Length) * Site)`
+
+#### Model Diagnostics
+
+After fitting the model for both year and again for sites, I assessed the assumptions by examining residual plots and histograms of the residuals. These diagnostics indicated that the log-transformed data met the assumptions of normality and homoscedasticity, which supported the validity of the model.
+
+```{r}
+#log transform data
+cts <- cts %>%
+  mutate(
+    logW = log(weight),      # Log-transform weight
+    logL = log(tl)           # Log-transform tl (total length)
+  ) %>% 
+  mutate(year = as.factor(year))
+
+#create subset of the data for different years
+cts <- cts |>
+  filter(year %in% c(2012,2014, 2016, 2018, 2020, 2022, 2024)) |>
+  droplevels()
+```
+
+```{r}
+#| eval: false
+#| echo: false
+#| warning: false
+#| message: false
+#| fig.cap: "Residual plot (Left) and histogram of residuals (Right) from fitting a dummy variable (year) regression to the original weights and lengths. The residuals appear to be normally distributed, indicating that the model assumptions are met."
+
+# lm of original data 
+fit1 <- lm(weight~tl*year,data=cts)
+
+# plot it
+par(mfrow=c(1,2))
+plot(resid(fit1)~fitted(fit1),xlab="Fitted Values",ylab="Residuals")
+# Histogram of residuals
+hist(resid(fit1), xlab = "Residuals")
+```
+
+```{r}
+#| fig.cap: "**Normality Across Years.** Residual plot (Left) and histogram of residuals (Right) from fitting a dummy variable (site) regression to the log-transformed weights and lengths. The residuals appear to be normally distributed, indicating that the model assumptions are met."
+ 
+# lm of log data across years
+fit1 <- lm(logW~logL*year,data=cts)
+
+par(mfrow=c(1,2))
+# Scatter of residuals
+plot(resid(fit1)~fitted(fit1),xlab="Fitted Values",ylab="Residuals")
+
+# Histogram of residuals
+hist(resid(fit1), xlab = "Residuals")
+
+#summary(fit1)
+```
+
+```{r}
+#| fig.cap: "**Normality Across Sites.** Residual plot (Left) and histogram of residuals (Right) from fitting a dummy variable regression to the log-transformed weights and lengths. The residuals appear to be normally distributed, indicating that the model assumptions are met."
+
+# lm of log data across sites
+fit2 <- lm(logW~logL*site,data=cts)
+
+par(mfrow=c(1,2))
+# Scatter of residuals
+plot(resid(fit2)~fitted(fit2),xlab="Fitted Values",ylab="Residuals")
+
+# Histogram of residuals
+hist(resid(fit2), xlab = "Residuals")
+
+#summary(fit2)
+```
+
+#### Comparing Slopes Across Years and Sites
+
+To further explore the differences in the weight-length relationship over time and sites, I used the `emmeans` package to estimate means and compare the slopes across years and sites. This analysis provided pairwise comparisons of the regression slopes for each year and site, allowing me to identify statistically significant differences in the weight-length relationships.
+
+#### Statistical Significance
+
+I assessed statistical significance using p-values obtained from the Tukey test for pairwise comparisons of slopes across years and sites. Significant differences were identified where the p-value was less than 0.05. These results were then summarized in a table with highlighted significant contrasts for easier interpretation.
+
+This methodology allows for a robust comparison of body condition across years and sites, while providing insights into temporal and spatial trends in the California tiger salamander population.
+
+## Results
+
+### Weight-Length Relationship Across Years
+
+#### ANOVA Results
+
+The ANOVA provides statistically significant results (p-value \< 0.05) when comparing across trapping years. Therefore, at least 2 of the log-transformed mean lengths are statistically different across years.
+
+```{r}
+car::Anova(fit1)
+```
+
+#### Differences Among Slopes
+
+The log(Total Length) across different years show several significant differences, particularly between 2012 and 2016 (p = 0.000), 2012 and 2018 (p = 0.000), 2012 and 2024 (p = 0.000), 2014 and 2016 (p = 0.000), and 2016 and 2022 (p = 0.000). These results suggest that the total length of the individuals significantly differs between these years. In contrast, some year comparisons, such as 2012 vs. 2022 (p = 1.000) and 2018 vs. 2020 (p = 0.988), show no significant differences, indicating that in these comparisons, the total length measurements remain relatively consistent over time.
+
+```{r}
+# Run the emtrends for years
+cs <- emtrends(fit1,
+               specs=pairwise~year,
+               var="logL")
+
+css <- summary(cs,infer=TRUE)
+```
+
+```{r}
+#| fig.cap: "**Comparison of log(Total Length) Across Years.** Significant differences (p-value < 0.05) are highlighted in yellow, indicating that the total length of the individuals significantly differs between these years."
+
+# Extract contrasts across years
+contrast_table <- data.frame(
+  Contrast = css$contrasts$contrast,
+  Estimate = css$contrasts$estimate,
+  Std.Error = css$contrasts$SE,
+  t.value = css$contrasts$t.ratio,
+  p.value = css$contrasts$p.value
+)
+
+# Highlight significant contrasts (p-value < 0.05)
+contrast_table$highlight <- ifelse(contrast_table$p.value < 0.05, "significant", "not_significant")
+
+kable(contrast_table, 
+      caption = "Comparison of log(Total Length) Across Years", 
+      digits = 3) %>%
+  kable_styling() %>%  
+  row_spec(0, background = "white") %>%  
+  row_spec(which(contrast_table$highlight == "significant"), 
+           color = "black", 
+           background = "lightyellow") %>%  
+  row_spec(which(contrast_table$highlight == "not_significant"), 
+           color = "black", 
+           background = "white") %>%  
+  # Explicitly reset row colors to white for all other rows to avoid alternating rows
+  kable_classic(full_width = F, html_font = "arial", position = "left")
+```
+
+#### Summary Plot
+
+This summary plot of the regression results highlights the relationship between log-transformed weight and total length for each year. The plot shows differences in the weight-length relationship across years, with some years showing steeper slopes than others. These differences suggest that the body condition of California tiger salamanders varies over time, which may be influenced by environmental factors (precipitation, humidity, etc.) or population dynamics.
+
+```{r}
+#| fig.cap: "**Weight-length Relationship of CTS Across Years.** The regression lines represent the relationship between log-transformed weight and total length for each year. The plot highlights the differences in the weight-length relationship across years, with some years showing steeper slopes than others. These differences suggest that the body condition of California tiger salamanders varies over time, which may be influenced by environmental factors or population dynamics."
+
+# Load fonts
+font_add_google("Lato", "lato")
+showtext_auto()
+
+# Create plot 
+plot <- ggplot(cts, aes(x = logL, y = logW, color = as.factor(year))) +
+  geom_point(alpha = 0.6, size = 2) +  
+  geom_smooth(method = "lm", formula = y ~ x, se = FALSE, linewidth = 1.2) +  
+  
+  scale_color_viridis_d(option = "magma", name = "Year") +  
+  theme_minimal(base_family = "lato") +  
+  
+  labs(
+    title = "CTS Weight-Length Relationship Across Years",
+    subtitle = "Weights and total lengths vary across survey years (2012 to 2024)",
+    x = "Log(Total Length) (mm)", 
+    y = "Log(Weight) (g)",
+    caption = "Data Source: CTS Trapping Data from CCCI | Analysis by Madi Calbert"
+  ) +
+  
+  theme(
+    plot.title = element_text(size = 14, face = "bold", hjust = 0),
+    plot.subtitle = element_text(size = 12, hjust = 0, 
+                                 margin = margin(b = 10)),
+    axis.title = element_text(size = 10),
+    axis.text = element_text(size = 10),
+    legend.position = "right",
+    legend.text = element_text(size = 10),
+    legend.title = element_text(size = 10),
+    plot.caption = element_text(size = 8, hjust = 0, face = "italic", 
+                                margin = margin(0.75, 0, 0, 0, "cm")),
+    plot.background = element_rect(fill = "#D3D3D3", color = NA),
+    panel.grid = element_blank(),  # Remove all gridlines
+    axis.ticks = element_line(color = "black"),
+    axis.line = element_line(color = "black"))
+plot
+
+#ggsave("outputs/cts_year.png", plot, width = 8, height = 6, dpi = 400)
+```
+
+### Weight-Length Relationship Across Sites
+
+#### ANOVA Results
+
+Likewise to across years, when comparing across sites there are statistically significant results (p-value \< 0.05), therefore at least 2 of the log-transformed total length means are different across sites.
+
+```{r}
+car::Anova(fit2)
+```
+
+#### Differences Among Slopes
+
+The only statistically significant difference (p-value \< 0.05) is between the Eagles Nest site and the other sites. This suggests that the total length of the individuals at the Eagles Nest site significantly differs from the other sites. In contrast, the other site comparisons show no significant differences, indicating that the total length measurements remain relatively consistent across the other sites.
+
+```{r}
+# Run the emtrends
+cs <- emtrends(fit2,
+               specs=pairwise~site,
+               var="logL")
+
+css <- summary(cs,infer=TRUE)
+```
+
+```{r}
+#| fig.cap: "**Comparison of log(Total Length) Across Sites.** Significant differences (p-value < 0.05) are highlighted in yellow, indicating that the total length of the individuals significantly differs between these sites."
+
+# Extract contrasts across sites
+contrast_table <- data.frame(
+  Contrast = css$contrasts$contrast,
+  Estimate = css$contrasts$estimate,
+  Std.Error = css$contrasts$SE,
+  t.value = css$contrasts$t.ratio,
+  p.value = css$contrasts$p.value
+)
+
+# Highlight significant contrasts (p-value < 0.05)
+contrast_table$highlight <- ifelse(contrast_table$p.value < 0.05, "significant", "not_significant")
+
+kable(contrast_table) %>%
+  kable_styling() %>%  
+  row_spec(0, background = "white") %>%  
+  row_spec(which(contrast_table$highlight == "significant"), 
+           color = "black", 
+           background = "lightyellow") %>%  
+  row_spec(which(contrast_table$highlight == "not_significant"), 
+           color = "black", 
+           background = "white") %>%  
+  # Explicitly reset row colors to white for all other rows to avoid alternating rows
+  kable_classic(full_width = F, html_font = "arial", position = "left")
+```
+
+#### Summary Plot
+
+This summary plot of the regression results highlights the relationship between log-transformed weight and total length for each trapping site. The plot shows differences in the weight-length relationship across sites, with only one site showing a slightly steeper slopes than eight others. These similarities suggest that the body condition of California tiger salamanders are consistent across sites.
+
+```{r}
+#| fig.cap: "**Weight-length Relationship of CTS Across Sites.** The regression lines represent the relationship between log-transformed weight and total length for each site. The plot highlights similar slopes in the weight-length relationship across sites, with only the Eagles Nest site showing steeper slopes than others. These similarities suggest that the body condition of California tiger salamanders across trapping locations are the same."
+
+# Create plot 
+plot_site <- ggplot(cts, aes(x = logL, y = logW, color = as.factor(site))) +
+  geom_point(alpha = 0.6, size = 2) +  
+  geom_smooth(method = "lm", formula = y ~ x, se = FALSE, linewidth = 1.2) +  
+  
+  scale_color_viridis_d(option = "magma", name = "Site") +  
+  theme_minimal(base_family = "lato") +  
+  
+  coord_cartesian(clip = "off") +  # Allow points to extend beyond the plot area
+  
+  labs(
+    title = "CTS Weight-Length Relationship Across Sites",
+    subtitle = "Weights and total lengths are consistent across most survey sites",
+    x = "Log(Total Length) (mm)", 
+    y = "Log(Weight) (g)",
+    caption = "Data Source: CTS Trapping Data from CCCI | Analysis by Madi Calbert"
+  ) +
+  
+  theme(
+    plot.title = element_text(size = 14, face = "bold", hjust = 0),
+    plot.subtitle = element_text(size = 12, hjust = 0, 
+                                 margin = margin(b = 10)),
+    axis.title = element_text(size = 10),
+    axis.text = element_text(size = 10),
+    legend.position = "right",
+    legend.text = element_text(size = 10),
+    legend.title = element_text(size = 10),
+    plot.caption = element_text(size = 8, face = "italic", hjust = 0, 
+                                margin = margin(0.75, 0, 0, 0, "cm")),
+    plot.background = element_rect(fill = "#D3D3D3", color = NA),
+    panel.grid = element_blank(),  # Remove all gridlines
+    axis.ticks = element_line(color = "black"),
+    axis.line = element_line(color = "black")) 
+
+plot_site
+
+#ggsave("outputs/cts_sites.png", plot_site,width = 8, height = 6, dpi = 400)
+```
+
+## Discussion
+
+The results of this study indicate that the weight-length relationship of California tiger salamanders (*Ambystoma californiense*) varies significantly across certain years, but only varies across one of the trapping sites. The statistical analyses confirmed that differences in log-transformed mean total lengths were significant across multiple years, suggesting that body condition fluctuates over time. This iimplies that temporal environmental conditions and habitat characteristics influence salamander growth patterns. However differences across trapping sites were only significant between Eagle's Nest and the other sites. Meanwhile the other eight sites had a similar weight-length relationship. This suggests that the body condition of California tiger salamanders is consistent across most trapping locations.
+
+The observed differences in weight-length relationships across years likely reflect environmental variations and population dynamics affecting the growth and condition of CTS. Significant pairwise differences between certain years (e.g., 2012 vs. 2016, 2012 vs. 2024) suggest that environmental factors such as precipitation levels, temperature fluctuations, and resource availability may play a role in salamander growth. Since CTS depend on vernal pools and seasonal wetlands for breeding and development, interannual variability in rainfall could impact juvenile recruitment and adult body condition.
+
+The lack of significant differences in weight-length relationships across most trapping sites indicates that the body condition of CTS is relatively consistent across different sites within the Concord Naval Weapons Station. This spatial consistency suggests that the environmental conditions and habitat characteristics at these sites are similar enough to maintain a stable weight-length relationship. However, the significant difference observed at the Eagle's Nest site may be due to unique habitat features, resource availability, or predator-prey dynamics that influence salamander growth and condition. The Eagle's Nest site is the farthest away from the other trapping sites, which could indicate that this is a separate sub-population of CTS with different habitat conditions and availability of resources, both of which could greatly influence body condition.
+
+Further research is needed to explore the underlying factors driving these variations in weight-length relationships. Further studies incorporating environmental variables such as precipitation patterns, temperature data, and habitat quality assessments could provide deeper insights into the drivers of body condition changes. Additionally, investigating genetic diversity and population connectivity across sites may help determine whether observed differences are due to environmental influences or population structure.
+
+## Works Cited
+
+Ogle, D. H., & Winfield, I. J. (2009). Ruffe Length–Weight Relationships with a Proposed Standard Weight Equation. *North American Journal of Fisheries Management*, *29*(4), 850–858. https://doi.org/10.1577/M08-176.1
