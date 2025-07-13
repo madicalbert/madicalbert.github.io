@@ -1,0 +1,20 @@
+Version history for county-level pesticide-use estimates, 2013-17
+
+Wieben, C.M., 2019, Estimated Annual Agricultural Pesticide Use for Counties of the Conterminous United States, 2013-17 (ver. 2.0, May 2020): U.S. Geological Survey data release, https://doi.org/10.5066/P9F2SRYH.
+
+________________________________________________________
+
+Version 1 posted online November 26, 2019
+________________________________________________________
+
+Version 2.0 revised and reposted online May 27, 2020
+
+Changes in version 2.0
+
+Data for select compounds were missing from the original (version 1) pesticide use estimates. Pesticide use estimates for compounds with missing data have been updated in version 2.0.  Specifically:
+
+1. The following compounds were missing from the original pesticide use estimates for years 2013-17, for states except California. Pesticide use for the missing compounds has been added to the version 2.0 estimates.  Note: there are no pesticide use estimates for these compounds for 2017.
+AMETRYN, ASULAM, AZINPHOS-METHYL, BACILLUS FIRMUS, BACTERIOPHAGE, CARBOXIN, DISULFOTON, ENDOSULFAN, FENAMIPHOS, FORAMSULFURON, HYMEXAZOL, IMAZALIL, IMAZAPYR, IPCONAZOLE, MANEB, METHAMIDOPHOS, NAPTALAM, PASTEURIA NISHIZAWAE, PENFLUFEN, PINOLENE, SEDAXANE, SUCROSE OCTANOATE, TCMTB, TEBUFENOZIDE, THIAZOPYR, TOLCLOFOS-METHYL, TRIADIMENOL, TRINEXAPAC, TRITICONAZOLE
+
+2. The following compounds had incomplete estimates in the original pesticide use estimates as a result of missing use estimates for sugarcane for years 2013-17.  Pesticide use on sugarcane has been added to the version 2.0 estimates for 2013-17.
+2,4-D, ATRAZINE, AZOXYSTROBIN, CHLORANTRANILIPROLE, CHLORIMURON, CLOMAZONE, CLOPYRALID, CYFLUTHRIN, CYHALOTHRIN-LAMBDA, DICAMBA, DIURON, FLUBENDIAMIDE, FLUMIOXAZIN, FLUXAPYROXAD, GLYPHOSATE, HALOSULFURON, HEXAZINONE, IMIDACLOPRID, MESOTRIONE, METCONAZOLE, METRIBUZIN, NOVALURON, PARAQUAT, PENDIMETHALIN, PHORATE, PROPICONAZOLE, PYRACLOSTROBIN, SULFENTRAZONE, TERBACIL, TRIFLOXYSTROBIN, TRIFLOXYSULFURON, TRIFLURALIN

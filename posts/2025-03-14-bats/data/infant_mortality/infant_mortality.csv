@@ -1,0 +1,301 @@
+﻿State,State Code,County,County Code,Deaths,Births,Death Rate
+Alabama,1,"Jefferson County, AL",1073,69,7751,8.9
+Alabama,1,"Madison County, AL",1089,20,4514,4.43
+Alabama,1,"Mobile County, AL",1097,42,5001,8.4
+Alabama,1,"Unidentified Counties, AL",1999,258,40883,6.31
+Alaska,2,"Anchorage Borough, AK",2020,23,3643,6.31
+Alaska,2,"Unidentified Counties, AK",2999,39,5716,6.82
+Arizona,4,"Maricopa County, AZ",4013,303,50706,5.98
+Arizona,4,"Pima County, AZ",4019,58,9997,5.8
+Arizona,4,"Pinal County, AZ",4021,32,5133,6.23
+Arizona,4,"Unidentified Counties, AZ",4999,92,12711,7.24
+Arkansas,5,"Pulaski County, AR",5119,37,4895,7.56
+Arkansas,5,"Unidentified Counties, AR",5999,234,30576,7.65
+California,6,"Alameda County, CA",6001,58,16613,3.49
+California,6,"Contra Costa County, CA",6013,34,11570,2.94
+California,6,"Fresno County, CA",6019,67,13950,4.8
+California,6,"Kern County, CA",6029,70,12494,5.6
+California,6,"Los Angeles County, CA",6037,375,95824,3.91
+California,6,"Merced County, CA",6047,17,3849,4.42 (Unreliable)
+California,6,"Monterey County, CA",6053,35,5691,6.15
+California,6,"Orange County, CA",6059,116,30929,3.75
+California,6,"Placer County, CA",6061,11,3766,2.92 (Unreliable)
+California,6,"Riverside County, CA",6065,134,27878,4.81
+California,6,"Sacramento County, CA",6067,96,18205,5.27
+California,6,"San Bernardino County, CA",6071,117,26212,4.46
+California,6,"San Diego County, CA",6073,150,37587,3.99
+California,6,"San Francisco County, CA",6075,13,7115,1.83 (Unreliable)
+California,6,"San Joaquin County, CA",6077,51,10091,5.05
+California,6,"San Mateo County, CA",6081,19,7497,2.53 (Unreliable)
+California,6,"Santa Barbara County, CA",6083,23,5670,4.06
+California,6,"Santa Clara County, CA",6085,56,19080,2.94
+California,6,"Solano County, CA",6095,29,4851,5.98
+California,6,"Sonoma County, CA",6097,16,4468,3.58 (Unreliable)
+California,6,"Stanislaus County, CA",6099,39,7071,5.52
+California,6,"Tulare County, CA",6107,28,6801,4.12
+California,6,"Ventura County, CA",6111,34,8642,3.93
+California,6,"Unidentified Counties, CA",6999,116,26310,4.41
+Colorado,8,"Adams County, CO",8001,39,6266,6.22
+Colorado,8,"Arapahoe County, CO",8005,33,7674,4.3
+Colorado,8,"Denver County, CO",8031,38,8649,4.39
+Colorado,8,"Douglas County, CO",8035,14,3865,3.62 (Unreliable)
+Colorado,8,"El Paso County, CO",8041,44,9096,4.84
+Colorado,8,"Jefferson County, CO",8059,23,5446,4.22
+Colorado,8,"Larimer County, CO",8069,12,3062,3.92 (Unreliable)
+Colorado,8,"Weld County, CO",8123,16,4768,3.36 (Unreliable)
+Colorado,8,"Unidentified Counties, CO",8999,60,11134,5.39
+Connecticut,9,"Fairfield County, CT",9001,48,10203,4.7
+Connecticut,9,"Hartford County, CT",9003,33,8951,3.69
+Connecticut,9,"New Haven County, CT",9009,44,8580,5.13
+Connecticut,9,"New London County, CT",9011,11,2572,4.28 (Unreliable)
+Connecticut,9,"Unidentified Counties, CT",9999,14,5026,2.79 (Unreliable)
+Delaware,10,"New Castle County, DE",10003,54,6176,8.74
+Delaware,10,"Unidentified Counties, DE",10999,27,4640,5.82
+District of Columbia,11,"District of Columbia, DC",11001,44,8075,5.45
+Florida,12,"Brevard County, FL",12009,36,5238,6.87
+Florida,12,"Broward County, FL",12011,113,21295,5.31
+Florida,12,"Collier County, FL",12021,18,3476,5.18 (Unreliable)
+Florida,12,"Duval County, FL",12031,92,12606,7.3
+Florida,12,"Escambia County, FL",12033,30,3628,8.27
+Florida,12,"Hillsborough County, FL",12057,105,17221,6.1
+Florida,12,"Lake County, FL",12069,15,3805,3.94 (Unreliable)
+Florida,12,"Lee County, FL",12071,32,7495,4.27
+Florida,12,"Leon County, FL",12073,29,2768,10.48
+Florida,12,"Manatee County, FL",12081,23,3782,6.08
+Florida,12,"Marion County, FL",12083,21,3589,5.85
+Florida,12,"Miami-Dade County, FL",12086,176,29765,5.91
+Florida,12,"Orange County, FL",12095,94,16722,5.62
+Florida,12,"Osceola County, FL",12097,20,4982,4.01
+Florida,12,"Palm Beach County, FL",12099,72,15518,4.64
+Florida,12,"Pasco County, FL",12101,28,5713,4.9
+Florida,12,"Pinellas County, FL",12103,47,7452,6.31
+Florida,12,"Polk County, FL",12105,73,9101,8.02
+Florida,12,"St. Lucie County, FL",12111,23,3731,6.16
+Florida,12,"Seminole County, FL",12117,27,4690,5.76
+Florida,12,"Volusia County, FL",12127,31,5052,6.14
+Florida,12,"Unidentified Counties, FL",12999,230,33822,6.8
+Georgia,13,"Chatham County, GA",13051,36,3667,9.82
+Georgia,13,"Clayton County, GA",13063,29,3391,8.55
+Georgia,13,"Cobb County, GA",13067,57,8914,6.39
+Georgia,13,"DeKalb County, GA",13089,71,9934,7.15
+Georgia,13,"Fulton County, GA",13121,86,12258,7.02
+Georgia,13,"Gwinnett County, GA",13135,69,11215,6.15
+Georgia,13,"Unidentified Counties, GA",13999,544,76751,7.09
+Hawaii,15,"Honolulu County, HI",15003,57,11015,5.17
+Hawaii,15,"Unidentified Counties, HI",15999,33,4520,7.3
+Idaho,16,"Ada County, ID",16001,23,4955,4.64
+Idaho,16,"Unidentified Counties, ID",16999,95,17436,5.45
+Illinois,17,"Cook County, IL",17031,316,51918,6.09
+Illinois,17,"DuPage County, IL",17043,41,9739,4.21
+Illinois,17,"Kane County, IL",17089,23,5495,4.19
+Illinois,17,"Lake County, IL",17097,23,6730,3.42
+Illinois,17,"McHenry County, IL",17111,12,3158,3.80 (Unreliable)
+Illinois,17,"St. Clair County, IL",17163,21,2592,8.1
+Illinois,17,"Will County, IL",17197,33,6987,4.72
+Illinois,17,"Winnebago County, IL",17201,26,3287,7.91
+Illinois,17,"Unidentified Counties, IL",17999,213,35787,5.95
+Indiana,18,"Allen County, IN",18003,35,5150,6.8
+Indiana,18,"Hamilton County, IN",18057,19,3891,4.88 (Unreliable)
+Indiana,18,"Lake County, IN",18089,35,5256,6.66
+Indiana,18,"Marion County, IN",18097,139,14412,9.64
+Indiana,18,"St. Joseph County, IN",18141,30,3209,9.35
+Indiana,18,"Unidentified Counties, IN",18999,311,47731,6.52
+Iowa,19,"Polk County, IA",19153,25,6438,3.88
+Iowa,19,"Unidentified Counties, IA",19999,165,30068,5.49
+Kansas,20,"Johnson County, KS",20091,25,6913,3.62
+Kansas,20,"Sedgwick County, KS",20173,39,6707,5.81
+Kansas,20,"Unidentified Counties, KS",20999,135,20781,6.5
+Kentucky,21,"Fayette County, KY",21067,19,3706,5.13 (Unreliable)
+Kentucky,21,"Jefferson County, KY",21111,59,9505,6.21
+Kentucky,21,"Unidentified Counties, KY",21999,223,39104,5.7
+Louisiana,22,"Caddo Parish, LA",22017,36,2798,12.87
+Louisiana,22,"East Baton Rouge Parish, LA",22033,49,5613,8.73
+Louisiana,22,"Jefferson Parish, LA",22051,39,5417,7.2
+Louisiana,22,"Orleans Parish, LA",22071,26,4045,6.43
+Louisiana,22,"Unidentified Counties, LA",22999,266,38606,6.89
+Maine,23,"Cumberland County, ME",23005,18,2916,6.17 (Unreliable)
+Maine,23,"Unidentified Counties, ME",23999,59,9177,6.43
+Maryland,24,"Anne Arundel County, MD",24003,37,6906,5.36
+Maryland,24,"Baltimore County, MD",24005,59,9298,6.35
+Maryland,24,"Howard County, MD",24027,20,3162,6.33
+Maryland,24,"Montgomery County, MD",24031,44,11782,3.73
+Maryland,24,"Prince George's County, MD",24033,92,11021,8.35
+Maryland,24,"Baltimore city, MD",24510,67,7259,9.23
+Maryland,24,"Unidentified Counties, MD",24999,96,19354,4.96
+Massachusetts,25,"Bristol County, MA",25005,19,5649,3.36 (Unreliable)
+Massachusetts,25,"Essex County, MA",25009,39,8536,4.57
+Massachusetts,25,"Hampden County, MA",25013,23,4721,4.87
+Massachusetts,25,"Middlesex County, MA",25017,43,16308,2.64
+Massachusetts,25,"Norfolk County, MA",25021,13,7153,1.82 (Unreliable)
+Massachusetts,25,"Plymouth County, MA",25023,19,5339,3.56 (Unreliable)
+Massachusetts,25,"Suffolk County, MA",25025,25,8246,3.03
+Massachusetts,25,"Worcester County, MA",25027,34,8482,4.01
+Massachusetts,25,"Unidentified Counties, MA",25999,12,4150,2.89 (Unreliable)
+Michigan,26,"Genesee County, MI",26049,41,4306,9.52
+Michigan,26,"Ingham County, MI",26065,18,2834,6.35 (Unreliable)
+Michigan,26,"Kalamazoo County, MI",26077,17,2652,6.41 (Unreliable)
+Michigan,26,"Kent County, MI",26081,41,8014,5.12
+Michigan,26,"Macomb County, MI",26099,42,8684,4.84
+Michigan,26,"Oakland County, MI",26125,42,12439,3.38
+Michigan,26,"Washtenaw County, MI",26161,19,3242,5.86 (Unreliable)
+Michigan,26,"Wayne County, MI",26163,207,20958,9.88
+Michigan,26,"Unidentified Counties, MI",26999,220,36126,6.09
+Minnesota,27,"Anoka County, MN",27003,20,4068,4.92
+Minnesota,27,"Dakota County, MN",27037,15,4919,3.05 (Unreliable)
+Minnesota,27,"Hennepin County, MN",27053,68,14476,4.7
+Minnesota,27,"Ramsey County, MN",27123,42,6649,6.32
+Minnesota,27,"Unidentified Counties, MN",27999,143,33903,4.22
+Mississippi,28,"Unidentified Counties, MS",28999,316,34675,9.11
+Missouri,29,"Greene County, MO",29077,23,3276,7.02
+Missouri,29,"Jackson County, MO",29095,65,8566,7.59
+Missouri,29,"St. Charles County, MO",29183,22,4251,5.18
+Missouri,29,"St. Louis County, MO",29189,54,10480,5.15
+Missouri,29,"St. Louis city, MO",29510,38,3342,11.37
+Missouri,29,"Unidentified Counties, MO",29999,264,39070,6.76
+Montana,30,"Unidentified Counties, MT",30999,52,11175,4.65
+Nebraska,31,"Douglas County, NE",31055,41,8032,5.1
+Nebraska,31,"Lancaster County, NE",31109,25,3616,6.91
+Nebraska,31,"Unidentified Counties, NE",31999,76,12697,5.99
+Nevada,32,"Clark County, NV",32003,118,24924,4.73
+Nevada,32,"Washoe County, NV",32031,19,4916,3.86 (Unreliable)
+Nevada,32,"Unidentified Counties, NV",32999,12,3353,3.58 (Unreliable)
+New Hampshire,33,"Hillsborough County, NH",33011,18,4168,4.32 (Unreliable)
+New Hampshire,33,"Unidentified Counties, NH",33999,17,5144,3.30 (Unreliable)
+New Jersey,34,"Atlantic County, NJ",34001,16,2698,5.93 (Unreliable)
+New Jersey,34,"Bergen County, NJ",34003,27,9317,2.9
+New Jersey,34,"Burlington County, NJ",34005,15,4733,3.17 (Unreliable)
+New Jersey,34,"Camden County, NJ",34007,32,6124,5.23
+New Jersey,34,"Essex County, NJ",34013,45,10147,4.43
+New Jersey,34,"Gloucester County, NJ",34015,12,3050,3.93 (Unreliable)
+New Jersey,34,"Hudson County, NJ",34017,25,9042,2.76
+New Jersey,34,"Mercer County, NJ",34021,19,4203,4.52 (Unreliable)
+New Jersey,34,"Middlesex County, NJ",34023,29,8552,3.39
+New Jersey,34,"Monmouth County, NJ",34025,12,6444,1.86 (Unreliable)
+New Jersey,34,"Morris County, NJ",34027,12,5098,2.35 (Unreliable)
+New Jersey,34,"Ocean County, NJ",34029,23,10225,2.25
+New Jersey,34,"Passaic County, NJ",34031,26,6414,4.05
+New Jersey,34,"Union County, NJ",34039,28,6703,4.18
+New Jersey,34,"Unidentified Counties, NJ",34999,36,6868,5.24
+New Mexico,35,"Bernalillo County, NM",35001,45,6560,6.86
+New Mexico,35,"Unidentified Counties, NM",35999,81,15054,5.38
+New York,36,"Albany County, NY",36001,13,2732,4.76 (Unreliable)
+New York,36,"Bronx County, NY",36005,85,17073,4.98
+New York,36,"Erie County, NY",36029,50,9098,5.5
+New York,36,"Kings County, NY",36047,116,33596,3.45
+New York,36,"Monroe County, NY",36055,48,7434,6.46
+New York,36,"Nassau County, NY",36059,47,13763,3.41
+New York,36,"New York County, NY",36061,38,13398,2.84
+New York,36,"Onondaga County, NY",36067,24,4637,5.18
+New York,36,"Orange County, NY",36071,17,5468,3.11 (Unreliable)
+New York,36,"Queens County, NY",36081,92,23986,3.84
+New York,36,"Richmond County, NY",36085,20,5001,4
+New York,36,"Rockland County, NY",36087,19,6409,2.96 (Unreliable)
+New York,36,"Suffolk County, NY",36103,65,16105,4.04
+New York,36,"Westchester County, NY",36119,36,9905,3.63
+New York,36,"Unidentified Counties, NY",36999,205,36541,5.61
+North Carolina,37,"Cumberland County, NC",37051,56,5282,10.6
+North Carolina,37,"Durham County, NC",37063,22,4082,5.39
+North Carolina,37,"Forsyth County, NC",37067,41,4555,9
+North Carolina,37,"Guilford County, NC",37081,54,5886,9.17
+North Carolina,37,"Mecklenburg County, NC",37119,72,15047,4.79
+North Carolina,37,"Wake County, NC",37183,63,13190,4.78
+North Carolina,37,"Unidentified Counties, NC",37999,517,73520,7.03
+North Dakota,38,"Unidentified Counties, ND",38999,42,9567,4.39
+Ohio,39,"Butler County, OH",39017,23,4322,5.32
+Ohio,39,"Cuyahoga County, OH",39035,92,12833,7.17
+Ohio,39,"Franklin County, OH",39049,143,17528,8.16
+Ohio,39,"Hamilton County, OH",39061,87,10264,8.48
+Ohio,39,"Lorain County, OH",39093,16,3152,5.08 (Unreliable)
+Ohio,39,"Lucas County, OH",39095,45,4910,9.16
+Ohio,39,"Montgomery County, OH",39113,48,6007,7.99
+Ohio,39,"Stark County, OH",39151,27,3882,6.96
+Ohio,39,"Summit County, OH",39153,28,5390,5.19
+Ohio,39,"Unidentified Counties, OH",39999,401,59943,6.69
+Oklahoma,40,"Cleveland County, OK",40027,18,2760,6.52 (Unreliable)
+Oklahoma,40,"Oklahoma County, OK",40109,72,10912,6.6
+Oklahoma,40,"Tulsa County, OK",40143,64,8706,7.35
+Oklahoma,40,"Unidentified Counties, OK",40999,178,25954,6.86
+Oregon,41,"Clackamas County, OR",41005,13,3661,3.55 (Unreliable)
+Oregon,41,"Lane County, OR",41039,17,3019,5.63 (Unreliable)
+Oregon,41,"Marion County, OR",41047,15,3917,3.83 (Unreliable)
+Oregon,41,"Multnomah County, OR",41051,29,7383,3.93
+Oregon,41,"Washington County, OR",41067,25,5986,4.18
+Oregon,41,"Unidentified Counties, OR",41999,78,15527,5.02
+Pennsylvania,42,"Allegheny County, PA",42003,65,11824,5.5
+Pennsylvania,42,"Berks County, PA",42011,28,4584,6.11
+Pennsylvania,42,"Bucks County, PA",42017,17,5604,3.03 (Unreliable)
+Pennsylvania,42,"Chester County, PA",42029,21,5610,3.74
+Pennsylvania,42,"Dauphin County, PA",42043,16,3277,4.88 (Unreliable)
+Pennsylvania,42,"Delaware County, PA",42045,45,6487,6.94
+Pennsylvania,42,"Erie County, PA",42049,20,2650,7.55
+Pennsylvania,42,"Lancaster County, PA",42071,51,7093,7.19
+Pennsylvania,42,"Lehigh County, PA",42077,24,3821,6.28
+Pennsylvania,42,"Luzerne County, PA",42079,16,3074,5.20 (Unreliable)
+Pennsylvania,42,"Montgomery County, PA",42091,32,8475,3.78
+Pennsylvania,42,"Northampton County, PA",42095,15,2699,5.56 (Unreliable)
+Pennsylvania,42,"Philadelphia County, PA",42101,130,19126,6.8
+Pennsylvania,42,"Westmoreland County, PA",42129,14,2910,4.81 (Unreliable)
+Pennsylvania,42,"York County, PA",42133,23,4846,4.75
+Pennsylvania,42,"Unidentified Counties, PA",42999,225,38172,5.89
+Rhode Island,44,"Providence County, RI",44007,34,6963,4.88
+South Carolina,45,"Charleston County, SC",45019,36,5025,7.16
+South Carolina,45,"Greenville County, SC",45045,25,6554,3.81
+South Carolina,45,"Horry County, SC",45051,24,3334,7.2
+South Carolina,45,"Lexington County, SC",45063,21,3335,6.3
+South Carolina,45,"Richland County, SC",45079,29,4462,6.5
+South Carolina,45,"Spartanburg County, SC",45083,22,4217,5.22
+South Carolina,45,"Unidentified Counties, SC",45999,233,30893,7.54
+South Dakota,46,"Unidentified Counties, SD",46999,87,11201,7.77
+Tennessee,47,"Davidson County, TN",47037,62,10155,6.11
+Tennessee,47,"Hamilton County, TN",47065,26,4403,5.91
+Tennessee,47,"Knox County, TN",47093,38,5405,7.03
+Tennessee,47,"Rutherford County, TN",47149,25,4544,5.5
+Tennessee,47,"Shelby County, TN",47157,91,12269,7.42
+Tennessee,47,"Unidentified Counties, TN",47999,301,45489,6.62
+Texas,48,"Bell County, TX",48027,48,6085,7.89
+Texas,48,"Bexar County, TX",48029,173,26589,6.51
+Texas,48,"Brazoria County, TX",48039,25,4825,5.18
+Texas,48,"Cameron County, TX",48061,34,6112,5.56
+Texas,48,"Collin County, TX",48085,48,12806,3.75
+Texas,48,"Dallas County, TX",48113,253,37249,6.79
+Texas,48,"Denton County, TX",48121,58,11499,5.04
+Texas,48,"El Paso County, TX",48141,67,11602,5.77
+Texas,48,"Fort Bend County, TX",48157,56,9589,5.84
+Texas,48,"Galveston County, TX",48167,23,3881,5.93
+Texas,48,"Harris County, TX",48201,345,66124,5.22
+Texas,48,"Hidalgo County, TX",48215,94,14401,6.53
+Texas,48,"Jefferson County, TX",48245,36,3260,11.04
+Texas,48,"Lubbock County, TX",48303,16,4140,3.86 (Unreliable)
+Texas,48,"Montgomery County, TX",48339,37,8470,4.37
+Texas,48,"Nueces County, TX",48355,28,4169,6.72
+Texas,48,"Tarrant County, TX",48439,159,28126,5.65
+Texas,48,"Travis County, TX",48453,65,16450,3.95
+Texas,48,"Webb County, TX",48479,23,4537,5.07
+Texas,48,"Williamson County, TX",48491,39,8072,4.83
+Texas,48,"Unidentified Counties, TX",48999,601,101755,5.91
+Utah,49,"Davis County, UT",49011,17,4599,3.70 (Unreliable)
+Utah,49,"Salt Lake County, UT",49035,70,14626,4.79
+Utah,49,"Utah County, UT",49049,62,12112,5.12
+Utah,49,"Unidentified Counties, UT",49999,81,14431,5.61
+Vermont,50,"Unidentified Counties, VT",50999,26,5316,4.89
+Virginia,51,"Chesterfield County, VA",51041,25,4258,5.87
+Virginia,51,"Fairfax County, VA",51059,53,12405,4.27
+Virginia,51,"Henrico County, VA",51087,26,3703,7.02
+Virginia,51,"Loudoun County, VA",51107,23,4821,4.77
+Virginia,51,"Prince William County, VA",51153,34,6427,5.29
+Virginia,51,"Virginia Beach city, VA",51810,28,5091,5.5
+Virginia,51,"Unidentified Counties, VA",51999,405,58925,6.87
+Washington,53,"Clark County, WA",53011,17,5526,3.08 (Unreliable)
+Washington,53,"King County, WA",53033,83,23023,3.61
+Washington,53,"Kitsap County, WA",53035,13,2938,4.42 (Unreliable)
+Washington,53,"Pierce County, WA",53053,54,10968,4.92
+Washington,53,"Snohomish County, WA",53061,29,9860,2.94
+Washington,53,"Spokane County, WA",53063,29,5867,4.94
+Washington,53,"Thurston County, WA",53067,18,3014,5.97 (Unreliable)
+Washington,53,"Unidentified Counties, WA",53999,118,22137,5.33
+West Virginia,54,"Unidentified Counties, WV",54999,124,16929,7.32
+Wisconsin,55,"Dane County, WI",55025,29,5584,5.19
+Wisconsin,55,"Milwaukee County, WI",55079,89,11576,7.69
+Wisconsin,55,"Waukesha County, WI",55133,17,3768,4.51 (Unreliable)
+Wisconsin,55,"Unidentified Counties, WI",55999,213,39121,5.44
+Wyoming,56,"Unidentified Counties, WY",56999,34,6049,5.62

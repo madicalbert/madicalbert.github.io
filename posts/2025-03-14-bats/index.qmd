@@ -1,0 +1,415 @@
+---
+title: "White-Nose Syndrome and Pesticide Use"
+description: "Investigating the connection between White-nose syndrome in bats and increases in pesticide use in agriculture in the US."
+author:
+  - name: Madi Calbert & Steven Mitchell
+    url: https://madicalbert.github.io/
+    affiliation: ESM 217 Planetary Health Course - Master of Environmental Science & Management Program @ The Bren School (UCSB)
+    affiliation-url: https://bren.ucsb.edu/masters-programs/master-environmental-science-and-management 
+date: March 14, 2025
+categories: [Data Science]
+citation: 
+  url: https://madicalbert.github.io/posts/2025-03-14-bats/ 
+image: preview-image.png
+execute: 
+  eval: true
+  echo: true
+  warning: false
+  message: false
+format:
+  html:
+    toc: true
+    code-fold: true  
+    code-tools: true  
+    embed-resources: true
+editor: visual
+---
+
+![A bat suffering from White-nose syndrome, a disease caused by the fungus *Pseudomycans destructans* (commonly abbreviated as "Pd"). *Photo credit: Google Creative Commons*](preview-image.png)
+
+# Abstract
+
+In this report, we investigate the impacts to crop production from an infectious fungal disease affecting bats. The fungus *Pseudogymnoascus destructans* causes white-nose syndrome in hibernating bats and has spread across the United States. Declining bat populations are expected to have substantial impacts on the environment, specifically agriculture. Bats eat insects that damage crops and the consumption of these insects by bats saves farmers billions of dollars in pest control services annually. We map white-nose syndrome occurrence and pesticide use by county across the US. The white-nose syndrome data from USGS is a time series of categorical presence/absence data of the disease and fungus. The pesticide use data is a time series of continuous concentration data by US counties. We run a linear regression to quantify the relationship between white-nose syndrome detection and pesticide use. We suggest next steps move towards incorporating public health data and running a multivariate analysis between WNS status, pesticide use, and negative health outcomes.
+
+# Background
+
+White-nose syndrome (WNS) is a disease caused by the invasive European fungus *Pseudogymnoascus destructans* (Pd). Pd and WNS were first detected in the U.S. in 2007.WNS has killed off over 90% of the total populations of at least 3 species (*Myotis septentrionalis, Myotis lucifugus, and Perimyotis subflavus*) and heavily impacted others (Quarles 2013, NPS 2019). Pd grows on the walls of caves, and can be spread between caves by both bats and human activity.
+
+At the population scale, bats serve as natural pest control by eating insects that would otherwise feed on crops. Bats are vital to agricultural ecosystems, saving the U.S. farming industry an estimated \$3.7 billion annually in pest control costs (Frank 2024). Their decline has led to increased reliance on chemical pesticides, specifically insecticides, which can have unintended consequences for environmental and human health. Pesticide exposure has been linked to adverse health effects, including respiratory issues, neurological disorders, infant mortality, and cancer (Brainerd 2014, Dias 2023). Additionally, declining bat populations may contribute to ecosystem imbalances, increasing the risk of pest outbreaks and crop failures.
+
+Key drivers of this issue include fungal disease transmission. WNS spreads rapidly in hibernating bat colonies, which causes mass mortality events. Habitat loss and climate change also are a key driver to this problem. Environmental stressors exacerbate disease impacts and loss of habitat further limits bat population recovery. Lastly, agricultural intensification further exacerbates the problem. Reduced bat populations lead to greater pesticide dependence, increasing exposure risks for both humans and wildlife.
+
+To address this issuse we pose the following research question: Does pesticide use increase following detection of Pd or WNS?
+
+# Methods
+
+To investigate the relationship between White-Nose Syndrome (WNS) in bats and pesticide use in agriculture, we compiled and processed datasets from the U.S. Geological Survey (USGS; Wieben 2021). WNS occurrence data was obtained at the county level, categorizing locations based on the presence of *Pseudogymnoascus destructans* (Pd) and confirmed WNS cases (USGS 2024). Pesticide use data, available as continuous concentration estimates, was aggregated by county and standardized by land area to facilitate comparisons. These datasets were integrated with U.S. county shapefiles to ensure spatial consistency for mapping and analysis.
+
+Data visualization played a key role in our analysis. We created a bivariate map to identify regions where both factors co-occur. This map provided a clear spatial representation of potential associations between WNS prevalence and increased pesticide application. To quantify this relationship, we conducted a linear regression analysis, treating WNS status as the independent variable and pesticide use per square meter as the dependent variable. This allowed us to assess whether counties with higher WNS detections also exhibited increased pesticide use.
+
+Through this methodological approach, we aimed to provide a comprehensive assessment of the link between WNS-related bat population declines, increased pesticide reliance, and potential consequences for both agriculture and public health. We provide potential solutions to combat this planetary health problem and suggest next steps for future research.
+
+# Results
+
+### Data Exploration
+
+```{r libraries}
+#Load libraries
+library(here)
+library(tidyverse)
+library(sf)
+library(tmap)
+library(viridisLite)
+library(biscale)
+library(lubridate)
+library(janitor)
+library(readr)
+library(terra)
+library(biscale)
+library(ggspatial)
+library(ggplot2)
+library(cowplot)
+```
+
+```{r global map options}
+# Global Map Options
+# US state boundary data for use as a bounding box
+us <- read_sf(here("posts", "2025-03-14-bats", "data", "tl_2024_state", "tl_2024_us_state.shp")) %>% 
+  filter(!STUSPS %in% c("MP", "GU", "AS", "AK", "HI", "PR", "VI"))
+
+# make a bounding box
+bbox <- st_bbox(us)
+
+# load US counties shapefile
+counties <- read_sf(here("posts", "2025-03-14-bats", "data", "tl_2023_us_county", "tl_2023_us_county.shp")) %>% 
+  mutate(county = NAME)
+```
+
+#### White-Nose Syndrome and *Pseudomycan destructans* Detections by County
+
+Figure 1 shows the presence of Pd and WNS by county. The data is from the USGS and is a time series of categorical presence/absence data of the disease and fungus. The map highlights the spread of WNS across the US, starting on the east coast and now reaching counties in Washington, Oregon, and California.
+
+```{r wns}
+# load WNS status by county data
+wns <- read_sf(here("posts", "2025-03-14-bats", "data", "wns_county_status", "wns_county_status.csv"))
+
+# join them
+wns_counties <- left_join(counties, wns, by = "county") %>% 
+  mutate(wns_status = factor(determination, levels = c("Pd Presumed", "WNS Suspect", "Pd Positive", "WNS Positive"), ordered = TRUE)) %>% 
+  mutate(date = mdy(release_date)) %>% 
+  filter(date <= as.Date("2020-01-01"))
+
+# Define  color palettes
+wns_palette <- c("Pd Presumed" = "#d3d3d3", "WNS Suspect" = "#d6c597", 
+                 "Pd Positive" = "#d9b653", "WNS Positive" = "#dea301")
+
+# Exploratory WNS-by-County Map
+map_wns_counties <-   tm_shape(us, bbox = bbox)+
+  tm_polygons(fill = "#f6f9f3",
+             border.col = "black",
+             border.lwd = 1)+
+  tm_shape(counties)+
+  tm_polygons(fill = "#f6f9f3",
+              border.col = "grey",
+              border.lwd = 0.1)+
+  tm_shape(wns_counties, bbox = bbox)+
+  tm_polygons(col = "wns_status",
+              palette = wns_palette,
+              title = "Pd / WNS Status")+
+  tm_compass(position = c("right", "bottom"))+
+  tm_scalebar(position = c("right", "bottom"))+
+  tm_title("",position = c("left", "bottom"))+
+  tm_legend(position = c("left", "bottom"))+
+  tm_layout(bg.color = "#f6f9f3",
+            outer.bg.color = "#f6f9f3")
+
+tmap_save(map_wns_counties, here("posts", "2025-03-14-bats", "outputs", "map_wns_counties.png"))
+```
+
+![**Figure 1: *Pseudomycan destructans* and White-Nose Syndrome Detections by County.** Data Source: [U.S. Geological Survey (USGS) National Wildlife Health Center](https://www.usgs.gov/centers/nwhc/science/white-nose-syndrome)](outputs/map_wns_counties.png)
+
+#### Pesticide Use by County
+
+Figure 2 shows the total pesticide use (in kilograms) by county. The data is from the USGS and is a time series of continuous concentration data by US counties. The map highlights the areas of the US with the highest pesticide use, which are primarily in the Midwest.
+
+```{r pesticides}
+pesticides_2013_2017 <- read_csv(here("posts", "2025-03-14-bats", "data", "2013_2017_pesticides", "EPest_county_estimates_2013_2017_v2.csv")) %>% 
+  mutate(COUNTYFP = as.character(COUNTY_FIPS_CODE)) %>% 
+  mutate(concentration = ifelse(is.na(EPEST_HIGH_KG), 
+                                EPEST_LOW_KG, EPEST_HIGH_KG)) %>% 
+  group_by(COUNTYFP, YEAR) %>% 
+  summarise(total_pesticides_kg = sum(concentration, na.rm = TRUE))  
+
+pesticides_2018 <- read_csv(here("posts", "2025-03-14-bats", "data", "2018_pesticides", "EPest_county_estimates_2018.csv")) %>% 
+  mutate(COUNTYFP = as.character(COUNTY_FIPS_CODE)) %>% 
+  mutate(concentration = ifelse(is.na(EPEST_HIGH_KG), 
+                                EPEST_LOW_KG, EPEST_HIGH_KG)) %>% 
+  group_by(COUNTYFP, YEAR) %>% 
+  summarise(total_pesticides_kg = sum(concentration, na.rm = TRUE)) 
+
+pesticides_2019 <- read_csv(here("posts", "2025-03-14-bats", "data", "2019_pesticides", "EPest_county_estimates_2019.csv")) %>% 
+  mutate(COUNTYFP = as.character(COUNTY_FIPS_CODE)) %>% 
+  mutate(concentration = ifelse(is.na(EPEST_HIGH_KG), 
+                                EPEST_LOW_KG, EPEST_HIGH_KG)) %>% 
+  group_by(COUNTYFP, YEAR) %>% 
+  summarise(total_pesticides_kg = sum(concentration, na.rm = TRUE)) 
+
+# join pesticides data
+pesticides <- bind_rows(pesticides_2013_2017, pesticides_2018, pesticides_2019)
+
+
+# join to counties shp
+pesticides_counties <- left_join(counties, pesticides, by = "COUNTYFP") %>% 
+  mutate(pesticides_per_sqm = total_pesticides_kg/ALAND) %>% 
+  mutate(pesticides_quantile = cut(pesticides_per_sqm, 
+                                  breaks = quantile(pesticides_per_sqm, 
+                                                    probs = seq(0, 1, by = 0.25), na.rm = TRUE),
+                                  labels = c("Low", "Medium", "High", "Very High"))) %>% 
+  drop_na(pesticides_quantile)
+
+# Define  color palettes
+pesticide_palette <- c("Low" = "#d3d3d3","Medium" = "#a6bcc7", 
+                       "High" = "#77a6bb", "Very High" = "#488fb0")  
+
+map_pesticides_counties <- tm_shape(us, bbox = bbox)+
+  tm_polygons(fill = "#f6f9f3",
+             border.col = "black",
+             border.lwd = 1)+
+  tm_shape(counties)+
+  tm_polygons(fill = "#f6f9f3",
+              border.col = "grey",
+              border.lwd = 0.1)+
+  tm_shape(pesticides_counties)+
+  tm_polygons(col = "pesticides_quantile",
+              palette = pesticide_palette,,
+              NA.col = "#f6f9f3",
+              title = "Pesticides (kg/m²)")+
+  tm_compass(position = c("right", "bottom"))+
+  tm_scale_bar(position = c("right", "bottom"))+
+  tm_layout(title = "",
+            title.position = c("left", "bottom"),
+            legend.position = c("left", "bottom"))+
+  tm_layout(bg.color = "#f6f9f3",
+            outer.bg.color = "#f6f9f3")
+
+tmap_save(map_pesticides_counties, here("posts", "2025-03-14-bats", "outputs", "map_pesticides_counties.png"))
+```
+
+![**Figure 2: Pesticide use (kg/m²) by County.** Data Source: [U.S. Geological Survey (USGS) Science-Base Catalog](https://www.sciencebase.gov/catalog/item/6081a924d34e8564d68661a1)](outputs/map_pesticides_counties.png)
+
+#### WNS Status & Pesticide Use by County
+
+Figure 3 highlights the relationship between WNS status and pesticide use (in kilograms per square meter). The data shows that positive detection of WNS are in counties with the most pesticide use.
+
+```{r wns and pesticides}
+wns_pesticides <- left_join(wns_counties, pesticides, by = "COUNTYFP") %>% 
+  drop_na(total_pesticides_kg) %>% 
+  drop_na(wns_status)  %>% 
+  mutate(pesticides_per_sqm = total_pesticides_kg/ALAND) %>% 
+  mutate(wns_numeric = as.numeric(wns_status)) %>% 
+  mutate(pesticides_quantile = cut(pesticides_per_sqm, 
+                                  breaks = quantile(pesticides_per_sqm, 
+                                                    probs = seq(0, 1, by = 0.25), na.rm = TRUE),
+                                  labels = c("Low", "Medium", "High", "Very High")))
+
+write_sf(wns_pesticides, here("posts", "2025-03-14-bats", "data", "wns_pesticides.shp"))
+
+chart_wns_pesticides <- ggplot(data = wns_pesticides, aes(x = wns_status, y = pesticides_per_sqm,
+                                    color = wns_status))+
+  geom_col()+
+  theme_bw()+
+  scale_color_manual(values = wns_palette)+
+  labs(x = "White-Nose Syndrome Status",
+       y = "Pesticide Use (kg/m²)",
+       title = "Pesticide Use by WNS Status")+
+    theme(panel.background = element_rect(fill = "#f6f9f3",
+                                colour = "#f6f9f3",
+                                size = 0.5, linetype = "solid"),
+        plot.background = element_rect(fill = "#f6f9f3"),
+        legend.position = "none")
+
+ggsave(here("posts", "2025-03-14-bats", "outputs", "chart_wns_pesticides.png"), chart_wns_pesticides,
+       width = 6, height = 3)
+```
+
+![**Figure 3: White-Nose Syndrome Status and Pesticide use (kg/m²)**. Detections of WNS are highest in counties with the most pesticide use.](outputs/chart_wns_pesticides.png)
+
+### Linear Regression
+
+We ran a linear regression to quantify the relationship between WNS status and pesticide use. The results show a significant positive relationship between WNS status and pesticide use, indicating that counties with higher WNS detections also exhibit increased pesticide use.
+
+```{r regression}
+wns_pest_lm <- glm(pesticides_per_sqm ~ wns_status, data = wns_pesticides)
+
+print(summary(wns_pest_lm))
+```
+
+### Bivariate Map
+
+Figure 4 shows the relationship between WNS status and pesticide use by county. The map highlights the areas of the US with the highest pesticide use and the presence of WNS, which are concentrated in the Midwest.
+
+```{r bivariate map}
+# Classify the pesticide data into categories
+wns_pesticides_biclass <- wns_pesticides %>% 
+  select(wns_numeric, pesticides_quantile, county, geometry, GEOID)
+
+bivariate <- bi_class(wns_pesticides_biclass, 
+                      x = wns_numeric, 
+                      y = pesticides_quantile, 
+                      style = "quantile",
+                      dim = 4) %>% 
+  drop_na()
+
+# Set the color palette for the bivariate map
+pallet <- "BlueGold" 
+
+# Create the legend for the bivariate map
+legend <- bi_legend(pal = pallet,   
+                    flip_axes = FALSE,
+                    rotate_pal = FALSE,
+                    dim = 4,
+                    xlab = "Pesticides (kg/m²)",
+                    ylab = "WNS Status",
+                    size = 8) +
+  theme(plot.background = element_rect(fill = "#f6f9f3"))
+
+# Create the bivariate map using ggplot2
+map <- ggplot() +
+  theme_void(base_size = 14) +  
+  xlim(-125, -66) +  
+  ylim(24, 49) +  
+  
+  # Plot the bivariate data with appropriate fill color based on bivariate classes
+  geom_sf(data = bivariate, aes(fill = bi_class), 
+          color = NA, 
+          linewidth = 0.1, 
+          show.legend = TRUE) +
+  
+  # Apply the color palette
+  bi_scale_fill(pal = pallet, dim = 4, flip_axes = FALSE, rotate_pal = FALSE) +
+  
+  # Overlay the US state boundaries
+  geom_sf(data = us, fill = NA, color = "black", linewidth = 0.4) +  
+
+  # Overlay the county boundaries
+  geom_sf(data = counties, fill = NA, color = "grey60", linewidth = 0.25) +  
+  
+  # Add a scale bar and north arrow together in the bottom right
+  annotation_scale(location = "br", width_hint = 0.15, text_cex = 0.8) +  
+  annotation_north_arrow(location = "br", which_north = "true",
+                         pad_x = unit(0.1, "cm"), pad_y = unit(1, "cm"), 
+                         height = unit(0.9, "cm"), width = unit(0.6, "cm")) +
+  
+  # Add labels for the map
+  labs(title = "White-Nose Syndrome and Pesticide Use in US Counties",
+       caption = "Source: U.S. Geological Survey") +
+  
+  # Customize the appearance of the title, subtitle, and caption
+  theme(plot.title = element_text(hjust = 0.5, 
+                                  face = "bold"),
+        plot.subtitle = element_text(hjust = 0.5),
+        plot.caption = element_text(size = 10, 
+                                    hjust = 1, 
+                                    face = "italic"),
+        legend.position = "none",
+        plot.background = element_rect(fill = "#f6f9f3", color = NA)) 
+
+
+# Combine the map and legend using cowplot
+map_bivar <- ggdraw() +
+  draw_plot(map, 0, 0, 1, 1) +  
+  draw_plot(legend, 0.05, 0.05, 0.28, 0.28) 
+
+# Display the final map with legend
+# map_bivar
+
+ggsave(here("posts", "2025-03-14-bats", "outputs", "map_bivar.png"), map_bivar, dpi = 400, width = 8.48, height = 5.12)
+```
+
+![**Figure 4: White-Nose Syndrome Status and Pesticide use by county across the US.** Associations of WNS and high pesticide use are concentrated in midwestern counties.](outputs/map_bivar.png)
+
+# Discussion
+
+### Recommendations
+
+Our research sought to determine whether pesticide use increases following the detection of *Pseudogymnoascus destructans* (Pd) or white-nose syndrome (WNS) in bats. Our findings suggest that this is the case. As bat populations decline due to WNS, farmers may rely more heavily on chemical pest control methods to compensate for the loss of bats as natural insect predators. This pattern highlights the ecological and economic importance of bats in agricultural systems and raises concerns about the broader environmental and human health consequences of increased pesticide use.
+
+The implications of these findings extend beyond agriculture. Pesticide exposure has been linked to respiratory issues, neurological disorders, and cancer, posing risks to both farmworkers and surrounding communities (Brainerd 2014, Diaz 2023, Frank 2024). Additionally, excessive pesticide application can disrupt ecosystems by harming non-target species, contaminating water sources, and contributing to insecticide resistance in pest populations. Given these risks, conservation strategies that protect bat populations may offer an alternative to increasing pesticide dependence.
+
+Potential solutions to combat this planetary health problem include:
+
+-   **Protect Bat Habitat:**
+
+    -   Conserve Pd-negative caves and surrounding habitats to sustain healthy bat populations.
+
+    -   Modify or construct man-made structures to provide Pd-free bat habitats.
+
+-   **Prevent the Spread of Pd:**
+
+    -   Restrict human access to caves to reduce the risk of Pd transmission.
+
+    -   Investigate treatments to inoculate caves against Pd, though current methods remain limited in efficacy.
+
+-   **Prevent the Onset of WNS in Bats:**
+
+    -   Develop and implement vaccination programs to protect bats from WNS, though these are still experimental.
+
+### Limitations & Next Steps
+
+While our analysis identifies a correlation between WNS presence and higher pesticide use, several limitations must be considered. First, correlation does not imply causation, and other factors such as changing pest populations, shifts in land use, or regional policy differences may also influence pesticide application. Second, our reliance on county-level data may obscure finer-scale patterns, and inconsistencies in pesticide reporting across states could introduce variability in our dataset. Additionally, the potential lag between WNS detection and pesticide use increases is not fully accounted for in this analysis. A longer-term study would be necessary to assess delayed effects more accurately.
+
+To build on this research, future studies should incorporate public health data to explore potential links between WNS status, pesticide use, and human health outcomes. A multivariate analysis could provide a clearer understanding of these interactions, informing conservation and agricultural policies that support both ecosystem health and public well-being. We suggest moving towards incorporating public health data and running a multivariate analysis between WNS status, pesticide use, and negative health outcomes. We attempted to incorporate public health data on infant mortality but were hindered by data availability as shown in Figure 5. Frank (2024) highlights this connection between declining bat populations, increased pesticide use, and increased cases of infant mortality.
+
+```{r}
+# Infant Mortality
+infant_mortality <- read_csv(here("posts", "2025-03-14-bats", "data", "infant_mortality", "infant_mortality.csv")) %>%   clean_names() %>% 
+  mutate(death_rate = parse_number(death_rate)) %>% 
+  mutate(GEOID = as.character(county_code)) 
+
+wns_pest_infmort <- left_join(wns_pesticides, infant_mortality, by = "GEOID") %>% 
+  drop_na(total_pesticides_kg) %>% 
+  drop_na(wns_status)  %>% 
+  mutate(pesticides_per_sqm = total_pesticides_kg/ALAND) %>% 
+  drop_na(death_rate)
+
+map_wns_infmort <- tm_shape(us, bbox = bbox)+
+  tm_polygons(fill = "#f6f9f3",
+             border.col = "black",
+             border.lwd = 1)+
+  tm_shape(counties)+
+  tm_polygons(fill = "#f6f9f3",
+              border.col = "grey",
+              border.lwd = 0.1)+
+  tm_shape(wns_pest_infmort)+
+  tm_polygons(fill = "death_rate",
+              palette = "viridis",
+              title = "Infant Mortality Rate")+
+  tm_compass(position = c("right", "bottom"))+
+  tm_scalebar(position = c("right", "bottom"))+
+  tm_title("",position = c("left", "bottom"))+
+  tm_legend(position = c("left", "bottom"))+
+  tm_layout(bg.color = "#f6f9f3",
+            outer.bg.color = "#f6f9f3",
+            frame.lwd = 0)
+tmap_save(map_wns_infmort, here("posts", "2025-03-14-bats", "outputs", "map_wns_infmort.png"))
+```
+
+![**Figure 5: Infant Mortality Rate by County.** Data Source: [U.S. Centers for Disease Control and Prevention (CDC)](https://www.cdc.gov/nchs/pressroom/nchs_press_releases/2019/20190925.htm)](outputs/map_wns_infmort.png)
+
+# Works Cited
+
+Brainerd, E., Menon, N. (2014). Seasonal effects of water quality: The hidden costs of the Green Revolution to infant and child health in India. J. Dev. Econ. 107, 49–64. doi: 10.1016/j.jdeveco.2013.11.004
+
+Dias, M., Rocha, R., Soares, R. (2023). Down the River: Glyphosate Use in Agriculture and Birth Outcomes of Surrounding Populations. Rev. Econ. Stud. 90, 2943–2981. doi: 10.1093/restud/rdad011
+
+Frank, E. G. (2024). The economic impacts of ecosystem disruptions: Costs from substituting biological pest control. Science, 385(6713).
+
+NPS. (2019). Fungus that Causes White-nose Syndrome Confirmed in California. Available at: https://www.nps.gov/articles/fungus-that-causes-white-nose-syndrome-confirmed-in-california.htm?utm_source=article&utm_medium=website&utm_campaign=experience_more&utm_content=small
+
+Quarles, W. (2013). Bats, pesticides and white nose syndrome. IPM Practitioner, 33(9/10), 1-6.
+
+Verant, M., & Bernard, R. F. (2023). White‐nose syndrome in bats: Conservation, management, and context‐dependent decision making. Wildlife disease and health in conservation, 273-291.
+
+Wieben, C.M. (2021). Preliminary estimated annual agricultural pesticide use for counties of the conterminous United States, 2013 - 2019: U.S. Geological Survey data release, https://doi.org/10.5066/P9EDTHQL.
+
+USGS. (2024). Where is White-nose Syndrome Now? Preliminary White-nose Syndrome Occurence by County/District of the conterminous United States. Updated December 2024.

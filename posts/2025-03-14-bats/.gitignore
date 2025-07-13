@@ -1,0 +1,6 @@
+.Rproj.user
+.Rhistory
+.RData
+.Ruserdata
+# ignore any folder named `data/`
+posts/2025-03-14-bats/data/

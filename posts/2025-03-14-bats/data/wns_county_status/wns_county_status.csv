@@ -1,0 +1,716 @@
+country,stateprov,county,determination,release_date,status_season
+USA,Wyoming,Laramie,WNS Positive,8/2/24,2022-23
+USA,Wyoming,Albany,WNS Positive,8/2/24,2022-23
+USA,Nebraska,Lancaster,Pd Positive,6/7/17,2016-17
+USA,Nebraska,Dixon,Pd Positive,6/7/17,2016-17
+USA,Nebraska,Cass,WNS Positive,3/15/17,2016-17
+USA,Nebraska,Sarpy,WNS Suspect,3/15/17,2016-17
+USA,Mississippi,Wayne,Pd Positive,4/24/17,2016-17
+USA,Mississippi,Union,Pd Positive,3/22/17,2016-17
+USA,Missouri,Newton,WNS Suspect,4/2/18,2017-18
+USA,South Dakota,Jackson,Pd Positive,5/31/18,2017-18
+USA,Washington,Kittitas,WNS Positive,9/4/19,2018-19
+USA,Kansas,Cherokee,WNS Positive,4/2/18,2017-18
+USA,Kansas,Comanche,WNS Suspect,5/30/18,2017-18
+USA,Kansas,Barber,WNS Positive,4/2/18,2017-18
+USA,Kansas,Kiowa,WNS Positive,5/30/18,2017-18
+USA,Kansas,Pratt,WNS Positive,5/30/18,2017-18
+USA,South Dakota,Custer,WNS Positive,7/2/18,2017-18
+USA,Texas,Uvalde,WNS Positive,5/20/20,2019-20
+USA,Texas,Guadalupe,WNS Positive,5/20/20,2019-20
+USA,Texas,Comal,WNS Positive,5/20/20,2019-20
+USA,Texas,Kerr,WNS Positive,5/20/20,2019-20
+USA,Texas,Hays,WNS Positive,5/20/20,2019-20
+USA,Texas,Travis,WNS Positive,5/20/20,2019-20
+USA,Texas,Terrell,Pd Positive,5/14/21,2020-21
+USA,Texas,Sutton,WNS Positive,5/20/20,2019-20
+USA,Texas,Kimble,WNS Positive,5/20/20,2019-20
+USA,Texas,Williamson,WNS Positive,5/20/20,2019-20
+USA,Texas,Llano,WNS Positive,5/20/20,2019-20
+USA,Texas,Mason,WNS Positive,5/20/20,2019-20
+USA,Texas,Burnet,WNS Positive,5/20/20,2019-20
+USA,Texas,Bell,WNS Positive,5/20/20,2019-20
+USA,Texas,Lampasas,WNS Positive,5/20/20,2019-20
+USA,Texas,McCulloch,WNS Positive,6/2/20,2019-20
+USA,Texas,Freestone,Pd Positive,5/14/21,2018-19
+USA,Texas,Cottle,WNS Positive,5/14/21,2020-21
+USA,Texas,Hardeman,WNS Positive,5/14/21,2020-21
+USA,Texas,Frio,Pd Positive,5/7/19,2018-19
+USA,Texas,Victoria,Pd Positive,5/7/19,2018-19
+USA,Texas,Bexar,Pd Positive,5/7/19,2018-19
+USA,Texas,Kendall,Pd Presumed,4/5/18,2017-18
+USA,Texas,Val Verde,Pd Positive,5/7/19,2018-19
+USA,Texas,Liberty,Pd Positive,5/7/19,2018-19
+USA,Texas,Blanco,Pd Presumed,4/5/18,2017-18
+USA,Texas,San Saba,Pd Positive,5/7/19,2018-19
+USA,Texas,Foard,Pd Presumed,4/5/18,2017-18
+USA,Texas,Wheeler,Pd Presumed,4/5/18,2017-18
+USA,Texas,Scurry,Pd Positive,3/22/17,2016-17
+USA,Texas,King,Pd Positive,3/22/17,2016-17
+USA,Texas,Childress,Pd Positive,3/22/17,2016-17
+USA,Texas,Collingsworth,Pd Positive,3/22/17,2016-17
+USA,Texas,Bandera,WNS Positive,5/15/20,2019-20
+USA,Texas,Bastrop,WNS Positive,5/19/20,2019-20
+USA,Texas,Gillespie,WNS Positive,3/5/20,2019-20
+USA,North Dakota,Billings,WNS Positive,5/20/20,2019-20
+CAN,Alberta,Camrose county,Pd Positive,7/2/24,2023-24
+CAN,Alberta,Cyprus county,Pd Positive,7/2/24,2023-24
+CAN,Alberta,Strathcona county,Pd Positive,7/2/24,2023-24
+CAN,Alberta,Kneehill county,Pd Positive,7/2/24,2023-24
+CAN,Saskatchewan,Meadow Lake,Pd Positive,7/2/24,2023-24
+CAN,Alberta,Forty Mile,Pd Positive,7/13/23,2022-23
+CAN,Saskatchewan,White Valley,Pd Positive,7/6/23,2021-22
+CAN,British Columbia,Kootenay boundary,Pd Positive,7/6/23,2021-22
+CAN,Alberta,Newell,WNS Positive,8/8/24,2023-24
+CAN,Alberta,Special Area No. 2,WNS Positive,8/8/24,2023-24
+CAN,Saskatchewan,Happyland,Pd Positive,1/13/23,2021-22
+CAN,Saskatchewan,Chesterfield,Pd Positive,1/13/23,2021-22
+CAN,Saskatchewan,Grasslands National Park East,WNS Positive,8/8/22,2021-22
+CAN,Quebec,La Mitis,Pd Positive,12/22/21,2013-14
+CAN,Newfoundland and Labrador,Division No.  6,Pd Positive,12/22/21,2018-19
+CAN,Newfoundland and Labrador,District 19a,Pd Positive,12/22/21,2018-19
+CAN,Newfoundland and Labrador,District 19a,Pd Positive,12/22/21,2018-19
+CAN,Newfoundland and Labrador,District 19b,Pd Positive,12/22/21,2017-18
+CAN,Saskatchewan,Enniskillen,Pd Positive,12/22/21,2020-21
+CAN,Quebec,Monticules du Lac De Morbihan,Pd Positive,12/22/21,2017-18
+CAN,Saskatchewan,Keys,Pd Positive,12/22/21,2020-21
+CAN,Saskatchewan,Hudson Bay,Pd Positive,12/22/21,2020-21
+CAN,Quebec,Papineau,Pd Positive,12/22/21,2015-16
+CAN,Saskatchewan,Grasslands National Park west,Pd Positive,12/22/21,2020-21
+CAN,Saskatchewan,Val Marie,Pd Positive,12/22/21,2020-21
+CAN,Quebec,La Vallée-de-la-Gatineau,Pd Positive,12/22/21,2014-15
+CAN,Quebec,Buttons du Lac Némiscau,Pd Positive,12/22/21,2017-18
+CAN,Saskatchewan,Moose Range,Pd Positive,12/22/21,2020-21
+CAN,Newfoundland and Labrador,District 19b,Pd Positive,12/22/21,2020-21
+CAN,Saskatchewan,Arborfield,Pd Positive,12/22/21,2020-21
+CAN,Manitoba,Division No. 21,WNS Positive,7/8/21,2020-21
+CAN,New Brunswick,York County,WNS Positive,3/24/21,2013-14
+CAN,New Brunswick,Queens County,WNS Positive,3/24/21,2013-14
+CAN,Ontario,Wellington County,WNS Positive,3/24/21,2011-12
+CAN,Ontario,Atikokan,WNS Positive,3/24/21,2014-15
+CAN,Ontario,Beardmore,WNS Positive,3/24/21,2014-15
+CAN,Newfoundland,Census Div. 4/St George's,WNS Positive,3/24/21,2016-17
+CAN,Nova Scotia,Cape Breton County,WNS Positive,3/24/21,2013-14
+CAN,Nova Scotia,Digby County,WNS Positive,3/24/21,2013-14
+CAN,Nova Scotia,Kings County,WNS Positive,3/24/21,2010-11
+CAN,Nova Scotia,Hants County,WNS Positive,3/24/21,2010-11
+CAN,New Brunswick,Victoria County,WNS Positive,3/24/21,2013-14
+CAN,Nova Scotia,Halifax County,WNS Positive,3/24/21,2010-11
+CAN,New Brunswick,Albert County,WNS Positive,3/24/21,2010-11
+CAN,New Brunswick,Kings County,WNS Positive,3/24/21,2011-12
+CAN,Nova Scotia,Colchester County,WNS Positive,3/24/21,2011-12
+CAN,Ontario,Beardmore,WNS Suspect,3/24/21,2014-15
+CAN,Nova Scotia,Annapolis County,WNS Positive,3/24/21,2012-13
+CAN,Quebec,Sault Ste Marie,WNS Suspect,3/24/21,2015-16
+CAN,Nova Scotia,Antigonish County,WNS Positive,3/24/21,2012-13
+CAN,Ontario,Timmins,WNS Positive,3/24/21,2010-11
+CAN,Quebec,Anticosti,WNS Positive,3/24/21,2019-20
+CAN,Quebec,Le Domaine-du-Roy,WNS Positive,3/24/21,2011-12
+CAN,Manitoba,Division No. 17,WNS Positive,3/24/21,2018-19
+CAN,Nova Scotia,Guysborough County,WNS Positive,3/24/21,2012-13
+CAN,Prince Edward,Kings County,WNS Positive,3/24/21,2012-13
+CAN,Prince Edward,Prince County,WNS Positive,1/1/15,2012-13
+CAN,New Brunswick,Carleton County,WNS Positive,3/25/21,2017-18
+CAN,Quebec,Mekinac-Saint-Tite,WNS Positive,3/24/21,2010-11
+CAN,Quebec,Levis,WNS Positive,3/24/21,2011-12
+CAN,Quebec,Antoine-Labelle,WNS Positive,3/24/21,2014-15
+CAN,New Brunswick,Northumberland County,WNS Positive,3/24/21,2012-13
+CAN,New Brunswick,Charlotte County,WNS Positive,3/24/21,2011-12
+CAN,Quebec,Le Haut-Saint-François,WNS Suspect,3/24/21,2011-12
+CAN,Quebec,La Cote de Beaupre,WNS Suspect,3/24/21,2010-11
+CAN,Quebec,Le Haut-Saint-Laurent,WNS Suspect,3/24/21,2013-14
+CAN,New Brunswick,Restigouche,WNS Positive,3/24/21,2014-15
+CAN,Manitoba,District 19/Sturgeon Bay,WNS Positive,3/24/21,2017-18
+CAN,Quebec,Le Granit,WNS Positive,3/24/21,2010-11
+CAN,New Brunswick,Madawaska County,WNS Positive,3/24/21,2012-13
+CAN,Quebec,Memphrémagog,WNS Positive,3/24/21,2009-10
+CAN,Quebec,Lotbinière,WNS Positive,3/24/21,2011-12
+CAN,Ontario,Bruce County,WNS Positive,3/24/21,2010-11
+CAN,Ontario,Haldimand-Norfolk Rgnl Municipal,WNS Positive,3/24/21,2011-12
+CAN,Ontario,Niagara Regional Municipality,WNS Positive,3/24/21,2011-12
+CAN,Quebec,Les Collines-De-L'Outaouais,WNS Positive,3/24/21,2009-10
+CAN,Ontario,Renfrew County,WNS Positive,3/24/21,2009-10
+CAN,Ontario,Peterborough County,WNS Positive,3/24/21,2009-10
+CAN,Quebec,La Jacques-Cartier (Part 1 Of),WNS Positive,3/24/21,2011-12
+CAN,Ontario,Hastings County,WNS Positive,3/24/21,2009-10
+CAN,Ontario,Grey County,WNS Positive,3/24/21,2009-10
+CAN,Quebec,Desjardins,WNS Positive,3/24/21,2011-12
+CAN,Quebec,L'Érable,WNS Positive,3/24/21,2010-11
+CAN,Ontario,Dufferin County,WNS Positive,3/24/21,2010-11
+CAN,Ontario,Haliburton County,WNS Positive,3/24/21,2010-11
+CAN,Ontario,Halton Regional Municipality,WNS Positive,3/24/21,2010-11
+CAN,Ontario,Peel Regional Municipality,WNS Positive,3/24/21,2010-11
+CAN,Quebec,Les Laurentides,WNS Positive,3/24/21,2010-11
+CAN,Ontario,Sudbury District (Part 1 Of),WNS Positive,3/24/21,2012-13
+CAN,Ontario,Algoma District (Part 4 of),WNS Suspect,3/24/21,2014-15
+CAN,Ontario,Thunder Bay District (Part 1 Of),WNS Positive,3/24/21,2013-14
+CAN,Ontario,Algoma Dist. (Part 3 Of),WNS Positive,3/24/21,2013-14
+CAN,Ontario,Timiskaming District,WNS Positive,3/24/21,2009-10
+CAN,Ontario,Kenora District,WNS Positive,3/24/21,2016-17
+CAN,Quebec,La Côte-De-Gaspé,WNS Positive,3/24/21,2014-15
+CAN,Quebec,Matane,WNS Positive,3/24/21,2013-14
+CAN,New Brunswick,Saint John County,WNS Positive,3/24/21,2010-11
+CAN,Ontario,Cochrane District (Part 1 Of),WNS Positive,3/24/21,2010-11
+CAN,Ontario,Nipissing District (Part 1 Of),WNS Positive,3/24/21,2010-11
+CAN,Quebec,La Vallee-De-L'Or (Part 1 Of),WNS Positive,3/24/21,2010-11
+CAN,Ontario,Algoma Dist. (Part 1 Of),WNS Positive,3/24/21,2010-11
+CAN,Ontario,Thunder Bay District (Part 2 Of),WNS Suspect,3/24/21,2014-15
+CAN,Ontario,Algoma Dist. (Part 2 Of),WNS Positive,3/24/21,2011-12
+CAN,Nova Scotia,Victoria County,WNS Positive,3/24/21,2015-16
+CAN,New Brunswick,Westmorland County,WNS Positive,3/24/21,2011-12
+CAN,Newfoundland,Census div 5 Humber,WNS Positive,3/24/21,2017-18
+CAN,Nova Scotia,Inverness County,WNS Positive,3/24/21,2013-14
+CAN,Nova Scotia,Richmond County,WNS Positive,3/24/21,2013-14
+CAN,New Brunswick,Kent County,WNS Positive,3/24/21,2013-14
+CAN,Nova Scotia,Cumberland County,WNS Positive,3/24/21,2011-12
+CAN,Prince Edward,Queens County,WNS Positive,3/24/21,2012-13
+CAN,Ontario,Simcoe County,WNS Positive,3/24/21,2010-11
+CAN,Quebec,Nord-Du-Quebec (Part 2 Of),WNS Positive,3/24/21,2012-13
+CAN,Quebec,Nord-Du-Quebec (Part 1 Of),WNS Positive,3/24/21,2010-11
+CAN,Ontario,Waterloo,WNS Suspect,3/24/21,2016-17
+USA,Louisiana,Natchitoches,Pd Positive,3/14/22,2020-21
+USA,California,Plumas,Pd Presumed,6/4/20,2018-19
+USA,Michigan,Lake,WNS Positive,6/30/17,2016-17
+USA,Michigan,Grand Traverse,Pd Positive,8/7/17,2016-17
+USA,Michigan,Emmet,Pd Positive,8/7/17,2016-17
+USA,Michigan,Baraga,WNS Positive,4/24/17,2016-17
+USA,Missouri,Douglas,WNS Suspect,3/15/17,2016-17
+USA,South Carolina,Laurens,Pd Positive,4/24/17,2016-17
+USA,South Carolina,Union,Pd Positive,4/17/17,2016-17
+USA,South Carolina,Lancaster,Pd Positive,4/17/17,2016-17
+USA,South Carolina,York,Pd Positive,3/14/18,2017-18
+USA,South Carolina,Cherokee,Pd Positive,3/14/18,2017-18
+USA,South Carolina,Spartanburg,Pd Positive,3/14/18,2017-18
+USA,South Carolina,Greenville,Pd Positive,4/17/17,2016-17
+USA,Wisconsin,Washington,Pd Positive,5/9/17,2016-17
+USA,Wisconsin,Columbia,WNS Suspect,5/9/17,2016-17
+USA,Wisconsin,Calumet,Pd Positive,5/9/17,2016-17
+USA,Wisconsin,Vernon,WNS Positive,5/9/17,2016-17
+USA,Wisconsin,La Crosse,WNS Positive,5/9/17,2016-17
+USA,Wisconsin,Monroe,Pd Positive,5/9/17,2016-17
+USA,Wisconsin,Juneau,Pd Positive,5/9/17,2016-17
+USA,Wisconsin,Jackson,WNS Positive,5/9/17,2016-17
+USA,Wisconsin,Pepin,Pd Positive,4/3/18,2017-18
+USA,Wisconsin,St. Croix,WNS Positive,5/9/17,2016-17
+USA,Wisconsin,Polk,Pd Positive,5/9/17,2016-17
+USA,Wisconsin,Dodge,WNS Positive,5/9/17,2016-17
+USA,Wisconsin,Sauk,WNS Positive,5/9/17,2016-17
+USA,Alabama,Blount,Pd Positive,6/19/17,2016-17
+USA,Alabama,Madison,Pd Positive,6/19/17,2016-17
+USA,Alabama,Bibb,Pd Positive,3/22/17,2016-17
+USA,Alabama,Shelby,WNS Positive,3/22/17,2016-17
+USA,Minnesota,Winona,WNS Positive,10/1/18,2017-18
+USA,Minnesota,Olmsted,WNS Positive,11/12/17,2017-18
+USA,Minnesota,Wabasha,WNS Positive,10/1/18,2017-18
+USA,Minnesota,Fillmore,Pd Positive,3/22/17,2016-17
+USA,Minnesota,Dakota,Pd Positive,3/22/17,2016-17
+USA,Minnesota,Ramsey,WNS Positive,11/12/17,2017-18
+USA,Minnesota,Hennepin,Pd Positive,11/12/17,2017-18
+USA,Minnesota,Washington,WNS Positive,3/22/17,2016-17
+USA,Minnesota,Pine,WNS Positive,11/12/17,2017-18
+USA,Minnesota,Becker,WNS Positive,3/22/17,2016-17
+USA,Minnesota,Lake,WNS Suspect,3/15/17,2016-17
+USA,Minnesota,St. Louis,WNS Positive,3/15/17,2016-17
+USA,Washington,Klickitat,Pd Positive,8/30/24,2023-24
+USA,Washington,Clark,Pd Positive,8/30/24,2023-24
+USA,Washington,Lewis,WNS Positive,8/30/24,2023-24
+USA,Washington,Grays Harbor,Pd Positive,8/30/24,2023-24
+USA,Washington,Grant,Pd Positive,8/30/24,2023-24
+USA,Washington,Island,Pd Positive,8/30/24,2023-24
+USA,Washington,Clallam,Pd Positive,8/30/24,2023-24
+USA,Washington,Skagit,WNS Suspect,9/16/24,2023-24
+USA,Washington,Whatcom,Pd Positive,9/16/24,2023-24
+USA,Washington,Okanogan,Pd Positive,8/30/24,2023-24
+USA,Oklahoma,Le Flore,Pd Positive,5/22/18,2017-18
+USA,Oklahoma,Sequoyah,Pd Positive,4/17/17,2016-17
+USA,Oklahoma,Woodward,Pd Positive,5/22/18,2017-18
+USA,Oklahoma,Ottawa,Pd Positive,4/17/17,2016-17
+USA,Oklahoma,Adair,WNS Positive,5/22/18,2017-18
+USA,Oklahoma,Delaware,WNS Positive,4/17/17,2016-17
+USA,Wyoming,Goshen,WNS Positive,6/10/22,2021-22
+USA,Montana,Daniels,WNS Suspect,7/15/21,2020-21
+USA,Montana,Phillips,WNS Positive,5/25/22,2021-22
+USA,Georgia,Union,Pd Positive,5/9/17,2016-17
+USA,Georgia,Catoosa,Pd Positive,5/9/17,2016-17
+USA,Georgia,Harris,Pd Positive,9/16/22,2021-22
+USA,Georgia,Twiggs,Pd Positive,9/16/22,2021-22
+USA,Georgia,Monroe,Pd Positive,4/28/22,2019-20
+USA,California,San Diego,Pd Presumed,10/28/24,2023-24
+USA,Georgia,Coweta,Pd Positive,6/24/24,2023-24
+USA,Georgia,Carroll,Pd Positive,4/28/22,2019-20
+USA,Georgia,Clarke,WNS Positive,9/16/22,2021-22
+USA,New Mexico,Lincoln,WNS Positive,6/8/23,2022-23
+USA,Arkansas,Pike,WNS Suspect,4/2/24,2023-24
+USA,New Mexico,De Baca,WNS Positive,6/8/23,2022-23
+USA,Georgia,Habersham,Pd Positive,11/9/20,2016-17
+USA,Arkansas,Johnson,WNS Suspect,9/20/24,2021-22
+USA,California,San Bernardino,Pd Presumed,8/20/21,2020-21
+USA,California,Inyo,Pd Positive,10/28/24,2023-24
+USA,Colorado,Baca,Pd Positive,5/30/23,2021-22
+USA,Colorado,Otero,WNS Positive,4/26/23,2022-23
+USA,California,Amador,Pd Positive,10/28/24,2023-24
+USA,California,Alpine,Pd Presumed,10/28/24,2023-24
+USA,California,Sutter,Pd Positive,10/28/24,2023-24
+USA,California,Placer,Pd Positive,10/28/24,2023-24
+USA,Missouri,Adair,WNS Positive,6/24/24,2020-21
+USA,Colorado,Routt,Pd Positive,5/30/23,2021-22
+USA,California,Shasta,Pd Presumed,8/20/21,2020-21
+USA,California,Trinity,Pd Presumed,10/28/24,2023-24
+USA,Massachusetts,Nantucket,WNS Positive,6/24/24,2019-20
+USA,California,Humboldt,Pd Positive,6/7/24,2022-23
+USA,California,Siskiyou,Pd Presumed,10/28/24,2023-24
+USA,Wyoming,Sweetwater,Pd Positive,10/16/23,2022-23
+USA,Wyoming,Carbon,WNS Positive,8/3/22,2021-22
+USA,Idaho,Bear Lake,Pd Positive,6/6/22,2021-22
+USA,Wyoming,Platte,Pd Positive,4/8/22,2021-22
+USA,Nebraska,Cherry,WNS Positive,6/23/21,2020-21
+USA,Wyoming,Lincoln,Pd Positive,2/6/23,2021-22
+USA,Wyoming,Converse,Pd Positive,5/12/23,2021-22
+USA,Wyoming,Niobrara,Pd Positive,5/12/23,2021-22
+USA,Wyoming,Fremont,Pd Positive,6/6/22,2021-22
+USA,South Dakota,Pennington,WNS Positive,7/22/22,2021-22
+USA,Minnesota,Rice,Pd Positive,6/24/24,2018-19
+USA,Wyoming,Johnson,Pd Positive,5/12/23,2021-22
+USA,South Dakota,Lawrence,WNS Positive,7/22/22,2021-22
+USA,Wyoming,Sheridan,WNS Positive,7/6/22,2021-22
+USA,Wyoming,Campbell,Pd Positive,5/12/23,2021-22
+USA,Wyoming,Crook,WNS Positive,6/15/21,2020-21
+USA,South Dakota,Meade,WNS Positive,7/22/22,2021-22
+USA,Montana,Carbon,WNS Positive,3/4/24,2022-23
+USA,Montana,Powder River,Pd Positive,11/7/22,2021-22
+USA,Montana,Big Horn,Pd Positive,11/7/22,2021-22
+USA,Montana,Stillwater,Pd Positive,3/4/24,2022-23
+USA,Montana,Carter,WNS Positive,7/12/21,2020-21
+USA,Montana,Gallatin,Pd Positive,9/15/22,2021-22
+USA,Montana,Jefferson,Pd Positive,3/4/24,2022-23
+USA,Montana,Fallon,WNS Positive,4/27/21,2020-21
+USA,Montana,Golden Valley,Pd Positive,11/7/22,2021-22
+USA,Montana,Meagher,Pd Positive,3/4/24,2022-23
+USA,North Dakota,Burleigh,WNS Suspect,9/29/21,2020-21
+USA,Montana,Judith Basin,Pd Positive,3/4/24,2022-23
+USA,North Dakota,Mercer,WNS Positive,9/29/21,2020-21
+USA,Montana,Garfield,Pd Positive,7/12/21,2020-21
+USA,Montana,Richland,Pd Positive,7/7/20,2019-20
+USA,North Dakota,McKenzie,WNS Positive,9/29/21,2020-21
+USA,Montana,Chouteau,WNS Positive,3/4/24,2022-23
+USA,North Dakota,Williams,WNS Positive,9/29/21,2020-21
+USA,Montana,Valley,Pd Positive,7/12/21,2020-21
+USA,Montana,Blaine,Pd Positive,11/7/22,2021-22
+USA,Montana,Sheridan,Pd Positive,7/7/20,2019-20
+USA,Montana,Hill,Pd Positive,11/7/22,2021-22
+USA,Michigan,Clare,WNS Suspect,11/9/20,2014-15
+USA,Georgia,Gilmer,WNS Positive,11/9/20,2012-13
+USA,Arkansas,Crawford,WNS Positive,4/28/22,2016-17
+USA,Indiana,Jennings,WNS Suspect,11/9/20,2012-13
+USA,Missouri,Pike,WNS Suspect,11/9/20,2009-10
+USA,Massachusetts,Dukes,WNS Positive,3/22/17,2016-17
+USA,Iowa,Jasper,Pd Positive,11/9/20,2015-16
+USA,Utah,San Juan,Pd Positive,9/19/24,2023-24
+USA,Colorado,El Paso,WNS Positive,9/17/24,2023-24
+USA,Colorado,Douglas,WNS Positive,9/17/24,2023-24
+USA,Colorado,Boulder,WNS Positive,3/25/24,2023-24
+USA,Colorado,Larimer,WNS Positive,9/17/24,2023-24
+USA,Wyoming,Washakie,WNS Suspect,12/11/24,2023-24
+USA,South Dakota,Hughes,Pd Positive,6/1/19,2018-19
+USA,Wyoming,Teton,Pd Positive,9/16/24,2023-24
+USA,Wyoming,Big Horn,WNS Suspect,12/11/24,2023-24
+USA,Montana,Cascade,WNS Positive,8/12/24,2023-24
+USA,Mississippi,Franklin,Pd Positive,4/26/21,2019-20
+USA,Mississippi,Claiborne,Pd Positive,9/11/23,2022-23
+USA,Mississippi,Clarke,Pd Positive,9/11/23,2022-23
+USA,Mississippi,Montgomery,WNS Positive,3/10/22,2021-22
+USA,Mississippi,Carroll,Pd Positive,4/26/21,2019-20
+USA,Mississippi,Grenada,Pd Positive,10/17/22,2021-22
+USA,Mississippi,Tishomingo,Pd Positive,10/17/22,2021-22
+USA,Mississippi,Smith,Pd Positive,4/26/21,2013-14
+USA,Mississippi,Jasper,Pd Positive,4/26/21,2013-14
+USA,Mississippi,Neshoba,Pd Positive,4/26/21,2013-14
+USA,Mississippi,Winston,Pd Positive,4/26/21,2013-14
+USA,North Carolina,Macon,Pd Positive,3/7/22,2019-20
+USA,North Carolina,Polk,Pd Positive,3/7/22,2019-20
+USA,North Carolina,Gaston,Pd Presumed,5/26/19,2018-19
+USA,North Carolina,Montgomery,Pd Positive,5/26/19,2018-19
+USA,North Carolina,Rowan,Pd Positive,5/26/19,2018-19
+USA,North Carolina,Madison,Pd Positive,5/26/19,2018-19
+USA,North Carolina,Caldwell,Pd Positive,3/7/22,2019-20
+USA,North Carolina,Guilford,Pd Positive,3/7/22,2019-20
+USA,North Carolina,Stokes,Pd Positive,6/7/17,2016-17
+USA,Washington,Yakima,WNS Positive,9/11/24,2023-24
+USA,Texas,Presidio,WNS Suspect,6/11/24,2023-24
+USA,Texas,Brewster,WNS Suspect,6/11/24,2023-24
+USA,Texas,Jeff Davis,WNS Positive,6/11/24,2023-24
+USA,New Mexico,Eddy,WNS Suspect,5/14/24,2023-24
+USA,Oklahoma,Washita,Pd Positive,1/24/22,2019-20
+USA,Oklahoma,Major,Pd Positive,1/24/22,2019-20
+USA,Washington,Benton,WNS Positive,4/8/24,2023-24
+USA,Washington,Thurston,WNS Positive,4/29/24,2023-24
+USA,Washington,Pierce,WNS Positive,4/19/19,2018-19
+USA,Washington,Mason,Pd Positive,9/14/22,2021-22
+USA,Washington,Kitsap,Pd Positive,4/8/24,2023-24
+USA,Washington,Jefferson,WNS Positive,6/23/23,2022-23
+USA,Washington,Snohomish,WNS Positive,9/14/22,2019-20
+USA,Washington,Chelan,WNS Positive,7/31/21,2020-21
+USA,Georgia,Muscogee,Pd Positive,7/30/21,2020-21
+USA,Oklahoma,Woods,WNS Suspect,1/1/19,2018-19
+USA,Kansas,Rooks,Pd Positive,1/1/19,2018-19
+USA,Pennsylvania,Warren,WNS Positive,1/1/12,2011-12
+USA,Pennsylvania,Tioga,WNS Positive,1/1/10,2009-10
+USA,Illinois,Carroll,WNS Positive,1/1/15,2014-15
+USA,New York,Cattaraugus,WNS Suspect,1/1/13,2012-13
+USA,Wisconsin,Green,WNS Positive,1/1/16,2015-16
+USA,New York,Livingston,WNS Positive,1/1/10,2009-10
+USA,New York,Erie,WNS Positive,1/1/10,2009-10
+USA,New York,Onondaga,WNS Positive,1/1/09,2008-09
+USA,Wisconsin,Dane,WNS Positive,1/1/15,2014-15
+USA,New York,Lewis,WNS Suspect,1/1/09,2008-09
+USA,Wisconsin,Manitowoc,WNS Suspect,1/1/16,2015-16
+USA,New York,Jefferson,WNS Positive,1/1/08,2007-08
+USA,Michigan,Manistee,WNS Positive,1/1/15,2014-15
+USA,Michigan,Alpena,WNS Positive,1/1/14,2013-14
+USA,Wisconsin,Door,WNS Positive,1/1/15,2014-15
+USA,Michigan,Delta,WNS Positive,1/1/15,2014-15
+USA,Michigan,Mackinac,WNS Positive,1/1/14,2013-14
+USA,Michigan,Dickinson,WNS Positive,1/1/14,2013-14
+USA,Michigan,Alger,WNS Positive,1/1/15,2014-15
+USA,Michigan,Gogebic,WNS Positive,1/1/16,2015-16
+USA,Michigan,Marquette,WNS Positive,1/1/15,2014-15
+USA,Michigan,Ontonagon,WNS Positive,1/1/14,2013-14
+USA,Michigan,Houghton,WNS Positive,1/1/15,2014-15
+USA,Michigan,Keweenaw,WNS Positive,1/1/14,2013-14
+USA,Alabama,Calhoun,Pd Positive,1/1/16,2015-16
+USA,Georgia,Paulding,Pd Positive,1/1/14,2013-14
+USA,Georgia,Polk,WNS Positive,1/1/14,2013-14
+USA,South Carolina,Richland,WNS Positive,1/1/14,2013-14
+USA,Georgia,Bartow,WNS Suspect,1/1/14,2013-14
+USA,Georgia,Pickens,WNS Positive,1/1/14,2013-14
+USA,Alabama,Franklin,WNS Positive,1/1/16,2015-16
+USA,Georgia,Chattooga,WNS Suspect,1/1/16,2015-16
+USA,Georgia,Floyd,WNS Suspect,1/1/15,2014-15
+USA,Alabama,Marshall,WNS Positive,1/1/15,2014-15
+USA,Georgia,Dawson,WNS Suspect,1/1/16,2015-16
+USA,Alabama,Morgan,WNS Positive,1/1/14,2013-14
+USA,Arkansas,Polk,Pd Positive,1/1/15,2014-15
+USA,Arkansas,Garland,Pd Positive,1/1/15,2014-15
+USA,Alabama,Lawrence,WNS Suspect,1/1/14,2013-14
+USA,Alabama,DeKalb,WNS Positive,1/1/16,2015-16
+USA,Alabama,Colbert,Pd Positive,1/1/15,2014-15
+USA,Georgia,Walker,WNS Positive,1/1/13,2012-13
+USA,Georgia,Dade,WNS Positive,1/1/13,2012-13
+USA,Alabama,Jackson,Pd Positive,1/1/12,2011-12
+USA,Georgia,Rabun,WNS Positive,1/1/14,2013-14
+USA,Alabama,Limestone,WNS Positive,1/1/15,2014-15
+USA,Alabama,Lauderdale,Pd Positive,1/1/12,2011-12
+USA,South Carolina,Oconee,WNS Positive,1/1/14,2013-14
+USA,South Carolina,Pickens,WNS Positive,1/1/13,2012-13
+USA,Tennessee,Polk,WNS Positive,1/1/14,2013-14
+USA,North Carolina,Cherokee,WNS Suspect,1/1/14,2013-14
+USA,Tennessee,Marion,WNS Positive,1/1/13,2012-13
+USA,Tennessee,Franklin,WNS Positive,1/1/12,2011-12
+USA,North Carolina,Transylvania,WNS Positive,1/1/11,2010-11
+USA,Tennessee,Giles,WNS Positive,1/1/15,2014-15
+USA,Tennessee,Lawrence,WNS Positive,1/1/13,2012-13
+USA,Tennessee,Hamilton,WNS Positive,1/1/12,2011-12
+USA,Tennessee,Wayne,WNS Positive,1/1/14,2013-14
+USA,North Carolina,Stanly,WNS Suspect,1/1/15,2014-15
+USA,North Carolina,Jackson,WNS Positive,1/1/14,2013-14
+USA,Tennessee,Grundy,WNS Positive,1/1/13,2012-13
+USA,Tennessee,Sequatchie,WNS Positive,1/1/13,2012-13
+USA,North Carolina,Rutherford,WNS Positive,1/1/13,2012-13
+USA,Tennessee,Lewis,WNS Positive,1/1/13,2012-13
+USA,North Carolina,Swain,WNS Suspect,1/1/13,2012-13
+USA,Tennessee,Bedford,WNS Positive,1/1/14,2013-14
+USA,Tennessee,Coffee,WNS Positive,1/1/15,2014-15
+USA,Tennessee,Marshall,WNS Positive,1/1/15,2014-15
+USA,Tennessee,Meigs,WNS Positive,1/1/13,2012-13
+USA,Arkansas,Franklin,Pd Presumed,1/1/15,2014-15
+USA,North Carolina,Haywood,WNS Positive,1/1/12,2011-12
+USA,North Carolina,Buncombe,WNS Positive,1/1/13,2012-13
+USA,Tennessee,Van Buren,WNS Positive,1/1/12,2011-12
+USA,Tennessee,Perry,WNS Positive,1/1/13,2012-13
+USA,Tennessee,Maury,WNS Positive,1/1/14,2013-14
+USA,Tennessee,Warren,WNS Positive,1/1/13,2012-13
+USA,Tennessee,Blount,WNS Positive,1/1/12,2011-12
+USA,Arkansas,Independence,WNS Positive,1/1/15,2014-15
+USA,North Carolina,McDowell,WNS Positive,1/1/11,2010-11
+USA,Tennessee,Cannon,WNS Positive,1/1/13,2012-13
+USA,Tennessee,Hickman,WNS Positive,1/1/13,2012-13
+USA,Tennessee,Roane,WNS Positive,1/1/14,2013-14
+USA,North Carolina,Yancey,WNS Positive,1/1/11,2010-11
+USA,Tennessee,White,WNS Positive,1/1/13,2012-13
+USA,Arkansas,Stone,WNS Positive,1/1/14,2013-14
+USA,Arkansas,Searcy,WNS Positive,1/1/15,2014-15
+USA,Arkansas,Newton,WNS Positive,1/1/15,2014-15
+USA,Tennessee,DeKalb,WNS Positive,1/1/14,2013-14
+USA,Tennessee,Cumberland,WNS Positive,1/1/12,2011-12
+USA,Oklahoma,Cherokee,WNS Suspect,1/1/16,2015-16
+USA,Arkansas,Washington,WNS Positive,1/1/16,2015-16
+USA,Tennessee,Humphreys,WNS Positive,1/1/14,2013-14
+USA,Arkansas,Izard,WNS Positive,1/1/16,2015-16
+USA,North Carolina,Avery,WNS Positive,1/1/11,2010-11
+USA,Tennessee,Anderson,WNS Positive,1/1/14,2013-14
+USA,Arkansas,Madison,Pd Positive,1/1/15,2014-15
+USA,Tennessee,Putnam,WNS Positive,1/1/13,2012-13
+USA,Tennessee,Dickson,WNS Positive,1/1/13,2012-13
+USA,Tennessee,Hamblen,WNS Positive,1/1/14,2013-14
+USA,Tennessee,Houston,WNS Positive,1/1/13,2012-13
+USA,Tennessee,Greene,WNS Positive,1/1/13,2012-13
+USA,Tennessee,Grainger,WNS Positive,1/1/14,2013-14
+USA,Tennessee,Smith,WNS Positive,1/1/14,2013-14
+USA,Tennessee,Union,WNS Positive,1/1/13,2012-13
+USA,Arkansas,Boone,Pd Positive,1/1/15,2014-15
+USA,Arkansas,Marion,WNS Positive,1/1/14,2013-14
+USA,Arkansas,Benton,WNS Positive,1/1/16,2015-16
+USA,Arkansas,Baxter,WNS Suspect,1/1/12,2011-12
+USA,Tennessee,Carter,WNS Positive,1/1/10,2009-10
+USA,Tennessee,Jackson,WNS Positive,1/1/13,2012-13
+USA,Tennessee,Overton,WNS Positive,1/1/13,2012-13
+USA,Tennessee,Fentress,WNS Positive,1/1/13,2012-13
+USA,Tennessee,Hawkins,WNS Positive,1/1/12,2011-12
+USA,Tennessee,Campbell,WNS Positive,1/1/13,2012-13
+USA,Tennessee,Claiborne,WNS Positive,1/1/13,2012-13
+USA,Tennessee,Hancock,WNS Positive,1/1/12,2011-12
+USA,Tennessee,Sullivan,WNS Positive,1/1/10,2009-10
+USA,Tennessee,Pickett,WNS Positive,1/1/14,2013-14
+USA,Tennessee,Clay,WNS Positive,1/1/14,2013-14
+USA,Tennessee,Macon,WNS Positive,1/1/14,2013-14
+USA,Tennessee,Montgomery,WNS Positive,1/1/11,2010-11
+USA,Tennessee,Sumner,WNS Suspect,1/1/14,2013-14
+USA,Tennessee,Robertson,WNS Positive,1/1/15,2014-15
+USA,Tennessee,Stewart,WNS Positive,1/1/12,2011-12
+USA,Missouri,McDonald,WNS Suspect,1/1/16,2015-16
+USA,Missouri,Ozark,WNS Suspect,1/1/15,2014-15
+USA,Missouri,Taney,WNS Suspect,1/1/16,2015-16
+USA,Missouri,Oregon,WNS Suspect,1/1/15,2014-15
+USA,Virginia,Scott,WNS Positive,1/1/12,2011-12
+USA,Virginia,Lee,WNS Positive,1/1/13,2012-13
+USA,Missouri,Barry,WNS Suspect,1/1/16,2015-16
+USA,Kentucky,Bell,WNS Positive,1/1/13,2012-13
+USA,Kentucky,Whitley,WNS Positive,1/1/13,2012-13
+USA,Missouri,Stone,WNS Suspect,1/1/15,2014-15
+USA,Kentucky,Wayne,WNS Positive,1/1/12,2011-12
+USA,Kentucky,Trigg,WNS Positive,1/1/11,2010-11
+USA,Virginia,Smyth,WNS Positive,1/1/09,2008-09
+USA,Missouri,Howell,WNS Suspect,1/1/16,2015-16
+USA,Missouri,Christian,WNS Suspect,1/1/16,2015-16
+USA,Missouri,Carter,WNS Suspect,1/1/14,2013-14
+USA,Virginia,Russell,WNS Suspect,1/1/11,2010-11
+USA,Kentucky,Christian,WNS Positive,1/1/13,2012-13
+USA,Kentucky,Barren,WNS Positive,1/1/15,2014-15
+USA,Kentucky,Warren,WNS Positive,1/1/13,2012-13
+USA,Virginia,Wise,WNS Positive,1/1/11,2010-11
+USA,Virginia,Pulaski,WNS Suspect,1/1/11,2010-11
+USA,Kentucky,Letcher,WNS Positive,1/1/13,2012-13
+USA,Virginia,Bland,WNS Positive,1/1/09,2008-09
+USA,Kentucky,Edmonson,WNS Positive,1/1/13,2012-13
+USA,Virginia,Tazewell,WNS Positive,1/1/10,2009-10
+USA,Illinois,Alexander,WNS Positive,1/1/15,2014-15
+USA,Kentucky,Pulaski,WNS Positive,1/1/13,2012-13
+USA,Virginia,Montgomery,WNS Suspect,1/1/11,2010-11
+USA,Virginia,Roanoke,WNS Suspect,1/1/11,2010-11
+USA,Missouri,Shannon,WNS Suspect,1/1/10,2009-10
+USA,Missouri,Greene,WNS Suspect,1/1/14,2013-14
+USA,Kentucky,Hart,WNS Suspect,1/1/13,2012-13
+USA,Virginia,Giles,WNS Positive,1/1/09,2008-09
+USA,Missouri,Wright,WNS Suspect,1/1/15,2014-15
+USA,Kentucky,Rockcastle,WNS Positive,1/1/13,2012-13
+USA,Virginia,Chesterfield,WNS Suspect,1/1/10,2009-10
+USA,Kentucky,Jackson,WNS Positive,1/1/13,2012-13
+USA,Missouri,Dade,Pd Positive,1/1/16,2015-16
+USA,West Virginia,Mercer,WNS Positive,1/1/10,2009-10
+USA,Illinois,Johnson,WNS Positive,1/1/15,2014-15
+USA,Illinois,Union,WNS Positive,1/1/15,2014-15
+USA,Missouri,Texas,WNS Suspect,1/1/15,2014-15
+USA,Illinois,Pope,WNS Positive,1/1/13,2012-13
+USA,Illinois,Hardin,WNS Positive,1/1/13,2012-13
+USA,Virginia,Craig,WNS Positive,1/1/10,2009-10
+USA,Kentucky,Lee,WNS Suspect,1/1/14,2013-14
+USA,West Virginia,Monroe,WNS Positive,1/1/10,2009-10
+USA,Missouri,Iron,WNS Positive,1/1/14,2013-14
+USA,Missouri,Dent,WNS Suspect,1/1/14,2013-14
+USA,Virginia,Botetourt,WNS Suspect,1/1/11,2010-11
+USA,Kentucky,Garrard,WNS Positive,1/1/14,2013-14
+USA,Kentucky,Estill,WNS Suspect,1/1/14,2013-14
+USA,Missouri,Laclede,WNS Suspect,1/1/14,2013-14
+USA,Missouri,Cedar,WNS Suspect,1/1/16,2015-16
+USA,Missouri,Dallas,WNS Positive,1/1/14,2013-14
+USA,Missouri,Perry,WNS Suspect,1/1/12,2011-12
+USA,Illinois,Saline,WNS Positive,1/1/15,2014-15
+USA,Kentucky,Daviess,Pd Positive,1/1/14,2013-14
+USA,Illinois,Jackson,WNS Positive,1/1/15,2014-15
+USA,Virginia,Alleghany,WNS Suspect,1/1/11,2010-11
+USA,Kentucky,Hardin,WNS Suspect,1/1/14,2013-14
+USA,Missouri,Pulaski,WNS Suspect,1/1/14,2013-14
+USA,Kentucky,Breckinridge,WNS Positive,1/1/12,2011-12
+USA,Missouri,Hickory,WNS Suspect,1/1/15,2014-15
+USA,Missouri,St. Francois,WNS Suspect,1/1/15,2014-15
+USA,Missouri,Ste. Genevieve,WNS Suspect,1/1/13,2012-13
+USA,Missouri,Phelps,WNS Suspect,1/1/15,2014-15
+USA,Kentucky,Meade,WNS Positive,1/1/13,2012-13
+USA,Missouri,Washington,WNS Positive,1/1/13,2012-13
+USA,Kentucky,Fayette,Pd Positive,1/1/14,2013-14
+USA,Missouri,Crawford,WNS Suspect,1/1/13,2012-13
+USA,Missouri,St. Clair,WNS Suspect,1/1/16,2015-16
+USA,West Virginia,Fayette,WNS Positive,1/1/11,2010-11
+USA,Missouri,Camden,WNS Positive,1/1/14,2013-14
+USA,West Virginia,Greenbrier,WNS Positive,1/1/10,2009-10
+USA,Virginia,Bath,WNS Positive,1/1/09,2008-09
+USA,Kentucky,Elliott,WNS Positive,1/1/13,2012-13
+USA,Indiana,Harrison,WNS Positive,1/1/12,2011-12
+USA,Indiana,Crawford,WNS Positive,1/1/11,2010-11
+USA,Missouri,Miller,WNS Suspect,1/1/15,2014-15
+USA,Virginia,Augusta,WNS Suspect,1/1/11,2010-11
+USA,Kentucky,Scott,WNS Suspect,1/1/14,2013-14
+USA,Missouri,Jefferson,WNS Suspect,1/1/13,2012-13
+USA,Kentucky,Carter,Pd Positive,1/1/13,2012-13
+USA,Illinois,Monroe,WNS Positive,1/1/13,2012-13
+USA,Virginia,Highland,WNS Positive,1/1/10,2009-10
+USA,Indiana,Orange,WNS Positive,1/1/12,2011-12
+USA,Missouri,Franklin,WNS Positive,1/1/13,2012-13
+USA,West Virginia,Pocahontas,WNS Positive,1/1/10,2009-10
+USA,Missouri,Cole,WNS Positive,1/1/14,2013-14
+USA,Indiana,Washington,WNS Positive,1/1/11,2010-11
+USA,Ohio,Lawrence,WNS Suspect,1/1/11,2010-11
+USA,Virginia,Rockingham,WNS Positive,1/1/09,2008-09
+USA,Missouri,St. Louis County,WNS Suspect,1/1/15,2014-15
+USA,Indiana,Martin,WNS Positive,1/1/12,2011-12
+USA,Missouri,Moniteau,WNS Suspect,1/1/15,2014-15
+USA,Indiana,Jefferson,WNS Positive,1/1/12,2011-12
+USA,West Virginia,Pendleton,WNS Positive,1/1/09,2008-09
+USA,Indiana,Lawrence,WNS Positive,1/1/12,2011-12
+USA,Missouri,Warren,WNS Suspect,1/1/16,2015-16
+USA,Illinois,Madison,WNS Positive,1/1/16,2015-16
+USA,Missouri,Cooper,WNS Suspect,1/1/15,2014-15
+USA,Missouri,Callaway,WNS Suspect,1/1/15,2014-15
+USA,West Virginia,Randolph,WNS Positive,1/1/11,2010-11
+USA,Indiana,Greene,WNS Positive,1/1/12,2011-12
+USA,Ohio,Jackson,WNS Suspect,1/1/13,2012-13
+USA,Missouri,Lincoln,WNS Positive,1/1/12,2011-12
+USA,Missouri,Jackson,WNS Positive,1/1/14,2013-14
+USA,West Virginia,Hardy,WNS Positive,1/1/10,2009-10
+USA,Missouri,Boone,WNS Suspect,1/1/14,2013-14
+USA,West Virginia,Tucker,WNS Positive,1/1/11,2010-11
+USA,West Virginia,Grant,WNS Positive,1/1/11,2010-11
+USA,Indiana,Monroe,WNS Positive,1/1/11,2010-11
+USA,Missouri,Clay,WNS Suspect,1/1/15,2014-15
+USA,Virginia,Frederick,WNS Suspect,1/1/11,2010-11
+USA,West Virginia,Jefferson,WNS Positive,1/1/10,2009-10
+USA,Ohio,Athens,WNS Positive,1/1/13,2012-13
+USA,Ohio,Warren,Pd Presumed,1/1/13,2012-13
+USA,West Virginia,Mineral,WNS Suspect,1/1/12,2011-12
+USA,Ohio,Hocking,WNS Positive,1/1/14,2013-14
+USA,Missouri,Ralls,WNS Suspect,1/1/15,2014-15
+USA,West Virginia,Wetzel,WNS Positive,1/1/16,2015-16
+USA,West Virginia,Preston,WNS Positive,1/1/12,2011-12
+USA,West Virginia,Monongalia,WNS Suspect,1/1/12,2011-12
+USA,Maryland,Garrett,Pd Positive,1/1/11,2010-11
+USA,Maryland,Allegany,WNS Suspect,1/1/10,2009-10
+USA,Maryland,Washington,WNS Positive,1/1/11,2010-11
+USA,Missouri,Buchanan,WNS Suspect,1/1/16,2015-16
+USA,Delaware,New Castle,WNS Positive,1/1/12,2011-12
+USA,Illinois,Pike,WNS Positive,1/1/15,2014-15
+USA,Ohio,Preble,WNS Positive,1/1/12,2011-12
+USA,Missouri,Marion,WNS Suspect,1/1/14,2013-14
+USA,Ohio,Madison,WNS Positive,1/1/13,2012-13
+USA,Pennsylvania,Fayette,WNS Positive,1/1/10,2009-10
+USA,Ohio,Franklin,WNS Positive,1/1/14,2013-14
+USA,Pennsylvania,Fulton,WNS Positive,1/1/11,2010-11
+USA,Indiana,Vermillion,Pd Positive,1/1/14,2013-14
+USA,Illinois,Adams,WNS Positive,1/1/15,2014-15
+USA,Pennsylvania,York,WNS Suspect,1/1/13,2012-13
+USA,Pennsylvania,Somerset,WNS Positive,1/1/11,2010-11
+USA,Pennsylvania,Cumberland,WNS Suspect,1/1/13,2012-13
+USA,Pennsylvania,Bedford,WNS Positive,1/1/12,2011-12
+USA,Ohio,Union,WNS Suspect,1/1/13,2012-13
+USA,Ohio,Jefferson,WNS Suspect,1/1/13,2012-13
+USA,Pennsylvania,Bucks,WNS Positive,1/1/10,2009-10
+USA,Pennsylvania,Westmoreland,WNS Positive,1/1/11,2010-11
+USA,Pennsylvania,Cambria,WNS Positive,1/1/12,2011-12
+USA,Pennsylvania,Huntingdon,WNS Positive,1/1/10,2009-10
+USA,Pennsylvania,Blair,WNS Positive,1/1/10,2009-10
+USA,New York,Suffolk,WNS Suspect,1/1/11,2010-11
+USA,Pennsylvania,Mifflin,WNS Positive,1/1/09,2008-09
+USA,Pennsylvania,Beaver,WNS Positive,1/1/12,2011-12
+USA,Iowa,Van Buren,WNS Positive,1/1/15,2014-15
+USA,Pennsylvania,Schuylkill,WNS Suspect,1/1/10,2009-10
+USA,Ohio,Wayne,WNS Positive,1/1/13,2012-13
+USA,Ohio,Ashland,WNS Positive,1/1/13,2012-13
+USA,Iowa,Des Moines,WNS Positive,1/1/15,2014-15
+USA,New Jersey,Morris,WNS Positive,1/1/09,2008-09
+USA,New Jersey,Warren,WNS Positive,1/1/09,2008-09
+USA,Pennsylvania,Lawrence,WNS Positive,1/1/10,2009-10
+USA,Pennsylvania,Carbon,WNS Positive,1/1/10,2009-10
+USA,Pennsylvania,Armstrong,WNS Positive,1/1/12,2011-12
+USA,Pennsylvania,Butler,WNS Positive,1/1/12,2011-12
+USA,Pennsylvania,Northumberland,WNS Positive,1/1/10,2009-10
+USA,Pennsylvania,Monroe,WNS Positive,1/1/10,2009-10
+USA,Pennsylvania,Clearfield,WNS Positive,1/1/12,2011-12
+USA,Pennsylvania,Centre,WNS Positive,1/1/09,2008-09
+USA,Ohio,Medina,WNS Suspect,1/1/13,2012-13
+USA,Pennsylvania,Columbia,WNS Suspect,1/1/10,2009-10
+USA,Ohio,Portage,WNS Positive,1/1/12,2011-12
+USA,Ohio,Summit,WNS Positive,1/1/12,2011-12
+USA,Pennsylvania,Jefferson,WNS Positive,1/1/12,2011-12
+USA,Pennsylvania,Luzerne,WNS Positive,1/1/09,2008-09
+USA,Pennsylvania,Clarion,WNS Positive,1/1/12,2011-12
+USA,Pennsylvania,Clinton,WNS Suspect,1/1/12,2011-12
+USA,Ohio,Sandusky,WNS Positive,1/1/13,2012-13
+USA,New York,Putnam,WNS Positive,1/1/09,2008-09
+USA,Pennsylvania,Sullivan,WNS Suspect,1/1/10,2009-10
+USA,Pennsylvania,Lycoming,WNS Positive,1/1/10,2009-10
+USA,Pennsylvania,Forest,WNS Positive,1/1/12,2011-12
+USA,Ohio,Cuyahoga,WNS Positive,1/1/12,2011-12
+USA,New York,Orange,WNS Positive,1/1/10,2009-10
+USA,Illinois,LaSalle,WNS Positive,1/1/13,2012-13
+USA,Pennsylvania,Lackawanna,WNS Positive,1/1/09,2008-09
+USA,Connecticut,Fairfield,WNS Positive,1/1/11,2010-11
+USA,Rhode Island,Newport,WNS Positive,1/1/16,2015-16
+USA,Connecticut,New London,WNS Positive,1/1/11,2010-11
+USA,Ohio,Geauga,WNS Positive,1/1/12,2011-12
+USA,New York,Sullivan,WNS Positive,1/1/08,2007-08
+USA,Connecticut,Hartford,WNS Positive,1/1/09,2008-09
+USA,Connecticut,Litchfield,WNS Positive,1/1/08,2007-08
+USA,Massachusetts,Barnstable,WNS Positive,1/1/13,2012-13
+USA,New York,Ulster,WNS Positive,1/1/08,2007-08
+USA,Massachusetts,Norfolk,WNS Positive,1/1/09,2008-09
+USA,Massachusetts,Hampden,WNS Positive,1/1/08,2007-08
+USA,Iowa,Jackson,WNS Positive,1/1/16,2015-16
+USA,New York,Columbia,WNS Positive,1/1/08,2007-08
+USA,Illinois,Jo Daviess,WNS Positive,1/1/16,2015-16
+USA,Iowa,Webster,WNS Positive,1/1/16,2015-16
+USA,Iowa,Dubuque,WNS Positive,1/1/16,2015-16
+USA,Massachusetts,Middlesex,WNS Suspect,1/1/09,2008-09
+USA,Massachusetts,Franklin,WNS Positive,1/1/08,2007-08
+USA,Massachusetts,Berkshire,WNS Positive,1/1/08,2007-08
+USA,New York,Albany,WNS Positive,1/1/07,2006-07
+USA,Wisconsin,Lafayette,WNS Suspect,1/1/15,2014-15
+USA,New York,Schoharie,WNS Positive,1/1/07,2006-07
+USA,New York,Montgomery,WNS Positive,1/1/08,2007-08
+USA,Iowa,Clayton,WNS Positive,1/1/16,2015-16
+USA,Wisconsin,Grant,WNS Positive,1/1/14,2013-14
+USA,Wisconsin,Iowa,WNS Positive,1/1/16,2015-16
+USA,Vermont,Windham,WNS Positive,1/1/09,2008-09
+USA,New Hampshire,Rockingham,WNS Suspect,1/1/11,2010-11
+USA,Vermont,Bennington,WNS Positive,1/1/08,2007-08
+USA,Wisconsin,Crawford,WNS Positive,1/1/15,2014-15
+USA,Wisconsin,Richland,WNS Positive,1/1/15,2014-15
+USA,New Hampshire,Merrimack,WNS Positive,1/1/09,2008-09
+USA,New York,Warren,WNS Positive,1/1/08,2007-08
+USA,New York,Washington,WNS Positive,1/1/09,2008-09
+USA,Vermont,Rutland,WNS Positive,1/1/08,2007-08
+USA,Vermont,Windsor,WNS Positive,1/1/09,2008-09
+USA,New York,Hamilton,WNS Positive,1/1/09,2008-09
+USA,Vermont,Orange,WNS Positive,1/1/08,2007-08
+USA,New Hampshire,Grafton,WNS Positive,1/1/09,2008-09
+USA,Maine,Hancock,WNS Positive,1/1/12,2011-12
+USA,Vermont,Washington,WNS Positive,1/1/09,2008-09
+USA,New York,Essex,WNS Positive,1/1/08,2007-08
+USA,Vermont,Lamoille,WNS Positive,1/1/10,2009-10
+USA,Wisconsin,Pierce,WNS Positive,1/1/16,2015-16
+USA,New York,Franklin,WNS Positive,1/1/09,2008-09
+USA,New York,Clinton,WNS Positive,1/1/09,2008-09
+USA,New Hampshire,Coos,WNS Positive,1/1/10,2009-10
+USA,Maine,Oxford,WNS Positive,1/1/11,2010-11
+USA,Maine,Piscataquis,WNS Suspect,1/1/13,2012-13
+USA,Wisconsin,Iron,WNS Suspect,1/1/16,2015-16
+USA,Wisconsin,Douglas,WNS Positive,1/1/16,2015-16
+USA,Washington,King,WNS Positive,1/1/16,2015-16

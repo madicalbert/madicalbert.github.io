@@ -1,0 +1,480 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<metadata>
+  <idinfo>
+    <citation>
+      <citeinfo>
+        <origin>Christine M. Wieben</origin>
+        <pubdate>20210924</pubdate>
+        <title>Preliminary estimated annual agricultural pesticide use for counties of the conterminous United States, 2019</title>
+        <geoform>Tabular Digital Data</geoform>
+        <pubinfo>
+          <pubplace>Reston, VA</pubplace>
+          <publish>U.S. Geological Survey</publish>
+        </pubinfo>
+        <othercit>Wieben, C.M., 2021, Preliminary estimated annual agricultural pesticide use for counties of the conterminous United States, 2019: U.S. Geological Survey data release, https://doi.org/10.5066/P9EDTHQL.</othercit>
+        <onlink>https://doi.org/10.5066/P9EDTHQL</onlink>
+      </citeinfo>
+    </citation>
+    <descript>
+      <abstract>This data release provides preliminary estimates of annual agricultural use of pesticide compounds in counties of the conterminous United States, for the year 2019, compiled by means of methods described in Thelin and Stone (2013) and Baker and Stone (2015). For all States except California, U.S. Department of Agriculture county-level data for harvested-crop acreage were used in conjunction with proprietary Crop Reporting District-level pesticide-use data to estimate county-level pesticide use. Where Crop Reporting District data were not available or were incomplete, estimated pesticide-use values were calculated with two different methods, resulting in a low and a high estimate based on different assumptions about missing survey data (Thelin and Stone, 2013).
+
+Pesticide-use data for California were obtained from the California Department of Pesticide Regulation Pesticide Use Reporting (DPR–PUR) database (California Department of Pesticide Regulation, written commun., 2020). The California county data were appended after the estimation process was completed for the rest of the Nation.
+
+Preliminary estimates in this dataset may be revised upon availability of updated crop acreages in the 2022 Agricultural Census, expected to be published by the U.S. Department of Agriculture in 2024. Estimates of annual agricultural pesticide use are provided as downloadable, tab-delimited files, organized by compound, year, state Federal Information Processing Standard (FIPS) code, county FIPS code, and amount in kilograms. Tables of annual agricultural pesticide-use estimates beginning in 1992 are available for download on the Pesticide National Synthesis Project webpage: https://doi.org/doi:10.5066/F7NP22KM. Beginning in 2019, estimates are reported for a reduced number of compounds.
+
+References cited:
+
+Baker, N.T., and Stone, W.W., 2015, Estimated annual agricultural pesticide use for counties of the conterminous United States, 2008–12: U.S. Geological Survey Data Series 907, 9 p., accessed July 12, 2015, at https://doi.org/10.3133/ds907.
+
+Thelin, G.P., and Stone, W.W., 2013, Estimation of annual agricultural pesticide use for counties of the conterminous United States, 1992–2009: U.S. Geological Survey Scientific Investigations Report 2013–5009, 54 p., accessed July 12, 2015, at http://pubs.usgs.gov/sir/2013/5009/.</abstract>
+      <purpose>Pesticide-use estimates from this dataset were compiled for U.S. Geological Survey water-quality studies and are suitable for making national, regional, and watershed assessments of annual pesticide use.</purpose>
+      <supplinf>For all states except California, pesticide-use data were obtained from proprietary surveys of farm operations within U.S. Department of Agriculture (USDA) Crop Reporting Districts (CRDs). CRDs represent a collection of contiguous counties within a State. The survey data are based on agricultural pesticide-use surveys of farm operations distributed throughout the conterminous United States (Baker and Stone, 2015; Kynetec AgroTrak, written commun., 2020). Survey data were used to calculate pesticide use per crop acre, or an 'estimated pesticide use' (EPest) rate, for each pesticide compound used in a CRD. County-use estimates were then calculated by multiplying EPest rates by harvested-crop acres for each pesticide-crop combination in the CRD for 2019; annual harvested-crop acres were reported by the USDA 2017 Census of Agriculture (Ag Census) (U.S. Department of Agriculture, 2019) and the 2019 USDA National Agricultural Statistics (NASS) County Agricultural Production Survey (CAPS) (U.S. Department of Agriculture-National Agricultural Statistics Service, 2020). The methods documented in this report summarize the more detailed methods developed and described by Thelin and Stone (2013) and updated by Baker and Stone (2015).
+
+Two different estimates, EPest-low and EPest-high, provide a range of pesticide-use rates (Thelin and Stone, 2013; Baker and Stone, 2015) where a pesticide-use rate is not available for a crop from a CRD. Both methods incorporated surveyed and extrapolated rates to estimate pesticide use for counties, but EPest-low and EPest-high estimation procedures differed in how they treated situations in which a CRD was surveyed and pesticide use was not reported (missing) for a particular pesticide-by-crop combination. The EPest-low estimate is assigned a null value (blank) when there is not enough information to determine whether use occurred but was not captured by the survey or whether use did not occur for that pesticide and crop. EPest-high, however, treats missing data for surveyed CRDs as pesticide use likely to occur and therefore calculates a use rate from neighboring CRDs or CRDs within the same region to estimate the pesticide-by-crop use. This method is described in detail by Thelin and Stone (2013). The EPest-high estimate is based generally on the median of reported pesticide-by-crop use rates from surveyed farmers in neighboring CRDs and, in some cases, CRDs within the same USDA Farm Resource Region (Thelin and Stone, 2013). EPest-low annual-use totals can be greater than EPest-high totals when the low method of estimation concentrates the use to a particular geographic area while the high method spreads the use over a larger geographic area. There is uncertainty in both the high and low estimates that is difficult to quantify. A user should become familiar with the two methods to decide which estimate is best for a specific application.
+
+This data release is a continuation of the 1992-2009 pesticide-use estimates reported by Stone (2013), the 2008-2012 pesticide-use estimates reported by Baker and Stone (2015), and the 2013-17 pesticide-use estimates reported by Wieben (2019), although these 2019 data are preliminary. County annual harvested-crop acres reported in the 2017 Ag Census (U.S. Department of Agriculture, 2019) and 2019 CAPS (U.S. Department of Agriculture-National Agricultural Statistics Service, 2020) were used in this compilation. The Ag Census is the most uniform and complete source of crop-acre estimates for all counties in the United States. The Ag Census is published every 5th year, with CAPS reporting crop-acre estimates for selected crops and counties for interim Ag Census years. For the 1992–2009 pesticide-use estimates (Stone, 2013), the 2008–2012 estimates (Baker and Stone, 2015), and the 2013-17 estimates (Wieben, 2019), acreages for crops not surveyed by CAPS were interpolated linearly between census years. By convention, estimates of county acreages made for years before an Ag Census is available and where CAPS data are unavailable carry forward acreages from the most recent published Ag Census (Stone, 2013; Baker and Stone, 2013). Thus, the 2019 estimates published herein use 2017 Ag Census acreages in counties where CAPS acreages are not available for 2019. When the 2022 Ag Census data are published, estimates for 2018 through 2022 may be revised by using linear interpolation between 2017 and 2022 for crop acreages not reported by CAPS.
+
+Pesticide-use data for California for 2019 were obtained from the California Department of Pesticide Regulation Pesticide Use Reporting (DPR–PUR) database (California Department of Pesticide Regulation, written commun., 2020) and were appended to data for the rest of the Nation after the estimation process described above. Use estimates for California were compiled without extrapolation; therefore, EPest-low and EPest-high rates are the same for counties in California.
+
+Beginning 2015, the provider of the surveyed pesticide data used to derive the county-level use estimates discontinued making estimates for seed treatment application of pesticides because of complexity and uncertainty. Pesticide-use estimates prior to 2015 include estimates with seed treatment application.	  
+
+Additional references cited in the Supplemental Information section:   
+
+Stone, W.W., 2013, Estimated annual agricultural pesticide use for counties of the conterminous United States, 1992–2009: U.S. Geological Survey Data Series 752, 1-p. pamphlet, 14 tables, accessed July 12, 2015, at http://pubs.usgs.gov/ds/752/.
+
+U.S. Department of Agriculture, 2019, State and county data, Geographic area series parts 1–50, AC–17–A–1—AC–17–A–50: U.S. Department of Agriculture 2017 Census of Agriculture, v. 1, accessed May 22, 2019, at https://www.nass.usda.gov/Publications/AgCensus/2017/index.php.
+
+U.S. Department of Agriculture, National Agricultural Statistics Service, 2020, Field crops, 2019: U.S. Department of Agriculture Quick Stats database, accessed July 7, 2020, at http://www.nass.usda.gov/Quick_Stats/.
+
+Wieben, C.M., 2019, Estimated annual agricultural pesticide use for counties of the conterminous United States, 2013-17 (ver. 2.0, May 2020): U.S. Geological Survey data release, accessed January 15, 2021, at https://doi.org/10.5066/P9F2SRYH.</supplinf>
+    </descript>
+    <timeperd>
+      <timeinfo>
+        <rngdates>
+          <begdate>2019</begdate>
+          <enddate>2019</enddate>
+        </rngdates>
+      </timeinfo>
+      <current>publication date</current>
+    </timeperd>
+    <status>
+      <progress>Planned</progress>
+      <update>As needed</update>
+    </status>
+    <spdom>
+      <bounding>
+        <westbc>-125.771484</westbc>
+        <eastbc>-65.830078</eastbc>
+        <northbc>49.353468</northbc>
+        <southbc>23.523295</southbc>
+      </bounding>
+    </spdom>
+    <keywords>
+      <theme>
+        <themekt>None</themekt>
+        <themekey>pesticide</themekey>
+        <themekey>water</themekey>
+        <themekey>pesticide use</themekey>
+        <themekey>Census of Agriculture</themekey>
+        <themekey>Crop Reporting District</themekey>
+        <themekey>crops</themekey>
+        <themekey>National Water Quality Program</themekey>
+        <themekey>NAWQA</themekey>
+      </theme>
+      <theme>
+        <themekt>USGS Thesaurus</themekt>
+        <themekey>agriculture</themekey>
+        <themekey>water quality</themekey>
+      </theme>
+      <theme>
+        <themekt>ISO 19115 Topic Category</themekt>
+        <themekey>environment</themekey>
+        <themekey>geoscientificInformation</themekey>
+        <themekey>inlandWaters</themekey>
+      </theme>
+      <theme>
+        <themekt>USGS Metadata Identifier</themekt>
+        <themekey>USGS:6081a924d34e8564d68661a1</themekey>
+      </theme>
+      <place>
+        <placekt>Geographic Names Information System</placekt>
+        <placekey>United States</placekey>
+      </place>
+    </keywords>
+    <accconst>none</accconst>
+    <useconst>none</useconst>
+    <ptcontac>
+      <cntinfo>
+        <cntperp>
+          <cntper>Christine M Wieben</cntper>
+          <cntorg>U.S. Geological Survey</cntorg>
+        </cntperp>
+        <cntaddr>
+          <addrtype>mailing and physical</addrtype>
+          <address>3450 Princeton Pike Suite 110</address>
+          <city>Lawrenceville</city>
+          <state>New Jersey</state>
+          <postal>08648</postal>
+          <country>United States</country>
+        </cntaddr>
+        <cntvoice>609-406-3817</cntvoice>
+        <cntemail>cwieben@usgs.gov</cntemail>
+      </cntinfo>
+    </ptcontac>
+    <datacred>This work was done to support analyses by the National Water Quality Assessment Project, National Water Quality Program of the U.S. Geological Survey</datacred>
+    <native>Environment as of Metadata Creation: Microsoft Windows 7 Version 6.1 (Build 7601) Service Pack 1 Esri ArcGIS 10.2.2 (Build 3552)</native>
+    <crossref>
+      <citeinfo>
+        <origin>Nancy T. Baker</origin>
+        <origin>Wesley W. Stone</origin>
+        <pubdate>2015</pubdate>
+        <title>Estimated annual agricultural pesticide use for counties of the conterminous United States, 2008–12</title>
+        <geoform>publication</geoform>
+        <serinfo>
+          <sername>U.S. Geological Survey Data Series</sername>
+          <issue>907</issue>
+        </serinfo>
+        <pubinfo>
+          <pubplace>Reston, VA</pubplace>
+          <publish>US Geological Survey</publish>
+        </pubinfo>
+        <othercit>Baker, N.T., and Stone, W.W., 2015, Estimated annual agricultural pesticide use for counties of the conterminous United States, 2008–12: U.S. Geological Survey Data Series 907, 9 p., accessed July 12, 2015, at https://doi.org/10.3133/ds907.</othercit>
+        <onlink>https://doi.org/10.3133/ds907</onlink>
+      </citeinfo>
+    </crossref>
+    <crossref>
+      <citeinfo>
+        <origin>Wesley W. Stone</origin>
+        <pubdate>2013</pubdate>
+        <title>Estimated annual agricultural pesticide use for counties of the conterminous United States, 1992–2009</title>
+        <geoform>publication</geoform>
+        <serinfo>
+          <sername>U.S. Geological Survey Data Series</sername>
+          <issue>752</issue>
+        </serinfo>
+        <pubinfo>
+          <pubplace>Reston, VA</pubplace>
+          <publish>US Geological Survey</publish>
+        </pubinfo>
+        <othercit>Stone, W.W., 2013, Estimated annual agricultural pesticide use for counties of the conterminous United States, 1992–2009: U.S. Geological Survey Data Series 752, 1-p. pamphlet, 14 tables, accessed July 12, 2015, at https://pubs.usgs.gov/ds/752/.</othercit>
+        <onlink>https://pubs.usgs.gov/ds/752/</onlink>
+      </citeinfo>
+    </crossref>
+    <crossref>
+      <citeinfo>
+        <origin>Gail P. Thelin</origin>
+        <origin>Wesley W. Stone</origin>
+        <pubdate>2013</pubdate>
+        <title>Estimated annual agricultural pesticide use for counties of the conterminous United States, 1992–2009</title>
+        <geoform>publication</geoform>
+        <serinfo>
+          <sername>U.S. Geological Survey Scientific Investigations Report</sername>
+          <issue>2013-5009</issue>
+        </serinfo>
+        <pubinfo>
+          <pubplace>Reston, VA</pubplace>
+          <publish>US Geological Survey</publish>
+        </pubinfo>
+        <othercit>Thelin, G.P., and Stone, W.W., 2013, Estimation of annual agricultural pesticide use for counties of the conterminous United States, 1992–2009: U.S. Geological Survey Scientific Investigations Report 2013-5009, 54 p., accessed July 12, 2015, at https://pubs.usgs.gov/sir/2013/5009/.</othercit>
+        <onlink>https://pubs.usgs.gov/sir/2013/5009/</onlink>
+      </citeinfo>
+    </crossref>
+    <crossref>
+      <citeinfo>
+        <origin>Christine M. Wieben</origin>
+        <pubdate>2019</pubdate>
+        <title>Estimated annual agricultural pesticide use for counties of the conterminous United States, 2013-17 (ver 2.0, May 2020)</title>
+        <geoform>data release</geoform>
+        <serinfo>
+          <sername>U.S. Geological Survey Data Release</sername>
+          <issue>version 2.0</issue>
+        </serinfo>
+        <pubinfo>
+          <pubplace>Reston, VA</pubplace>
+          <publish>US Geological Survey</publish>
+        </pubinfo>
+        <othercit>Wieben, C.M., 2019, Estimated annual agricultural pesticide use for counties of the conterminous United States, 2013-17 (ver. 2.0, May 2020): U.S. Geological Survey data release, accessed January 15, 2021, at https://doi.org/10.5066/P9F2SRYH.</othercit>
+        <onlink>https://doi.org/10.5066/P9F2SRYH</onlink>
+      </citeinfo>
+    </crossref>
+  </idinfo>
+  <dataqual>
+    <attracc>
+      <attraccr>No formal attribute accuracy tests were conducted.</attraccr>
+    </attracc>
+    <logic>No formal logical accuracy tests were conducted.</logic>
+    <complete>This dataset is considered preliminary.</complete>
+    <posacc>
+      <horizpa>
+        <horizpar>A formal accuracy assessment of the horizontal positional information in the dataset has not been conducted.</horizpar>
+      </horizpa>
+      <vertacc>
+        <vertaccr>A formal accuracy assessment of the vertical positional information in the dataset has either not been conducted, or is not applicable.</vertaccr>
+      </vertacc>
+    </posacc>
+    <lineage>
+      <srcinfo>
+        <srccite>
+          <citeinfo>
+            <origin>Kynetec</origin>
+            <pubdate>2020</pubdate>
+            <title>Kynetec AgroTrak</title>
+            <geoform>Digital Resources</geoform>
+            <pubinfo>
+              <pubplace>Kynetec</pubplace>
+              <publish>written communication</publish>
+            </pubinfo>
+            <onlink>Proprietary data; no link provided</onlink>
+          </citeinfo>
+        </srccite>
+        <typesrc>Observed/Measured</typesrc>
+        <srctime>
+          <timeinfo>
+            <rngdates>
+              <begdate>20190101</begdate>
+              <enddate>20191231</enddate>
+            </rngdates>
+          </timeinfo>
+          <srccurr>publication date</srccurr>
+        </srctime>
+        <srccitea>Kynetec</srccitea>
+        <srccontr>Proprietary farm survey data on amounts of pesticides applied to individual crops by Crop Reporting District</srccontr>
+      </srcinfo>
+      <srcinfo>
+        <srccite>
+          <citeinfo>
+            <origin>U.S. Department of Agriculture</origin>
+            <pubdate>2019</pubdate>
+            <title>2017 Census of Agriculture, State and County Data Volume 1, Geographic Area Series Part 1-50, AC-17-A-1--AC-17-A-50</title>
+            <geoform>Tabular digital data</geoform>
+            <pubinfo>
+              <pubplace>Washington, D.C.</pubplace>
+              <publish>U.S. Department of Agriculture</publish>
+            </pubinfo>
+            <onlink>https://www.nass.usda.gov/Publications/AgCensus/2017/index.php</onlink>
+          </citeinfo>
+        </srccite>
+        <typesrc>Digital and/or Hardcopy Resources</typesrc>
+        <srctime>
+          <timeinfo>
+            <sngdate>
+              <caldate>2017</caldate>
+            </sngdate>
+          </timeinfo>
+          <srccurr>publication date</srccurr>
+        </srctime>
+        <srccitea>AgCensus</srccitea>
+        <srccontr>Source information, in the form of county-level crop acres, used in support of the development of the dataset.</srccontr>
+      </srcinfo>
+      <srcinfo>
+        <srccite>
+          <citeinfo>
+            <origin>U.S. Department of Agriculture</origin>
+            <pubdate>2020</pubdate>
+            <title>U.S. Department of Agriculture-National Agricultural Statistics Service,</title>
+            <geoform>Tabular digital data</geoform>
+            <pubinfo>
+              <pubplace>Washington, D.C.</pubplace>
+              <publish>U.S. Department of Agriculture</publish>
+            </pubinfo>
+            <onlink>http://www.nass.usda.gov/Quick_Stats/</onlink>
+          </citeinfo>
+        </srccite>
+        <typesrc>Digital and/or Hardcopy Resources</typesrc>
+        <srctime>
+          <timeinfo>
+            <rngdates>
+              <begdate>20190101</begdate>
+              <enddate>20191231</enddate>
+            </rngdates>
+          </timeinfo>
+          <srccurr>publication date</srccurr>
+        </srctime>
+        <srccitea>CAPS</srccitea>
+        <srccontr>Source information, in the form of county-level crop acres, used in support of the development of the dataset.</srccontr>
+      </srcinfo>
+      <srcinfo>
+        <srccite>
+          <citeinfo>
+            <origin>California Department of Pesticide Regulation</origin>
+            <pubdate>2020</pubdate>
+            <title>Pesticide use reporting—summary data: California Department of Pesticide Regulation Pesticide Use Reporting (DPR–PUR) database</title>
+            <geoform>Tabular digital data</geoform>
+            <pubinfo>
+              <pubplace>Sacramento, CA</pubplace>
+              <publish>California Department of Pesticide Regulation, written communication</publish>
+            </pubinfo>
+            <onlink>no link provided</onlink>
+          </citeinfo>
+        </srccite>
+        <typesrc>Digital</typesrc>
+        <srctime>
+          <timeinfo>
+            <rngdates>
+              <begdate>20190101</begdate>
+              <enddate>20191231</enddate>
+            </rngdates>
+          </timeinfo>
+          <srccurr>publication date</srccurr>
+        </srctime>
+        <srccitea>DPR-PUR</srccitea>
+        <srccontr>Annual agricultural pesticide use data for counties in California</srccontr>
+      </srcinfo>
+      <procstep>
+        <procdesc>For all States except California, pesticide-use data compiled by proprietary surveys of farm operations located within U.S. Department of Agriculture (USDA) Crop Reporting Districts (CRDs)—a collection of contiguous counties within each State—were used to calculate pesticide per crop acre, or an “estimated pesticide use” (EPest) rate, for each pesticide compound used in a CRD.</procdesc>
+        <procdate>20201112</procdate>
+      </procstep>
+      <procstep>
+        <procdesc>County-use estimates were then calculated by multiplying EPest rates by harvested-crop acres for each pesticide-by-crop combination in each county with annual harvested-crop acres. County annual harvested-crop acres reported by the USDA 2017 Census of Agriculture (Ag Census) (U.S. Department of Agriculture, 2019) and USDA National Agricultural Statistics (NASS) County Agricultural Production Survey (CAPS) (U.S. Department of Agriculture--National Agricultural Statistics Service, 2019) were used in this compilation.</procdesc>
+        <procdate>20210217</procdate>
+      </procstep>
+      <procstep>
+        <procdesc>Where a pesticide-use rate is not available for a crop from a CRD, both EPest-low and EPest-high estimates were made to provide a range of pesticide-use rates (Thelin and Stone, 2013; Baker and Stone, 2015). Both methods incorporated surveyed and extrapolated rates to estimate pesticide use for counties, but EPest-low and EPest-high estimation procedures differed in how they treated situations in which a CRD was surveyed and pesticide use was not reported (missing) for a particular pesticide-by-crop combination. The EPest-low estimate is assigned a null value (blank) when there is not enough information to determine whether use occurred but was not captured by the survey or whether use did not occur for that pesticide and crop. EPest-high, however, treats missing data for surveyed CRDs as pesticide use likely to occur and therefore calculates a use rate from neighboring CRDs or CRDs within the same region to estimate the pesticide-by-crop use.</procdesc>
+        <procdate>20210217</procdate>
+      </procstep>
+      <procstep>
+        <procdesc>Append California pesticide-use estimates to estimates compiled for the rest of the nation.</procdesc>
+        <procdate>20210223</procdate>
+      </procstep>
+    </lineage>
+  </dataqual>
+  <eainfo>
+    <detailed>
+      <enttyp>
+        <enttypl>EPest_county_estimates_2019.txt</enttypl>
+        <enttypd>County-level estimates of annual agricultural pesticide use. This table contains 107,742 records.</enttypd>
+        <enttypds>Producer defined</enttypds>
+      </enttyp>
+      <attr>
+        <attrlabl>COMPOUND</attrlabl>
+        <attrdef>Common name for the pesticide compound active ingredient</attrdef>
+        <attrdefs>Kynetec</attrdefs>
+        <attrdomv>
+          <udom>Pesticide compound active ingredients for which use estimates were calculated</udom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>YEAR</attrlabl>
+        <attrdef>Calendar year for which pesticide use was estimated</attrdef>
+        <attrdefs>Producer defined</attrdefs>
+        <attrdomv>
+          <rdom>
+            <rdommin>2019</rdommin>
+            <rdommax>2019</rdommax>
+            <attrunit>calendar year</attrunit>
+          </rdom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>STATE_FIPS_CODE</attrlabl>
+        <attrdef>A standard two-digit identifier code for each state in the United States</attrdef>
+        <attrdefs>Federal Information Processing Standard (FIPS) developed by the U.S. federal government National Institute of Standards and Technology</attrdefs>
+        <attrdomv>
+          <codesetd>
+            <codesetn>2017 State, County, Minor Civil Division, and Incorporated Place FIPS Codes</codesetn>
+            <codesets>https://www.census.gov/geographies/reference-files/2017/demo/popest/2017-fips.html</codesets>
+          </codesetd>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>COUNTY_FIPS_CODE</attrlabl>
+        <attrdef>A standard five-digit identifier code for each county in the United States (the first two digits are the FIPS state code. Only the three-digit county designations are given in this attribute.)</attrdef>
+        <attrdefs>Federal Information Processing Standard developed by the U.S. federal government National Institute of Standards and Technology</attrdefs>
+        <attrdomv>
+          <codesetd>
+            <codesetn>2017 State, County, Minor Civil Division, and Incorporated Place FIPS Codes</codesetn>
+            <codesets>https://www.census.gov/geographies/reference-files/2017/demo/popest/2017-fips.html</codesets>
+          </codesetd>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>EPEST_LOW_KG</attrlabl>
+        <attrdef>Estimated pesticide use (low estimate), in kilograms (kg). See 'Process Step' for more information on how low estimates were calculated. Null (blank) values indicate no use was estimated while zero values (0) indicate use was less than 0.01 kg.</attrdef>
+        <attrdefs>Producer defined</attrdefs>
+        <attrdomv>
+          <rdom>
+            <rdommin>0</rdommin>
+            <rdommax>855,410</rdommax>
+            <attrunit>kilograms</attrunit>
+          </rdom>
+        </attrdomv>
+      </attr>
+      <attr>
+        <attrlabl>EPEST_HIGH_KG</attrlabl>
+        <attrdef>Estimated pesticide use (high estimate), in kilograms (kg). See 'Process Step' for more information on how high estimates were calculated. Zero values (0) indicate use was less than 0.01 kg.</attrdef>
+        <attrdefs>Producer defined</attrdefs>
+        <attrdomv>
+          <rdom>
+            <rdommin>0</rdommin>
+            <rdommax>855,410</rdommax>
+            <attrunit>kilograms</attrunit>
+          </rdom>
+        </attrdomv>
+      </attr>
+    </detailed>
+  </eainfo>
+  <distinfo>
+    <distrib>
+      <cntinfo>
+        <cntperp>
+          <cntper>U.S. Geological Survey - ScienceBase</cntper>
+          <cntorg>USGS</cntorg>
+        </cntperp>
+        <cntaddr>
+          <addrtype>mailing and physical</addrtype>
+          <address>Denver Federal Center, Building 810, Mail Stop 302</address>
+          <city>Denver</city>
+          <state>CO</state>
+          <postal>80225</postal>
+          <country>USA</country>
+        </cntaddr>
+        <cntvoice>1-888-275-8747</cntvoice>
+        <cntemail>sciencebase@usgs.gov</cntemail>
+      </cntinfo>
+    </distrib>
+    <distliab>Any use of trade, firm, or product names is for descriptive purposes only and does not imply endorsement by the U.S. Government. Although this information product, for the most part, is in the public domain, it may also contain copyrighted materials as noted in the text. Permission to reproduce copyrighted items must be secured from the copyright owner whenever applicable. The data have been approved for release and publication by the U.S. Geological Survey (USGS). Unless otherwise stated, all data, metadata and related materials are considered to satisfy the quality standards relative to the purpose for which the data were collected. Although these data and associated metadata have been reviewed for accuracy and completeness and approved for release by the U.S. Geological Survey (USGS), no warranty expressed or implied is made regarding the display or utility of the data for other purposes, nor on all computer systems, nor shall the act of distribution constitute any such warranty. The USGS shall not be held liable for improper or incorrect use of the data described and/or contained herein. Users of this data are advised to read all metadata and associated documentation to understand appropriate use and data limitations.</distliab>
+    <stdorder>
+      <digform>
+        <digtinfo>
+          <formname>Tab-delimited text file</formname>
+          <formvern>none</formvern>
+          <transize>4</transize>
+        </digtinfo>
+        <digtopt>
+          <onlinopt>
+            <computer>
+              <networka>
+                <networkr>https://doi.org/10.5066/P9EDTHQL</networkr>
+              </networka>
+            </computer>
+          </onlinopt>
+        </digtopt>
+      </digform>
+      <fees>None. No fees are applicable for obtaining the dataset.</fees>
+    </stdorder>
+  </distinfo>
+  <metainfo>
+    <metd>20220810</metd>
+    <metc>
+      <cntinfo>
+        <cntperp>
+          <cntper>GS-W-NJ DataRelease</cntper>
+          <cntorg>U.S. Geological Survey</cntorg>
+        </cntperp>
+        <cntpos>Hydrologist</cntpos>
+        <cntaddr>
+          <addrtype>mailing and physical</addrtype>
+          <address>3450 Princeton Pike Suite 110</address>
+          <city>Lawrenceville</city>
+          <state>New Jersey</state>
+          <postal>08648</postal>
+          <country>United States</country>
+        </cntaddr>
+        <cntvoice>609-406-3817</cntvoice>
+        <cntemail>gs-w-nj_datarelease@usgs.gov</cntemail>
+      </cntinfo>
+    </metc>
+    <metstdn>FGDC Content Standard for Digital Geospatial Metadata</metstdn>
+    <metstdv>FGDC-STD-001-1998</metstdv>
+  </metainfo>
+</metadata>
